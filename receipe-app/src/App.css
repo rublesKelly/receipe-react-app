@@ -1,0 +1,95 @@
+.App {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  color: #5d5d5d;
+  background:#3d8591
+  
+}
+
+.randomButton {
+  margin: 6rem;
+  padding: 1rem;
+  
+}
+
+img{
+  justify-self: center;
+  height: auto;
+  width: auto;
+}
+
+.reciepe-grid{
+  margin: 50px;
+  display: inline-grid;
+  place-self: center center;
+  max-width: 80vw;
+  grid-template-rows: 20vh 1fr 1fr;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-areas: "Header Image Image"
+                        "Ingredients Steps Steps"
+                        "Ingredients Steps Steps";
+  align-items: center;
+  
+}
+
+.ReciepeHeader{
+  grid-area: Header;
+  align-self: center;
+  justify-self: center;
+  font-size: large;
+  text-align: center;
+}
+
+.ReciepeImage {
+  grid-area: Image;  
+}
+
+.in-box{
+  background-color: #eaeaea;  
+  grid-area: Ingredients; 
+  
+}
+
+.Ingredients-List{
+  text-align: left;
+  background-color: eee;
+  font-size: larger;
+  margin: 3.5vw;
+  padding: 3.5vw;
+}
+
+.m-box{
+  background-color: #eaeaea;
+  margin: 3.5vw;
+  padding: 3.5vw;
+  
+  
+}
+
+.Steps-List{
+  grid-area: Steps;
+  text-align: left;
+  font-size: larger;
+  max-width: 50vw;
+  margin: 3.5vw;
+  padding: 3.5vw;
+}
+
+/*For prototyping comment out for beautiful loook
+*/
+.reciepe-grid{
+  background-color: aqua;
+  
+}
+
+.Ingredients-List{
+  background-color: brown;
+}
+
+.Steps-List{
+  background-color: bisque;
+}
+
+
+
+
