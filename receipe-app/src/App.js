@@ -10,6 +10,7 @@ function App() {
   
 
   //Declaring State for Ingredients List and Steps List and declaring set steps for both
+  const [Header, setHeader] = useState([]);
   const [Ingredients, setIngredients] = useState([]);
   const [Steps, setSteps] = useState([]);
   const [URL, setURL] = useState('/receipe1');
@@ -22,6 +23,7 @@ function App() {
     axios.get(URL)
       .then(res => {
         console.log(res)
+        setHeader(res.data.Header)
         setIngredients(res.data.Ingredients)
         setSteps(res.data.Steps)
       })      
@@ -34,8 +36,12 @@ function App() {
   return (  
   <div className="App">
     <div className='reciepe-grid'>
-        <ReceipeHeader Header="Egg Fried Rice"/>
+      <div className = 'ReciepeHeader'>
+        <ReceipeHeader Header={Header}/>
+      </div>
+      <div className='ReciepeImage'>
         <ReceipeImage img_src="./egg-fried-rice.jpg"/>
+      </div>
         <div className='in-box'>
           <IngredientList Ingredients={Ingredients}/>
         </div>

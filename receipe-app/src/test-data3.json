@@ -1,6 +1,8 @@
 {
+    "Header": ["Potato in a bowl"],
+
     "Ingredients": 
-    ["Potatoe", "Olive oil", "salt","Garlic cloves",
+    ["Potato", "Olive oil", "salt","Garlic cloves",
     "feta","greek yogurt","slow roasted red pepper", "sumac","basil leaves",
     "other"
 ],

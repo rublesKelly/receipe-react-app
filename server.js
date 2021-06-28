@@ -2,7 +2,7 @@
 const express = require('express');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
-const graphqlHTTP = require('express-graphql');
+const {graphqlHTTP} = require('express-graphql');
 const schema = require('./schema')
 
 //Data for testing 
@@ -19,11 +19,11 @@ const port = process.env.PORT || 3001
 //Middleware  
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); //not sure what this line really does
-    //Set up GraphQL end point
-//app.use('/graphql', graphqlHTTP({
-   // schema,
-  //  graphql: true
- //   }))
+//Set up GraphQL end point this is also middleware
+app.use('/graphql', graphqlHTTP({
+   schema,
+   graphql: true
+   }))
     
 
 //Configure sever to listen on port 3001 and log a message
