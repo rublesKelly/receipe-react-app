@@ -4,12 +4,14 @@ import Ingredient from './Ingredient'
 
 function IngredientsList(props) {
     
+    console.log(props)
+
     return (
         <div>
             <div className='Ingredients-List'>
                 <ul>
-                    {props.Ingredients.map((newArray) => 
-                        (<Ingredient Ingredient={newArray}/>)
+                    {props.Ingredients.map((eachItem) => 
+                        (<Ingredient Ingredient={eachItem.name}/>)
                     )}               
                 </ul>
             </div>

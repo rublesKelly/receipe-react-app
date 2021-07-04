@@ -3,11 +3,13 @@ import Step from './Step'
 
 function StepsList(props) {
 
+//console.log(props.Steps[1].step)
+
    return (
         <div className="Steps-List">
             <ul>
-            {props.Steps.map((newArray => (
-                    <Step Step={newArray}/>
+            {props.Steps.map((eachItem => (
+                    <Step Step={eachItem.step}/>
                 )))}                
             </ul>            
         </div>
