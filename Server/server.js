@@ -93,12 +93,5 @@ const db = mysql.createConnection({
 //    });
 // });
 
-
-
-
-
-
-
-
 //Might need this later for connecting react ot sever
 //https://medium.com/@maison.moa/setting-up-an-express-backend-server-for-create-react-app-bc7620b20a61
