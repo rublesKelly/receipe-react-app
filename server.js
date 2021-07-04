@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true })); //not sure what this line re
 //Set up GraphQL end point this is also middleware
 app.use('/graphql', graphqlHTTP({
    schema,
-   graphql: true
+   graphiql: true
    }))
     
 
