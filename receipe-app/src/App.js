@@ -36,9 +36,11 @@ function App() {
   useEffect(() => {
     axios(API)
       .then(res => {
-        console.log(res)
+        console.log(res) 
         setHeader(res.data.recipes[0].title)
         console.log('___________________________________')
+        console.log(__dirname);
+        console.log(__filename);
         console.log(res.data.recipes[0].analyzedInstructions[0].steps)
         setSteps(res.data.recipes[0].analyzedInstructions[0].steps)
         setIngredients(res.data.recipes[0].extendedIngredients)
