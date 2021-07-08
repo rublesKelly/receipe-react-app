@@ -1,12 +1,13 @@
 import './App.css'
 import React, {useState, useEffect} from 'react' 
 import axios from 'axios';
-// import getRandomReceipe from './axios';
+//import getRandomReceipe from './axios';
 //Importing react components
 import IngredientList from './Components/IngredientsList';
 import StepsList from './Components/StepsList';
 import ReceipeImage from './Components/ReceipeImage';
-import ReceipeHeader from './Components/ReciepeHeader'
+import ReceipeHeader from './Components/ReciepeHeader';
+import SearchBox from './Components/SearchBox'
 
 require('dotenv').config({path:'../.env'})
 // console.log(process.env);
@@ -21,24 +22,24 @@ function App() {
   
 
  //Random Receipe search trying to add async not working
-  useEffect(() => {
-    const getRandomReceipe = async() => {axios.get(API)
-      .then(res => {
-        console.table(res.data.recipes) 
-        setHeader(res.data.recipes[0].title)
-        setSteps(res.data.recipes[0].analyzedInstructions[0].steps)
-        setIngredients(res.data.recipes[0].extendedIngredients)
-      })
-        .catch(err => {
-          console.log(err)
-        })
-      }}, [API])
+  // useEffect(() => {
+  //   const getRandomReceipe = async() => {axios.get(API)
+  //     .then(res => {
+  //       console.table(res.data.recipes) 
+  //       setHeader(res.data.recipes[0].title)
+  //       setSteps(res.data.recipes[0].analyzedInstructions[0].steps)
+  //       setIngredients(res.data.recipes[0].extendedIngredients)
+  //     })
+  //       .catch(err => {
+  //         console.log(err)
+  //       })
+  //     }}, [API])
 
 //Random receipe search no async await 
 useEffect(() => {
   axios.get(API)
     .then(res => {
-      console.table(res.data)
+      console.table(res.data.receipes[0])
       setHeader(res.data.recipes[0].title)
       setSteps(res.data.recipes[0].analyzedInstructions[0].steps)
       setIngredients(res.data.recipes[0].extendedIngredients)
@@ -60,6 +61,11 @@ useEffect(() => {
           onClick={() => setAPI(``)}
           >Reset
     </button>
+    <div id="nav-bar">
+      <div id="search-box">
+        <SearchBox/>
+      </div>
+    </div>
     <div className='reciepe-grid'>
       <div className = 'ReciepeHeader'>
         <ReceipeHeader Header={Header}/>
