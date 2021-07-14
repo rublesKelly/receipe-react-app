@@ -8,18 +8,18 @@ const axios = ax.create({
     headers: {}
 });
 
-//Get request for random receipe /random?query=&apiKey=${process.env.react_app_api_key}
-async function getRandomReceipe(){
-     await axios.get(`/random?query=&apiKey=${process.env.react_app_api_key}`,{})
-        .then(res => {
-            console.table(res.data)
-            return res
-        })
-        .catch(err => {
-            console.log(err);
-        })    
-}
+// //Get request for random receipe /random?query=&apiKey=${process.env.react_app_api_key}
+// async function getRandomReceipe(){
+//      await axios.get(`/random?query=&apiKey=${process.env.react_app_api_key}`,{})
+//         .then(res => {
+//             console.table(res.data)
+//             return res
+//         })
+//         .catch(err => {
+//             console.log(err);
+//         })    
+// }
 
-// getRandomReceipe()
+// // getRandomReceipe()
 
-export default getRandomReceipe
+export default axios

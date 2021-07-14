@@ -8,9 +8,15 @@ import StepsList from './Components/StepsList';
 import ReceipeImage from './Components/ReceipeImage';
 import ReceipeHeader from './Components/ReciepeHeader';
 import SearchBox from './Components/SearchBox'
+import SearchResults from './Components/SearchResults'
 
 require('dotenv').config({path:'../.env'})
 // console.log(process.env);
+console.log(window.location);
+const { search } = window.location;
+const query = new URLSearchParams(search).get('s');
+console.log(search);
+console.log(query);
 
 function App() {    
 
@@ -18,7 +24,8 @@ function App() {
   const [Header, setHeader] = useState([]);
   const [Ingredients, setIngredients] = useState([]);
   const [Steps, setSteps] = useState([]);
-  const [API, setAPI] = useState(``);  
+  const [API, setAPI] = useState(``); 
+  const [Receipes, setReceieps] = useState([]) 
   
 
  //Random Receipe search trying to add async not working
@@ -37,9 +44,9 @@ function App() {
 
 //Random receipe search no async await 
 useEffect(() => {
-  axios.get(API)
+  axios(API)
     .then(res => {
-      console.table(res.data.receipes[0])
+      console.table(res)
       setHeader(res.data.recipes[0].title)
       setSteps(res.data.recipes[0].analyzedInstructions[0].steps)
       setIngredients(res.data.recipes[0].extendedIngredients)
@@ -66,6 +73,7 @@ useEffect(() => {
         <SearchBox/>
       </div>
     </div>
+    <SearchResults searchResults={[]}/>
     <div className='reciepe-grid'>
       <div className = 'ReciepeHeader'>
         <ReceipeHeader Header={Header}/>
