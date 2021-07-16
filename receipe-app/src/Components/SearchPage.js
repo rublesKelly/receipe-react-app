@@ -3,10 +3,10 @@ import React from 'react'
 import { useState  } from "react";
 import SearchResults from './SearchResults';
 
-function SearchBox() {
+function SearchPage() {
 
 //Using setState to make this a controlled component
-const [searchResults, setSearchResults] = useState({})
+const [searchResults, setSearchResults] = useState([])
 const [searchQuery, setSearchQuery] = useState('eggs bacon')
 
 
@@ -27,7 +27,7 @@ const onSubmitHandler = (e) => {
 
 //getReciepesbySearchQuery function here 
 const getReciepesbySearchQuery = async (searchQuery) => {
-    await axios(`?q=${searchQuery}&apiKey=${process.env.react_app_api_key}`)
+    await axios(`/complexSearch?query=${searchQuery}&apiKey=${process.env.react_app_api_key}`)
         .then(res => {
             console.log(res);
             setSearchResults(res.data)
@@ -48,8 +48,9 @@ const getReciepesbySearchQuery = async (searchQuery) => {
                     onChange={onChangeHandler}                    
                 />
             </form>
+                <SearchResults searchResults={searchResults}/>
         </div>
     )
 }
 
-export default SearchBox
+export default SearchPage

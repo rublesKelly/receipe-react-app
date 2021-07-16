@@ -7,8 +7,7 @@ import IngredientList from './Components/IngredientsList';
 import StepsList from './Components/StepsList';
 import ReceipeImage from './Components/ReceipeImage';
 import ReceipeHeader from './Components/ReciepeHeader';
-import SearchBox from './Components/SearchBox'
-import SearchResults from './Components/SearchResults'
+import SearchPage from './Components/SearchPage'
 
 require('dotenv').config({path:'../.env'})
 // console.log(process.env);
@@ -70,10 +69,9 @@ useEffect(() => {
     </button>
     <div id="nav-bar">
       <div id="search-box">
-        <SearchBox/>
+        <SearchPage/>
       </div>
     </div>
-    <SearchResults searchResults={[]}/>
     <div className='reciepe-grid'>
       <div className = 'ReciepeHeader'>
         <ReceipeHeader Header={Header}/>
