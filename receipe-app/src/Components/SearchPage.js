@@ -8,12 +8,15 @@ function SearchPage() {
 //Using setState to make this a controlled component
 const [searchResults, setSearchResults] = useState([])
 const [searchQuery, setSearchQuery] = useState('eggs bacon')
+const [id, setId] = useState(637625)
 
 
 //OnChangeHandler note the spread operator and add `...searchResults,[e.currentTarget.name]: e.currentTarget.value` after it
+//This could be moved inline with the actual onChange property in the input tag below
 const onChangeHandler = (e) => {
     setSearchQuery(e.target.value);
     // console.log(e.target.value);
+    e.stopPropagation();
 }
 
 //OnSubmithandler note the preventdefualt behaviour (cuerrently it is not working)
@@ -27,7 +30,7 @@ const onSubmitHandler = (e) => {
 
 //getReciepesbySearchQuery function here 
 const getReciepesbySearchQuery = async (searchQuery) => {
-    await axios(`/complexSearch?query=${searchQuery}&apiKey=${process.env.react_app_api_key}`)
+    await axios(`/complexSearch?query=${searchQuery}&addRecipeInformation=true&apiKey=${process.env.react_app_api_key}`)
         .then(res => {
             console.log(res);
             setSearchResults(res.data)
@@ -36,6 +39,17 @@ const getReciepesbySearchQuery = async (searchQuery) => {
             console.log(err)
         })
 };
+
+//Search reciepes by ID
+const getReciepesbyID = async (id) => {
+    axios.get(`/${id}/information?apiKey=${process.env.react_app_api_key}`)
+        .then(res => {
+            console.log(res.data);
+        })
+        .catch(err => {
+            console.log(err);
+        })
+}
 
     return (
         <div>
@@ -47,8 +61,12 @@ const getReciepesbySearchQuery = async (searchQuery) => {
                     placeholder='dont knwo what to put here'
                     onChange={onChangeHandler}                    
                 />
+                <label >Search by ID </label>
+                <input type="text"onChange={(e) => setId(e.target.value)}/>
+                <input type="submit" onSubmit={getReciepesbyID(id)} />
             </form>
                 <SearchResults searchResults={searchResults}/>
+
         </div>
     )
 }
