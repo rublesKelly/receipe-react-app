@@ -5,8 +5,8 @@ import src from "./egg-fried-rice.jpg"
 function ReceipeImage (props) {
    
     return (
-        <div className="ReciepeImage">
-            <img src = {src} />
+        <div className="reciepe-image">
+            <img src = {props.src} />
         </div>
     )
 }

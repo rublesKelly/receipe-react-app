@@ -33,7 +33,7 @@ const getReciepesbySearchQuery = async (searchQuery) => {
     await axios(`/complexSearch?query=${searchQuery}&addRecipeInformation=true&apiKey=${process.env.react_app_api_key}`)
         .then(res => {
             console.log(res);
-            setSearchResults(res.data)
+            setSearchResults(res.data.results)
         })
         .catch(err => {
             console.log(err)
@@ -44,7 +44,7 @@ const getReciepesbySearchQuery = async (searchQuery) => {
 const getReciepesbyID = async (id) => {
     axios.get(`/${id}/information?apiKey=${process.env.react_app_api_key}`)
         .then(res => {
-            console.log(res.data);
+            // console.log(res.data);
         })
         .catch(err => {
             console.log(err);

@@ -16,6 +16,7 @@ img{
   justify-self: left;
   max-width: 100%;
   height: auto;
+  
 }
 
 .reciepe-grid{
@@ -25,7 +26,7 @@ img{
   place-items: top center;
   max-width: 80vw;
   grid-template-columns: 1fr 1fr 1fr ;
-  grid-template-rows: 10vh 1fr 1fr;
+  grid-template-rows: 20vh 1fr 1fr;
   grid-template-areas: "Header Header Image"
                         "Ingredients Steps Steps"
                         "Ingredients Steps Steps";  
@@ -40,8 +41,9 @@ img{
   background-color: #eaeaea;
 }  
 
-.ReciepeImage {
-  grid-area: Image; 
+.receipe-image {
+  grid-area: Image;
+
    
 }
 
@@ -69,6 +71,30 @@ img{
   margin: 6rem;
   padding: 1rem;
   
+}
+
+.receipe-card{
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 1;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "receipe-card-image"
+                       "receipe-card-long-text-info"
+                       "receipe-card-short-text-info";
+ grid-gap: .5rem;                      
+ place-items: top left;
+ text-align: left;
+ margin-bottom: 1rem;
+ background-color: #fff;
+ height: 11rem;
+ width: 50rem; 
+}
+
+#receipe-card-image{
+  grid-area: receipe-card-image;
+  height: inherit;
+  min-width: 100%;
+
 }
 
 /*For prototyping comment out for beautiful loook

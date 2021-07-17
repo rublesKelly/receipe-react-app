@@ -1,15 +1,23 @@
 import React from 'react'
 
-function ReceipeCard() {
+function ReceipeCard(props) {
+    console.log(props);
     return (
-        <div receipe-card>
-            <img src="props.Image" alt="receipe-not-found" id="receipe-card-image" />
-            <h2 id="receipe-card-title">Chicken Beetroot Stew</h2>
-            <h4 id="reciepe-card-preptime">23 Yrs</h4>
-            <i id='vegan-friendly-icon'>Vegan</i>
-            <i id='vegatarian-friendly-icon'>Veg</i>
-            <i id='dairy-free-icon'>dairy-free</i>
-            <i id='my-diet-friendly'>Yes</i>
+        <div className='receipe-card'>
+            <div id='receipe-card-image'>
+                <img src={props.image} alt="receipe-not-found" id="receipe-card-image" />
+            </div>
+            <div id='receipe-card-long-text-info'>
+                <h4 id="receipe-card-title">{props.title}</h4>
+                {/* <p>{props.description}</p> */}
+            </div>
+            <div id="receiep-card-short-text-info">
+                <h4 id="reciepe-card-preptime">{props.prepTime} mins</h4>
+                <i id='vegan-friendly-icon'>{props.vegan}</i>
+                <i id='vegatarian-friendly-icon'></i>
+                <i id='dairy-free-icon'></i>
+                <i id='my-diet-friendly'></i>
+            </div>
         </div>
     )
 }
