@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 function ReceipeCard(props) {
     console.log(props);
     return (
-        <div className='receipe-card'>
+        <Link to={`/${props.id}`}>
+            <div className='receipe-card'>
             <div id='receipe-card-image'>
                 <img src={props.image} alt="receipe-not-found" id="receipe-card-image" />
             </div>
@@ -19,6 +21,7 @@ function ReceipeCard(props) {
                 <i id='my-diet-friendly'></i>
             </div>
         </div>
+    </Link>
     )
 }
 

@@ -79,10 +79,13 @@ function App() {
         </div>
     <NavBar/>
     <Switch>
+      <Route exact path='/'>
+        
+      </Route>
       <Route path="/discover">
         <SearchPage/>
       </Route>
-      <Route exact path='/'>
+      <Route path='/receipe/:id'>
         <div className='reciepe-grid'>
           <div className ='ReciepeHeader'>
           <ReceipeHeader Header={Header}/>

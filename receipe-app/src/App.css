@@ -97,6 +97,12 @@ img{
 
 }
 
+#nav-bar-links > a{
+  margin: 2rem;
+  border: #5d5d5d;
+  background-color: #fff;
+}
+
 /*For prototyping comment out for beautiful loook
 
 .reciepe-grid{

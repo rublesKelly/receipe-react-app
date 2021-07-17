@@ -9,7 +9,8 @@ console.log(props);
         <div id="search-results">
             <div id="search-result">
                 {props.searchResults.map((eachItem) =>
-                    (<ReceipeCard 
+                    (<ReceipeCard
+                        id={eachItem.id} 
                         title={eachItem.title}
                         image={eachItem.image}
                         description={eachItem.summary}
