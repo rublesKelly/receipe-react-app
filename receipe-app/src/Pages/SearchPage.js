@@ -1,7 +1,7 @@
 import axios from '../axios.js';
 import React from 'react'
 import { useState  } from "react";
-import SearchResults from './SearchResults';
+import SearchResults from '../Components/SearchResults';
 
 function SearchPage() {
 
@@ -16,7 +16,7 @@ const [id, setId] = useState(637625)
 const onChangeHandler = (e) => {
     setSearchQuery(e.target.value);
     // console.log(e.target.value);
-    e.stopPropagation();
+        e.stopPropagation();
 }
 
 //OnSubmithandler note the preventdefualt behaviour (cuerrently it is not working)
