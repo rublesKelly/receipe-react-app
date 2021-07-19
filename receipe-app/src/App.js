@@ -10,11 +10,11 @@ import IngredientList from './Components/IngredientsList';
 import StepsList from './Components/StepsList';
 import ReceipeImage from './Components/ReceipeImage';
 import ReceipeHeader from './Components/ReciepeHeader';
-import SearchPage from './Components/SearchPage'
+import SearchPage from './Pages/SearchPage'
 import SearchResults from './Components/SearchResults'
 import NavBar from "./Components/NavBar";
 
-require('dotenv').config({path:'../.env'})
+require('dotenv').config({  path:'../.env'})
 // console.log(process.env);
 
 
@@ -85,7 +85,7 @@ function App() {
       <Route path="/discover">
         <SearchPage/>
       </Route>
-      <Route path='/receipe/:id'>
+      <Route path='/receipe'>
         <div className='reciepe-grid'>
           <div className ='ReciepeHeader'>
           <ReceipeHeader Header={Header}/>
