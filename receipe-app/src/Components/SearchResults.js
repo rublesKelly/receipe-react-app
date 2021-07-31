@@ -7,7 +7,8 @@ console.log(props);
 
     return (
         <div id="search-results">
-            <div id="search-result">
+            <p>jlksadfjsadflkasjdlfjlkasfdjlsakfdjlsajdlkfjlksajdflksajdfk</p>
+            {/* <div id="search-result">
                 {props.searchResults.map((eachItem) =>
                     (<ReceipeCard
                         id={eachItem.id} 
@@ -19,7 +20,7 @@ console.log(props);
 
                     />)
                 )}
-            </div>
+            </div> */}
         </div>
     )
 }

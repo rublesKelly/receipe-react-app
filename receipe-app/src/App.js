@@ -10,9 +10,13 @@ import IngredientList from './Components/IngredientsList';
 import StepsList from './Components/StepsList';
 import ReceipeImage from './Components/ReceipeImage';
 import ReceipeHeader from './Components/ReciepeHeader';
-import SearchPage from './Pages/SearchPage'
+// import SearchPage from './Pages/SearchPage'
 import SearchResults from './Components/SearchResults'
-import NavBar from "./Components/NavBar";
+import SearchBar from "./Components/SearchBar";
+import Announcement from "./Components/Annoucement";
+import TabBar from "./Components/DiscoverGrid.js";
+import DiscoverGrid from './Components/DiscoverGrid.js';
+import ReceipeGrid from './Components/ReceipeGrid';
 
 require('dotenv').config({  path:'../.env'})
 // console.log(process.env);
@@ -45,65 +49,30 @@ function App() {
       }}, [Receipes])
 
 //Random receipe search no async await 
-  useEffect(() => {
-    axios(API)
-      .then(res => {
-        console.table(res)
-        setHeader(res.data.recipes[0].title)
-        setSteps(res.data.recipes[0].analyzedInstructions[0].steps)
-        setIngredients(res.data.recipes[0].extendedIngredients)
-        setImage(res.data.recipes[0].image)
-      })
-        .catch(err => {
-          console.log(err)
-        })
-      }, [API])
+  // useEffect(() => {
+  //   axios(API)
+  //     .then(res => {
+  //       console.table(res)
+  //       setHeader(res.data.recipes[0].title)
+  //       setSteps(res.data.recipes[0].analyzedInstructions[0].steps)
+  //       setIngredients(res.data.recipes[0].extendedIngredients)
+  //       setImage(res.data.recipes[0].image)
+  //     })
+  //       .catch(err => {
+  //         console.log(err)
+  //       })
+  //     }, [API])
 
 
   return (  
-  <BrowserRouter>
-    <div className="App">
-    <div id="random-buttons">
-            {/* Setting the state with Random button */}
-            <button 
-                className ="randomAPIButton" type="button"
-                onClick={() => setAPI(`https://api.spoonacular.com/recipes/random?query=&apiKey=${process.env.react_app_api_key}`)}
-                >Random Recipe
-            </button>
-            <button 
-                className ="randomAPIButton" 
-                type="button"
-                onClick={() => setAPI(``)}
-                >Reset
-            </button>
-        </div>
-    <NavBar/>
-    <Switch>
-      <Route exact path='/'>
-        
-      </Route>
-      <Route path="/discover">
-        <SearchPage/>
-      </Route>
-      <Route path='/receipe'>
-        <div className='reciepe-grid'>
-          <div className ='ReciepeHeader'>
-          <ReceipeHeader Header={Header}/>
-        </div>
-          <div className='ReciepeImage'>
-          <ReceipeImage src={Image}/>
-        </div>
-          <div className='in-box'>
-            <IngredientList Ingredients={Ingredients}/>
-          </div>
-          <div className='m-box'>
-              <StepsList Steps={Steps}/>
-          </div>
-        </div>
-      </Route>
-    </Switch>
+    <div className='app'>
+      <SearchBar/>
+      <SearchResults/> {/* Conditionally rendered */}
+      <Announcement/>   {/* Conditionally rendered */}
+      <DiscoverGrid/>  
+      <TabBar/>
+      <ReceipeGrid/>  {/* Conditionally rendered */}
     </div>
-  </BrowserRouter>
   );
 }
 
