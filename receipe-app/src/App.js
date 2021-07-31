@@ -11,7 +11,6 @@ import StepsList from './Components/StepsList';
 import ReceipeImage from './Components/ReceipeImage';
 import ReceipeHeader from './Components/ReciepeHeader';
 // import SearchPage from './Pages/SearchPage'
-import SearchResults from './Components/SearchResults'
 import SearchBar from "./Components/SearchBar";
 import Announcement from "./Components/Annoucement";
 import TabBar from "./Components/DiscoverGrid.js";
@@ -67,7 +66,6 @@ function App() {
   return (  
     <div className='app'>
       <SearchBar/>
-      <SearchResults/> {/* Conditionally rendered */}
       <Announcement/>   {/* Conditionally rendered */}
       <DiscoverGrid/>  
       <TabBar/>

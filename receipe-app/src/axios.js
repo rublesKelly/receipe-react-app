@@ -25,13 +25,16 @@ const api ={
 
     //Get reciepes by query seach
     getReceipebyQuery: async(searchTerm) => {
-        await axios.get(`${SEARCH_RECEIPE_URL}&query=${searchTerm}`)
+        const response = await axios.get(`${SEARCH_RECEIPE_URL}&query=${searchTerm}`)
         .then((res) => {
-            console.log(res.data);
+            // console.log(res.data);
+            return res.data
         })
         .catch((err) => {
             console.log(err);
         })
+        // console.log(response);
+        return response
     },
 
     //Get reciepes by id

@@ -2,14 +2,12 @@ import React from 'react'
 import ReceipeCard from "./ReceipeCard";
 
 function SearchResults(props) {
-// console.log(props.searchResults.results);
-console.log(props);
+console.log(props.results);
 
     return (
         <div id="search-results">
-            <p>jlksadfjsadflkasjdlfjlkasfdjlsakfdjlsajdlkfjlksajdflksajdfk</p>
-            {/* <div id="search-result">
-                {props.searchResults.map((eachItem) =>
+            <div id="search-result">
+                {props.results.results? props.results.results.map((eachItem) =>
                     (<ReceipeCard
                         id={eachItem.id} 
                         title={eachItem.title}
@@ -19,8 +17,8 @@ console.log(props);
                         vegan={eachItem.vegan}
 
                     />)
-                )}
-            </div> */}
+                ): alert('no search conducted')}
+            </div>
         </div>
     )
 }

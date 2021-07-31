@@ -5,34 +5,32 @@ import SearchResults from './SearchResults';
 function SearchBar() {
 
     //Setting state for controlled form component 
-    const [SearchTerm, setSearchTerm] = useState('')
+    const [searchTerm, setSearchTerm] = useState('')
     const [results, setResults] = useState({})
 
     //On Submit Handler calls the fetch request with the search term
     const onSubmitHandler = (e) => {
         e.preventDefault()
-        // console.log(SearchTerm);
-        setResults(api.getReceipebyQuery(SearchTerm))
-        .then(console.log(results))
+        //Async all ways returns a promise so the  the .then is neccessary
+        const res = api.getReceipebyQuery(searchTerm)
+        .then((res) => setResults(res))
+        // console.log(results);
     }
 
-    //onChangeHandler
-    const onChangeHandler = (e) => {
-        // console.log(e.target.value);
-    }
     return (
         <div>
            <form id='search-bar' onSubmit={onSubmitHandler}>
                <label htmlFor="search-bar"></label>
                 <input 
                     type="text" 
-                    value={SearchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)} //onChangeHandler
                     
                  />
                 <input type="submit" />    
            </form> 
-           {results ? <SearchResults results={results}/> : alert('no search done') }
+           <SearchResults results={results}/>
+           {/* {console.log(results)} */}
         </div>
     )
 }
