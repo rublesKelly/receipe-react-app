@@ -1,10 +1,12 @@
 body{
-  background:#3d8591
+  justify-items: center;
+  background:#3d8591;
+  height: 100vh;
 }
 
 .App {
-  text-align: center;
   justify-items: center;
+  text-align: center;
   font-family: 'Courier New', Courier, monospace;
   color: #5d5d5d;
   background:#3d8591
@@ -17,6 +19,13 @@ img{
   max-width: 100%;
   height: auto;
   
+}
+.discover-grid{
+  margin: .6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  background-color: rgb(119, 98, 119);
 }
 
 .reciepe-grid{
@@ -74,7 +83,7 @@ img{
 }
 
 .receipe-card{
-  margin: 0 auto;
+  margin: 1rem auto;
   display: grid;
   grid-template-rows: 1;
   grid-template-columns: 1fr 1fr 1fr;
@@ -86,8 +95,8 @@ img{
  text-align: left;
  margin-bottom: 1rem;
  background-color: #fff;
- height: 11rem;
- width: 50rem; 
+ height: 11vh;
+ width: 30vw; 
 }
 
 #receipe-card-image{
@@ -125,3 +134,14 @@ img{
 */
 
 
+
+.annoucement-container{
+  background-color: #fff;
+  opacity: 72%;
+}
+
+.tab-bar{
+  background-color: #5d5d5d;
+  margin-top: 49.5vh;
+  height: 4vh;
+}

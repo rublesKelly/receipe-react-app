@@ -13,7 +13,7 @@ import ReceipeHeader from './Components/ReciepeHeader';
 // import SearchPage from './Pages/SearchPage'
 import SearchBar from "./Components/SearchBar";
 import Announcement from "./Components/Annoucement";
-import TabBar from "./Components/DiscoverGrid.js";
+import TabBar from "./Components/TabBar.js";
 import DiscoverGrid from './Components/DiscoverGrid.js';
 import ReceipeGrid from './Components/ReceipeGrid';
 
@@ -23,53 +23,15 @@ require('dotenv').config({  path:'../.env'})
 
 function App() {    
 
-  //Declaring State for Ingredients List and Steps List and declaring set steps for both
-  const [Header, setHeader] = useState([]);
-  const [Ingredients, setIngredients] = useState([]);
-  const [Steps, setSteps] = useState([]);
-  const [API, setAPI] = useState(``); 
-  const [Receipes, setReceieps] = useState([]) 
-  const [Image, setImage] = useState('')
-  
-
-//Random Receipe search trying to add async not working
-  useEffect(() => {
-      const getRandomReceipe = async() => {
-        await axios.get(API)
-        .then(res => {
-          console.table(res.data.recipes) 
-          setHeader(res.data.recipes[0].title)
-          setSteps(res.data.recipes[0].analyzedInstructions[0].steps)
-          setIngredients(res.data.recipes[0].extendedIngredients)
-        })
-          .catch(err => {
-            console.log(err)
-          })
-      }}, [Receipes])
-
-//Random receipe search no async await 
-  // useEffect(() => {
-  //   axios(API)
-  //     .then(res => {
-  //       console.table(res)
-  //       setHeader(res.data.recipes[0].title)
-  //       setSteps(res.data.recipes[0].analyzedInstructions[0].steps)
-  //       setIngredients(res.data.recipes[0].extendedIngredients)
-  //       setImage(res.data.recipes[0].image)
-  //     })
-  //       .catch(err => {
-  //         console.log(err)
-  //       })
-  //     }, [API])
-
+  //Declaring State
 
   return (  
     <div className='app'>
-      <SearchBar/>
+      <SearchBar/>      {/* controllers for rending the searchresults */}
       <Announcement/>   {/* Conditionally rendered */}
-      <DiscoverGrid/>  
-      <TabBar/>
-      <ReceipeGrid/>  {/* Conditionally rendered */}
+      <DiscoverGrid recomendations = {[1,2,3,4,4,6]}/>  
+      <TabBar test={100} />
+      <ReceipeGrid/>  {/* Conditionally rendered */}     
     </div>
   );
 }

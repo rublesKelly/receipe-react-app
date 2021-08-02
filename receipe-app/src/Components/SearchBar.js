@@ -6,15 +6,17 @@ function SearchBar() {
 
     //Setting state for controlled form component 
     const [searchTerm, setSearchTerm] = useState('')
-    const [results, setResults] = useState({})
+    const [results, setResults] = useState([])
+    const [showResults, setShowResults] = useState(false)
 
     //On Submit Handler calls the fetch request with the search term
     const onSubmitHandler = (e) => {
         e.preventDefault()
         //Async all ways returns a promise so the  the .then is neccessary
         const res = api.getReceipebyQuery(searchTerm)
-        .then((res) => setResults(res))
-        // console.log(results);
+        .then((res) => setResults(res.results))
+        setShowResults(true)
+        console.log(results);
     }
 
     return (
@@ -27,10 +29,12 @@ function SearchBar() {
                     onChange={(e) => setSearchTerm(e.target.value)} //onChangeHandler
                     
                  />
-                <input type="submit" />    
+                <input type="submit" />  
+                <input type="button" onClick={results => setShowResults(!showResults)}/>  
            </form> 
-           <SearchResults results={results}/>
-           {/* {console.log(results)} */}
+           {results.length > 0 && showResults ? 
+           <SearchResults results={results}/>: <div>No results yet</div> } 
+           {console.log(results.length)}
         </div>
     )
 }
