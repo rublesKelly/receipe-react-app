@@ -1,8 +1,8 @@
 //Imports
 import './App.css'
-import React, {useState, useEffect} from 'react' 
+import React, {useState} from 'react' 
 import {BrowserRouter, Router, Switch, Route } from "react-router-dom";
-import axios from 'axios';
+import {api} from './axios';
 
 
 //Importing react components
@@ -23,14 +23,27 @@ require('dotenv').config({  path:'../.env'})
 
 function App() {    
 
-  //Declaring State
+  //Declaring state to add tab
+  const [receipe, setReceipe] = useState({title: '',
+                                          ingredients: [],
+                                          steps: []})
+  const [id, setId] = useState(654959)
+
+  //Tab bar handler
+    //Add receipe to tab passed to receipe card and thumbnail
+    const onAddReceipeClicked = (id) => {
+      const res = api.getReceipebyID(id)
+            .then(res => console.log(res))
+      //    .then(setReceipe({title: res.data.title}))
+    }
 
   return (  
     <div className='app'>
-      <SearchBar/>      {/* controllers for rending the searchresults */}
+      <button onClick={()=>onAddReceipeClicked(id)}>Add receiep</button>
+      <SearchBar onAddReceipeClicked={onAddReceipeClicked}/>      {/* controllers for rending the searchresults */}
       <Announcement/>   {/* Conditionally rendered */}
       <DiscoverGrid recomendations = {[1,2,3,4,4,6]}/>  
-      <TabBar test={100} />
+      {/* <TabBar/> */}
       <ReceipeGrid/>  {/* Conditionally rendered */}     
     </div>
   );
