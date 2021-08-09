@@ -2,8 +2,7 @@ import React from 'react'
 import ReceipeCard from "./ReceipeCard";
 
 function SearchResults(props) {
-console.log(props);
-// console.log(props.results.results);
+// console.log(props);
 
     return (
         <div id="search-results">
@@ -16,6 +15,7 @@ console.log(props);
                         description={eachItem.summary}
                         prepTime={eachItem.readyInMinutes}
                         vegan={eachItem.vegan}
+                        onAddReceipeClicked={props.onAddReceipeClicked}
 
                     />)
                 )}

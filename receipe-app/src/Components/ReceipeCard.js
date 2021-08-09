@@ -1,8 +1,16 @@
 import React from 'react'
+import { api } from '../axios';
 // import { Link } from "react-router-dom";
 
 function ReceipeCard(props) {
-    // console.log(props);
+    // console.log(props.id);
+    
+    //On click handler doesnt work properly yet
+    // const onClickHandler = (e) => {
+    //     const res = api.getReceipebyID(props.id)
+    //         .then(res=>console.log(res))
+    // }
+
     return (
         // <Link to={`/${props.id}`}>
             <div className='receipe-card'>
@@ -12,6 +20,7 @@ function ReceipeCard(props) {
             <div id='receipe-card-long-text-info'>
                 <h4 id="receipe-card-title">{props.title}</h4>
                 <p>{props.description}</p>
+                <button onClick={()=>props.onAddReceipeClicked(props.id)}>GoTo</button>
             </div>
             <div id="receiep-card-short-text-info">
                 <h4 id="reciepe-card-preptime">{props.prepTime}</h4>

@@ -1,10 +1,10 @@
 import React from 'react'
 
-function Step(props) {
+function Step({step}) {
 
     return (
         <div>
-            <li>{props.Step}</li>
+            <li>{step.step}</li>
         </div>
     )
 }

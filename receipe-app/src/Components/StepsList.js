@@ -1,15 +1,15 @@
 import React from 'react'
 import Step from './Step'
 
-function StepsList(props) {
+function StepsList({steps}) {
 
 //console.log(props.Steps[1].step)
 
    return (
         <div className="Steps-List">
             <ul>
-            {props.Steps.map((eachItem => (
-                    <Step Step={eachItem.step}/>
+            {steps && steps.map((eachItem => (
+                    <Step step={eachItem}/>
                 )))}                
             </ul>            
         </div>

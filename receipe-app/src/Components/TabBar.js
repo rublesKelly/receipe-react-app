@@ -1,14 +1,27 @@
 import React from 'react'
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import ReceipeGrid from './ReceipeGrid';
 
-function TabBar() {
+//Delcaring State
+// const [receiepTitle, setreceiepTitle] = useState(initialState)
+
+function TabBar({receipe}) {
     return (
         <div className='tab-bar'>
-            <h3
-                style={{color: "#fff",
-                        textAlign:'center'}}>The tab bar will go here
-            </h3>
+            <Tabs>
+                <TabList>
+                    <Tab>{receipe.title}</Tab>
+                    <Tab>Receipe 2</Tab>
+                </TabList>
+                <TabPanel id='tab-panel-1'>
+                    <ReceipeGrid receipe = {receipe}/>
+                </TabPanel>
+                <TabPanel id='tab-panel-2'>
+                    <h6>Tjkkfdsdkfkajsdf</h6>
+                </TabPanel>
+            </Tabs>
         </div>
     )
 }
 
-export default TabBar
+ export default TabBar

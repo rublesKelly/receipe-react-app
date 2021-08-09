@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Ingredient(props) {
+function Ingredient({ingredient}) {
     return (
         <div>
-            <li>{props.Ingredient}</li>
+            <li>{ingredient.name}</li>
         </div>
     )
 }

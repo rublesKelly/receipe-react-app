@@ -2,16 +2,17 @@ import React from 'react';
 import '../App.css';
 import Ingredient from './Ingredient'
 
-function IngredientsList(props) {
+function IngredientsList({ingredients}) {
     
-    // console.log(props)
+    console.log(ingredients)
 
     return (
         <div>
             <div className='Ingredients-List'>
                 <ul>
-                    {props.Ingredients.map((eachItem) => 
-                        (<Ingredient Ingredient={eachItem.name}/>)
+                    {ingredients && 
+                    ingredients.map((eachItem) => 
+                        (<Ingredient ingredient={eachItem}/>)
                     )}               
                 </ul>
             </div>

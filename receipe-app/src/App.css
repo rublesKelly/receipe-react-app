@@ -20,12 +20,14 @@ img{
   height: auto;
   
 }
-.discover-grid{
+#discover-section{
+  background-color: rgb(119, 98, 119);
+}
+.quick-links-grid{
   margin: .6rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  background-color: rgb(119, 98, 119);
 }
 
 .reciepe-grid{
@@ -87,9 +89,7 @@ img{
   display: grid;
   grid-template-rows: 1;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "receipe-card-image"
-                       "receipe-card-long-text-info"
-                       "receipe-card-short-text-info";
+  grid-template-areas: "first second second";
  grid-gap: .5rem;                      
  place-items: top left;
  text-align: left;
@@ -100,12 +100,14 @@ img{
 }
 
 #receipe-card-image{
-  grid-area: receipe-card-image;
+  grid-area: first;
   height: inherit;
   min-width: 100%;
-
 }
-
+#receipe-card-long-text-info{
+  grid-area: second;
+  font-size: x-small;
+}
 #nav-bar-links > a{
   margin: 2rem;
   border: #5d5d5d;
@@ -132,7 +134,9 @@ img{
 }
 
 */
-
+h4{
+  font-size: 1.8vh;
+}
 
 
 .annoucement-container{
@@ -144,4 +148,32 @@ img{
   background-color: #5d5d5d;
   margin-top: 49.5vh;
   height: 4vh;
+}
+
+#discover-section1{
+  display: grid;
+  margin: auto;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#thumbnail{
+  /* grid-area: thumbnail; */
+  display: inline;
+  max-width: 11rem;
+  height: 11vh;
+  background-color: magenta;
+}
+
+#thumb-image{
+  height: inherit;
+}
+
+#thumb-tab{
+  background-color: #fff;
+  height: inherit;
+}
+
+h6{
+  margin: 0rem;
 }

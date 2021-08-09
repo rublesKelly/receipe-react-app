@@ -1,9 +1,16 @@
 import React from 'react'
+import IngredientList from './IngredientsList';
+import StepsList from './StepsList';
+import ReceipeImage from './ReceipeImage';
+import ReceipeHeader from './ReciepeHeader';
 
-function ReceipeGrid() {
+function ReceipeGrid({receipe}) {
     return (
-        <div>
-            
+        <div id='receipe-grid'>
+            <ReceipeHeader receiepeTitle = {receipe.title} />
+            <ReceipeImage/>
+            <IngredientList ingredients = {receipe.ingredients} />
+            <StepsList steps = {receipe.steps} />
         </div>
     )
 }
