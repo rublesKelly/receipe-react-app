@@ -1,9 +1,10 @@
 import React from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import ReceipeGrid from './ReceipeGrid';
+import '../tabs.css'
 
 //Delcaring State
-// const [receiepTitle, setreceiepTitle] = useState(initialState)
+// const [receiepTitle, setreceiepTitle] = useStatle(initialState)
 
 function TabBar({receipe}) {
     return (

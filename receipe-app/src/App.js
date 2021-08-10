@@ -41,6 +41,7 @@ function App() {
   return (  
     <div className='app'>
       <button onClick={()=>onAddReceipeClicked(id)}>Add receiep</button>
+      
       <SearchBar onAddReceipeClicked={onAddReceipeClicked}/>      {/* controllers for rending the searchresults */}
       <Announcement/>   {/* Conditionally rendered */}
       <DiscoverGrid recomendations = {[1,2,3,4,4,6]}/>  

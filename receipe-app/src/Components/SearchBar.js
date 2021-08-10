@@ -20,8 +20,8 @@ function SearchBar(props) {
     }
 
     return (
-        <div>
-           <form id='search-bar' onSubmit={onSubmitHandler}>
+        <div id='search-bar'>
+           <form onSubmit={onSubmitHandler}>
                <label htmlFor="search-bar"></label>
                 <input 
                     type="text" 

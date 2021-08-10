@@ -30,54 +30,6 @@ img{
   grid-template-rows: 1fr 1fr;
 }
 
-.reciepe-grid{
-  display: grid;
-  margin: 0 auto;
-  grid-gap: 10px;
-  place-items: top center;
-  max-width: 80vw;
-  grid-template-columns: 1fr 1fr 1fr ;
-  grid-template-rows: 20vh 1fr 1fr;
-  grid-template-areas: "Header Header Image"
-                        "Ingredients Steps Steps"
-                        "Ingredients Steps Steps";  
-}
-
-.ReciepeHeader{
-  text-align: left;
-  padding-left: .4rem;
-  max-height: 10rem;
-  grid-area: Header;
-  font-size: .8rem;
-  background-color: #eaeaea;
-}  
-
-.receipe-image {
-  grid-area: Image;
-
-   
-}
-
-.in-box{
-  background-color: #eaeaea;  
-  grid-area: Ingredients;
-}
-
-.Ingredients-List{
-  text-align: left;
-  font-size: l.2rem;
-}
-
-.m-box{
-  background-color: #eaeaea;
-  grid-area: Steps;  
-}
-
-.Steps-List{
-  text-align: left;
-  font-size: l.2rem;
-}
-
 .randomButton {
   margin: 6rem;
   padding: 1rem;
@@ -144,12 +96,6 @@ h4{
   opacity: 72%;
 }
 
-.tab-bar{
-  background-color: #5d5d5d;
-  margin-top: 49.5vh;
-  height: 4vh;
-}
-
 #discover-section1{
   display: grid;
   margin: auto;
@@ -158,11 +104,7 @@ h4{
 }
 
 #thumbnail{
-  /* grid-area: thumbnail; */
-  display: inline;
   max-width: 11rem;
-  height: 11vh;
-  background-color: magenta;
 }
 
 #thumb-image{
@@ -176,4 +118,9 @@ h4{
 
 h6{
   margin: 0rem;
+}
+
+#search-bar{
+  margin: auto;
+  width: auto;
 }

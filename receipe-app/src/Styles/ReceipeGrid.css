@@ -1,0 +1,48 @@
+#reciepe-grid{
+    background-color: limegreen;
+    display: grid;
+    margin: 0 auto;
+    grid-gap: 10px;
+    place-items: top center;
+    max-width: 80vw;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 20vh 1fr 1fr;
+    grid-template-areas: "Header Header Image"
+                          "Ingredients Steps Steps"
+                          "Ingredients Steps Steps";  
+  }
+  
+  #receipe-header{
+    text-align: left;
+    padding-left: .4rem;
+    max-height: 10rem;
+    grid-area: Header;
+    font-size: .8rem;
+    background-color: #eaeaea;
+  }  
+  
+  .receipe-image {
+    grid-area: Image;
+  
+     
+  }
+  
+  #ingredients-list{
+    background-color: #eaeaea;  
+    grid-area: Ingredients;
+  }
+  
+  .Ingredients-List{
+    text-align: left;
+    font-size: l.2rem;
+  }
+  
+  .m-box{
+    background-color: #eaeaea;
+    grid-area: Steps;  
+  }
+  
+  .Steps-List{
+    text-align: left;
+    font-size: l.2rem;
+  }
