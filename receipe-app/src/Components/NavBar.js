@@ -5,7 +5,7 @@ function NavBar() {
     return (
     <div id='nav-bar'>     
         <div id="nav-bar-links">
-            <Link to='/'>Home</Link>
+            <Link to='/receipe'>Home</Link>
             <Link to='/discover'>Discover</Link>
         </div>
     </div>

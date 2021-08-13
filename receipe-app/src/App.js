@@ -1,109 +1,52 @@
 //Imports
 import './App.css'
-import React, {useState, useEffect} from 'react' 
+import React, {useState} from 'react' 
 import {BrowserRouter, Router, Switch, Route } from "react-router-dom";
-import axios from 'axios';
+import {api} from './axios';
 
 
 //Importing react components
-import IngredientList from './Components/IngredientsList';
-import StepsList from './Components/StepsList';
-import ReceipeImage from './Components/ReceipeImage';
-import ReceipeHeader from './Components/ReciepeHeader';
-import SearchPage from './Components/SearchPage'
-import SearchResults from './Components/SearchResults'
-import NavBar from "./Components/NavBar";
+// import SearchPage from './Pages/SearchPage'
+import SearchBar from "./Components/SearchBar";
+import Announcement from "./Components/Annoucement";
+import TabBar from "./Components/TabBar.js";
+import DiscoverGrid from './Components/DiscoverGrid.js';
 
-require('dotenv').config({path:'../.env'})
+require('dotenv').config({  path:'../.env'})
 // console.log(process.env);
 
 
 function App() {    
 
-  //Declaring State for Ingredients List and Steps List and declaring set steps for both
-  const [Header, setHeader] = useState([]);
-  const [Ingredients, setIngredients] = useState([]);
-  const [Steps, setSteps] = useState([]);
-  const [API, setAPI] = useState(``); 
-  const [Receipes, setReceieps] = useState([]) 
-  const [Image, setImage] = useState('')
-  
+  //Declaring state to add tab
+  const [receipe, setReceipe] = useState({title: '',
+                                          ingredients: [],
+                                          steps: []})
+  const [id, setId] = useState(['639234', '639203'])
 
-//Random Receipe search trying to add async not working
-  useEffect(() => {
-      const getRandomReceipe = async() => {
-        await axios.get(API)
-        .then(res => {
-          console.table(res.data.recipes) 
-          setHeader(res.data.recipes[0].title)
-          setSteps(res.data.recipes[0].analyzedInstructions[0].steps)
-          setIngredients(res.data.recipes[0].extendedIngredients)
-        })
-          .catch(err => {
-            console.log(err)
-          })
-      }}, [Receipes])
-
-//Random receipe search no async await 
-  useEffect(() => {
-    axios(API)
-      .then(res => {
-        console.table(res)
-        setHeader(res.data.recipes[0].title)
-        setSteps(res.data.recipes[0].analyzedInstructions[0].steps)
-        setIngredients(res.data.recipes[0].extendedIngredients)
-        setImage(res.data.recipes[0].image)
-      })
-        .catch(err => {
-          console.log(err)
-        })
-      }, [API])
-
+  //Tab bar handler
+    //Add receipe to tab passed to receipe card and thumbnail
+    const onAddReceipeClicked = (id) => {
+      const res = api.getReceipebyID(id)
+          .then(res => {
+            console.log(res)
+            setReceipe({title: res.title,
+                        ingredients: res.extendedIngredients,
+                        steps: res.analyzedInstructions[0].steps
+                      })
+            })
+    
+    }
 
   return (  
-  <BrowserRouter>
-    <div className="App">
-    <div id="random-buttons">
-            {/* Setting the state with Random button */}
-            <button 
-                className ="randomAPIButton" type="button"
-                onClick={() => setAPI(`https://api.spoonacular.com/recipes/random?query=&apiKey=${process.env.react_app_api_key}`)}
-                >Random Recipe
-            </button>
-            <button 
-                className ="randomAPIButton" 
-                type="button"
-                onClick={() => setAPI(``)}
-                >Reset
-            </button>
-        </div>
-    <NavBar/>
-    <Switch>
-      <Route exact path='/'>
-        
-      </Route>
-      <Route path="/discover">
-        <SearchPage/>
-      </Route>
-      <Route path='/receipe/:id'>
-        <div className='reciepe-grid'>
-          <div className ='ReciepeHeader'>
-          <ReceipeHeader Header={Header}/>
-        </div>
-          <div className='ReciepeImage'>
-          <ReceipeImage src={Image}/>
-        </div>
-          <div className='in-box'>
-            <IngredientList Ingredients={Ingredients}/>
-          </div>
-          <div className='m-box'>
-              <StepsList Steps={Steps}/>
-          </div>
-        </div>
-      </Route>
-    </Switch>
+    <div className='app'>
+      <button onClick={()=>onAddReceipeClicked(id[0])}>Add receiep</button>
+      <button onClick={()=>onAddReceipeClicked(id[1])}>Add receiep</button>      
+      <SearchBar onAddReceipeClicked={onAddReceipeClicked}/>      {/* controllers for rending the searchresults */}
+      <Announcement/>   {/* Conditionally rendered */}
+      <DiscoverGrid recomendations = {[1,2,3,4,4,6]}/>  
+      <TabBar receipe={receipe}/>
     </div>
-  </BrowserRouter>
   );
 }
 

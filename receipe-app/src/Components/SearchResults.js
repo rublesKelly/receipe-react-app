@@ -2,13 +2,12 @@ import React from 'react'
 import ReceipeCard from "./ReceipeCard";
 
 function SearchResults(props) {
-// console.log(props.searchResults.results);
-console.log(props);
+// console.log(props);
 
     return (
         <div id="search-results">
             <div id="search-result">
-                {props.searchResults.map((eachItem) =>
+                {props.results.map((eachItem) =>
                     (<ReceipeCard
                         id={eachItem.id} 
                         title={eachItem.title}
@@ -16,6 +15,7 @@ console.log(props);
                         description={eachItem.summary}
                         prepTime={eachItem.readyInMinutes}
                         vegan={eachItem.vegan}
+                        onAddReceipeClicked={props.onAddReceipeClicked}
 
                     />)
                 )}

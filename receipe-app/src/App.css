@@ -1,10 +1,12 @@
 body{
-  background:#3d8591
+  justify-items: center;
+  background:#3d8591;
+  height: 100vh;
 }
 
 .App {
-  text-align: center;
   justify-items: center;
+  text-align: center;
   font-family: 'Courier New', Courier, monospace;
   color: #5d5d5d;
   background:#3d8591
@@ -18,53 +20,14 @@ img{
   height: auto;
   
 }
-
-.reciepe-grid{
+#discover-section{
+  background-color: rgb(119, 98, 119);
+}
+.quick-links-grid{
+  margin: .6rem;
   display: grid;
-  margin: 0 auto;
-  grid-gap: 10px;
-  place-items: top center;
-  max-width: 80vw;
-  grid-template-columns: 1fr 1fr 1fr ;
-  grid-template-rows: 20vh 1fr 1fr;
-  grid-template-areas: "Header Header Image"
-                        "Ingredients Steps Steps"
-                        "Ingredients Steps Steps";  
-}
-
-.ReciepeHeader{
-  text-align: left;
-  padding-left: .4rem;
-  max-height: 10rem;
-  grid-area: Header;
-  font-size: .8rem;
-  background-color: #eaeaea;
-}  
-
-.receipe-image {
-  grid-area: Image;
-
-   
-}
-
-.in-box{
-  background-color: #eaeaea;  
-  grid-area: Ingredients;
-}
-
-.Ingredients-List{
-  text-align: left;
-  font-size: l.2rem;
-}
-
-.m-box{
-  background-color: #eaeaea;
-  grid-area: Steps;  
-}
-
-.Steps-List{
-  text-align: left;
-  font-size: l.2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .randomButton {
@@ -74,29 +37,29 @@ img{
 }
 
 .receipe-card{
-  margin: 0 auto;
+  margin: 1rem auto;
   display: grid;
   grid-template-rows: 1;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "receipe-card-image"
-                       "receipe-card-long-text-info"
-                       "receipe-card-short-text-info";
+  grid-template-areas: "first second second";
  grid-gap: .5rem;                      
  place-items: top left;
  text-align: left;
  margin-bottom: 1rem;
  background-color: #fff;
- height: 11rem;
- width: 50rem; 
+ height: 11vh;
+ width: 30vw; 
 }
 
 #receipe-card-image{
-  grid-area: receipe-card-image;
+  grid-area: first;
   height: inherit;
   min-width: 100%;
-
 }
-
+#receipe-card-long-text-info{
+  grid-area: second;
+  font-size: x-small;
+}
 #nav-bar-links > a{
   margin: 2rem;
   border: #5d5d5d;
@@ -123,5 +86,41 @@ img{
 }
 
 */
+h4{
+  font-size: 1.8vh;
+}
 
 
+.annoucement-container{
+  background-color: #fff;
+  opacity: 72%;
+}
+
+#discover-section1{
+  display: grid;
+  margin: auto;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#thumbnail{
+  max-width: 11rem;
+}
+
+#thumb-image{
+  height: inherit;
+}
+
+#thumb-tab{
+  background-color: #fff;
+  height: inherit;
+}
+
+h6{
+  margin: 0rem;
+}
+
+#search-bar{
+  margin: auto;
+  width: auto;
+}
