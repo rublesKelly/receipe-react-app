@@ -22,7 +22,7 @@ function App() {
   const [receipe, setReceipe] = useState({title: '',
                                           ingredients: [],
                                           steps: []})
-  const [id, setId] = useState('654959')
+  const [id, setId] = useState(['639234', '639203'])
 
   //Tab bar handler
     //Add receipe to tab passed to receipe card and thumbnail
@@ -40,8 +40,8 @@ function App() {
 
   return (  
     <div className='app'>
-      <button onClick={()=>onAddReceipeClicked(id)}>Add receiep</button>
-      
+      <button onClick={()=>onAddReceipeClicked(id[0])}>Add receiep</button>
+      <button onClick={()=>onAddReceipeClicked(id[1])}>Add receiep</button>      
       <SearchBar onAddReceipeClicked={onAddReceipeClicked}/>      {/* controllers for rending the searchresults */}
       <Announcement/>   {/* Conditionally rendered */}
       <DiscoverGrid recomendations = {[1,2,3,4,4,6]}/>  
