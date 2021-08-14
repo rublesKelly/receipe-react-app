@@ -8,10 +8,10 @@ import ReceipeHeader from './ReciepeHeader';
 function ReceipeGrid({receipe}) {
     return (
         <div id='receipe-grid'>
-            <ReceipeHeader id='receipe-header'receiepeTitle = {receipe.title} />
-            <ReceipeImage/>
-            <IngredientList id ='ingredients-list'ingredients = {receipe.ingredients} />
-            <StepsList steps = {receipe.steps} />
+            <ReceipeHeader receiepeTitle = {receipe.title} />
+            <ReceipeImage   />
+            <IngredientList ingredients = {receipe.ingredients} />
+            <StepsList      steps = {receipe.steps} />
         </div>
     )
 }

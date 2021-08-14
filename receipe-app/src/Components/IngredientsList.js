@@ -8,7 +8,7 @@ function IngredientsList({ingredients}) {
 
     return (
         <div>
-            <div className='Ingredients-List'>
+            <div id ='ingredients-list'>
                 <ul>
                     {ingredients && 
                     ingredients.map((eachItem) => 

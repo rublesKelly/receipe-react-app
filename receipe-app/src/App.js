@@ -19,9 +19,9 @@ require('dotenv').config({  path:'../.env'})
 function App() {    
 
   //Declaring state to add tab
-  const [receipe, setReceipe] = useState({title: '',
+  const [receipe, setReceipe] = useState([{title: '',
                                           ingredients: [],
-                                          steps: []})
+                                          steps: []}])
   const [id, setId] = useState(['639234', '639203'])
 
   //Tab bar handler

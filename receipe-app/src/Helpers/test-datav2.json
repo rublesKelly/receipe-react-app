@@ -1,9 +1,9 @@
 {
-    "Ingredietns": [
-        {"Ingredient1": "Rice", "Amount_gram": "250 g"},
-        {"Ingredient2": "Oil", "Amount": "2 tbsp"},
-        {"Ingredient3": "Onion", "Amount": 1},
-        {"Ingredient4": "Eggs", "Amount": 4},
-        {"Ingredient5": "Spring_onion", "Amount": 2}
+    "Ingredients": [
+        {"Ingredient1": "Rice","ID": "10010", "Amount": 1, "Unit": "cup"},
+        {"Ingredient2": "Oil","ID": "10060", "Amount": 2, "Unit": "tbsp"}
+    ],
+    "Steps": [
+
     ]
 }

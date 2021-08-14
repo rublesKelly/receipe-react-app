@@ -28,7 +28,7 @@ const api ={
     getReceipebyQuery: async(searchTerm) => {
         const response = await axios.get(`${SEARCH_RECEIPE_URL}&query=${searchTerm}`)
         .then((res) => {
-            console.log(res.data);
+            // console.log(res.data);
             return res.data
         })
         .catch((err) => {
@@ -42,7 +42,7 @@ const api ={
     getReceipebyID: async(id) => {
         const response = await axios.get(`${API_URL}/${id}/information?apiKey=${API_KEY}`)
         .then((res) => {
-            console.log(res);
+            // console.log(res);
             return res.data
         })
         .catch((err) => {

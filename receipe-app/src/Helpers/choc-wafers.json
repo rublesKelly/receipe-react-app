@@ -1,0 +1,510 @@
+{
+    "vegetarian": false,
+    "vegan": false,
+    "glutenFree": false,
+    "dairyFree": false,
+    "veryHealthy": false,
+    "cheap": false,
+    "veryPopular": false,
+    "sustainable": false,
+    "weightWatcherSmartPoints": 1,
+    "gaps": "no",
+    "lowFodmap": false,
+    "aggregateLikes": 10,
+    "spoonacularScore": 7,
+    "healthScore": 0,
+    "creditsText": "Foodista.com – The Cooking Encyclopedia Everyone Can Edit",
+    "license": "CC BY 3.0",
+    "sourceName": "Foodista",
+    "pricePerServing": 4.82,
+    "extendedIngredients": [
+        {
+            "id": 20081,
+            "aisle": "Baking",
+            "image": "flour.png",
+            "consistency": "solid",
+            "name": "AP flour",
+            "nameClean": "wheat flour",
+            "original": "1 cup AP flour",
+            "originalString": "1 cup AP flour",
+            "originalName": "AP flour",
+            "amount": 1,
+            "unit": "cup",
+            "meta": [],
+            "metaInformation": [],
+            "measures": {
+                "us": {
+                    "amount": 1,
+                    "unitShort": "cup",
+                    "unitLong": "cup"
+                },
+                "metric": {
+                    "amount": 236.588,
+                    "unitShort": "ml",
+                    "unitLong": "milliliters"
+                }
+            }
+        },
+        {
+            "id": 18372,
+            "aisle": "Baking",
+            "image": "white-powder.jpg",
+            "consistency": "solid",
+            "name": "baking soda",
+            "nameClean": "baking soda",
+            "original": "1/4 teaspoon baking soda",
+            "originalString": "1/4 teaspoon baking soda",
+            "originalName": "baking soda",
+            "amount": 0.25,
+            "unit": "teaspoon",
+            "meta": [],
+            "metaInformation": [],
+            "measures": {
+                "us": {
+                    "amount": 0.25,
+                    "unitShort": "tsps",
+                    "unitLong": "teaspoons"
+                },
+                "metric": {
+                    "amount": 0.25,
+                    "unitShort": "tsps",
+                    "unitLong": "teaspoons"
+                }
+            }
+        },
+        {
+            "id": 19334,
+            "aisle": "Baking",
+            "image": "light-brown-sugar.jpg",
+            "consistency": "solid",
+            "name": "brown sugar",
+            "nameClean": "golden brown sugar",
+            "original": "1/2 cup brown sugar, lump free",
+            "originalString": "1/2 cup brown sugar, lump free",
+            "originalName": "brown sugar, lump free",
+            "amount": 0.5,
+            "unit": "cup",
+            "meta": [],
+            "metaInformation": [],
+            "measures": {
+                "us": {
+                    "amount": 0.5,
+                    "unitShort": "cups",
+                    "unitLong": "cups"
+                },
+                "metric": {
+                    "amount": 118.294,
+                    "unitShort": "ml",
+                    "unitLong": "milliliters"
+                }
+            }
+        },
+        {
+            "id": 1124,
+            "aisle": "Milk, Eggs, Other Dairy",
+            "image": "egg-white.jpg",
+            "consistency": "solid",
+            "name": "egg white",
+            "nameClean": "egg whites",
+            "original": "1 large egg white",
+            "originalString": "1 large egg white",
+            "originalName": "egg white",
+            "amount": 1,
+            "unit": "large",
+            "meta": [],
+            "metaInformation": [],
+            "measures": {
+                "us": {
+                    "amount": 1,
+                    "unitShort": "large",
+                    "unitLong": "large"
+                },
+                "metric": {
+                    "amount": 1,
+                    "unitShort": "large",
+                    "unitLong": "large"
+                }
+            }
+        },
+        {
+            "id": 4073,
+            "aisle": "Milk, Eggs, Other Dairy",
+            "image": "butter-sliced.jpg",
+            "consistency": "solid",
+            "name": "margarine",
+            "nameClean": "margarine",
+            "original": "3 teaspoons margarine",
+            "originalString": "3 teaspoons margarine",
+            "originalName": "margarine",
+            "amount": 3,
+            "unit": "teaspoons",
+            "meta": [],
+            "metaInformation": [],
+            "measures": {
+                "us": {
+                    "amount": 3,
+                    "unitShort": "tsps",
+                    "unitLong": "teaspoons"
+                },
+                "metric": {
+                    "amount": 3,
+                    "unitShort": "tsps",
+                    "unitLong": "teaspoons"
+                }
+            }
+        },
+        {
+            "id": 2047,
+            "aisle": "Spices and Seasonings",
+            "image": "salt.jpg",
+            "consistency": "solid",
+            "name": "salt",
+            "nameClean": "salt",
+            "original": "1/4 teaspoon salt",
+            "originalString": "1/4 teaspoon salt",
+            "originalName": "salt",
+            "amount": 0.25,
+            "unit": "teaspoon",
+            "meta": [],
+            "metaInformation": [],
+            "measures": {
+                "us": {
+                    "amount": 0.25,
+                    "unitShort": "tsps",
+                    "unitLong": "teaspoons"
+                },
+                "metric": {
+                    "amount": 0.25,
+                    "unitShort": "tsps",
+                    "unitLong": "teaspoons"
+                }
+            }
+        },
+        {
+            "id": 1145,
+            "aisle": "Milk, Eggs, Other Dairy",
+            "image": "butter-sliced.jpg",
+            "consistency": "solid",
+            "name": "unsalted butter",
+            "nameClean": "unsalted butter",
+            "original": "3 teaspoons unsalted butter, slightly softened",
+            "originalString": "3 teaspoons unsalted butter, slightly softened",
+            "originalName": "unsalted butter, slightly softened",
+            "amount": 3,
+            "unit": "teaspoons",
+            "meta": [
+                "unsalted",
+                "softened"
+            ],
+            "metaInformation": [
+                "unsalted",
+                "softened"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 3,
+                    "unitShort": "tsps",
+                    "unitLong": "teaspoons"
+                },
+                "metric": {
+                    "amount": 3,
+                    "unitShort": "tsps",
+                    "unitLong": "teaspoons"
+                }
+            }
+        },
+        {
+            "id": 19165,
+            "aisle": "Baking",
+            "image": "cocoa-powder.png",
+            "consistency": "solid",
+            "name": "unsweetened cocoa powder",
+            "nameClean": "hersheys cocoa",
+            "original": "1/2 cup unsweetened cocoa powder, preferably Dutch process",
+            "originalString": "1/2 cup unsweetened cocoa powder, preferably Dutch process",
+            "originalName": "unsweetened cocoa powder, preferably Dutch process",
+            "amount": 0.5,
+            "unit": "cup",
+            "meta": [
+                "unsweetened"
+            ],
+            "metaInformation": [
+                "unsweetened"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 0.5,
+                    "unitShort": "cups",
+                    "unitLong": "cups"
+                },
+                "metric": {
+                    "amount": 118.294,
+                    "unitShort": "ml",
+                    "unitLong": "milliliters"
+                }
+            }
+        },
+        {
+            "id": 2050,
+            "aisle": "Baking",
+            "image": "vanilla-extract.jpg",
+            "consistency": "liquid",
+            "name": "vanilla extract",
+            "nameClean": "vanilla extract",
+            "original": "1 teaspoon vanilla extract",
+            "originalString": "1 teaspoon vanilla extract",
+            "originalName": "vanilla extract",
+            "amount": 1,
+            "unit": "teaspoon",
+            "meta": [],
+            "metaInformation": [],
+            "measures": {
+                "us": {
+                    "amount": 1,
+                    "unitShort": "tsp",
+                    "unitLong": "teaspoon"
+                },
+                "metric": {
+                    "amount": 1,
+                    "unitShort": "tsp",
+                    "unitLong": "teaspoon"
+                }
+            }
+        }
+    ],
+    "id": 639234,
+    "title": "Chocolate Wafers",
+    "readyInMinutes": 45,
+    "servings": 40,
+    "sourceUrl": "http://www.foodista.com/recipe/PFD62V3L/chocolate-wafers",
+    "image": "https://spoonacular.com/recipeImages/639234-556x370.jpg",
+    "imageType": "jpg",
+    "summary": "Chocolate Wafers might be just the dessert you are searching for. This recipe makes 40 servings with <b>30 calories</b>, <b>1g of protein</b>, and <b>1g of fat</b> each. For <b>5 cents per serving</b>, this recipe <b>covers 1%</b> of your daily requirements of vitamins and minerals. A few people made this recipe, and 10 would say it hit the spot. A mixture of ap flour, margarine, cocoa powder, and a handful of other ingredients are all it takes to make this recipe so delicious. From preparation to the plate, this recipe takes roughly <b>45 minutes</b>. All things considered, we decided this recipe <b>deserves a spoonacular score of 8%</b>. This score is very bad (but still fixable). Try <a href=\"https://spoonacular.com/recipes/vanilla-chocolate-wafers-142042\">Vanilla Chocolate Wafers</a>, <a href=\"https://spoonacular.com/recipes/chocolate-mint-wafers-401020\">Chocolate Mint Wafers</a>, and <a href=\"https://spoonacular.com/recipes/chocolate-mint-wafers-517136\">Chocolate- Mint Wafers</a> for similar recipes.",
+    "cuisines": [],
+    "dishTypes": [
+        "antipasti",
+        "starter",
+        "snack",
+        "appetizer",
+        "antipasto",
+        "hor d'oeuvre"
+    ],
+    "diets": [],
+    "occasions": [],
+    "winePairing": {},
+    "instructions": "<ol><li>Combine the flour, cocoa, baking soda, and salt in a small bowl and mix together thoroughly with a whisk or fork. Set aside.</li><li>Beat the butter and margarine with an electric mixer for a few seconds just until blended.</li><li>Add the granulated sugar, brown sugar, and vanilla and beat at high speed for about 1 minute.</li><li>Beat in the egg white.</li><li>Add the flour mixture and mix on low speed, just until incorporated.</li><li>Gather the dough together with your hands and form it into a 9- to 10-inch log.</li><li>Wrap the log in wax paper or foil. Fold or twist the ends of the paper without pinching or flattening the log</li><li>Refrigerate for at least 45 minutes, or until needed.</li><li>Preheat the oven to 350F. Position racks in the upper and lower thirds of the oven.</li><li>Use a sharp knife to cut the dough log into slices a scant 1/4\" thick.</li><li>Place 1 inch apart on cookie sheets and bake for 12 - 14 minutes, or until the cookies puff and crackle on top, then begin to settle down slightly.</li><li>Rotate baking sheets from top to bottom and front to back about halfway through the baking time to ensure even baking.</li><li>Slide the parchment or foil onto cooling racks and cool the cookies completely before storing or stacking.</li></ol>",
+    "analyzedInstructions": [
+        {
+            "name": "",
+            "steps": [
+                {
+                    "number": 1,
+                    "step": "Combine the flour, cocoa, baking soda, and salt in a small bowl and mix together thoroughly with a whisk or fork. Set aside.Beat the butter and margarine with an electric mixer for a few seconds just until blended.",
+                    "ingredients": [
+                        {
+                            "id": 18372,
+                            "name": "baking soda",
+                            "localizedName": "baking soda",
+                            "image": "white-powder.jpg"
+                        },
+                        {
+                            "id": 4073,
+                            "name": "margarine",
+                            "localizedName": "margarine",
+                            "image": "butter-sliced.jpg"
+                        },
+                        {
+                            "id": 1001,
+                            "name": "butter",
+                            "localizedName": "butter",
+                            "image": "butter-sliced.jpg"
+                        },
+                        {
+                            "id": 19165,
+                            "name": "cocoa powder",
+                            "localizedName": "cocoa powder",
+                            "image": "cocoa-powder.png"
+                        },
+                        {
+                            "id": 20081,
+                            "name": "all purpose flour",
+                            "localizedName": "all purpose flour",
+                            "image": "flour.png"
+                        },
+                        {
+                            "id": 2047,
+                            "name": "salt",
+                            "localizedName": "salt",
+                            "image": "salt.jpg"
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 404628,
+                            "name": "hand mixer",
+                            "localizedName": "hand mixer",
+                            "image": "hand-mixer.png"
+                        },
+                        {
+                            "id": 404661,
+                            "name": "whisk",
+                            "localizedName": "whisk",
+                            "image": "whisk.png"
+                        },
+                        {
+                            "id": 404783,
+                            "name": "bowl",
+                            "localizedName": "bowl",
+                            "image": "bowl.jpg"
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "step": "Add the granulated sugar, brown sugar, and vanilla and beat at high speed for about 1 minute.Beat in the egg white.",
+                    "ingredients": [
+                        {
+                            "id": 10719335,
+                            "name": "granulated sugar",
+                            "localizedName": "granulated sugar",
+                            "image": "sugar-in-bowl.png"
+                        },
+                        {
+                            "id": 19334,
+                            "name": "brown sugar",
+                            "localizedName": "brown sugar",
+                            "image": "dark-brown-sugar.png"
+                        },
+                        {
+                            "id": 1124,
+                            "name": "egg whites",
+                            "localizedName": "egg whites",
+                            "image": "egg-white.jpg"
+                        },
+                        {
+                            "id": 1052050,
+                            "name": "vanilla",
+                            "localizedName": "vanilla",
+                            "image": "vanilla.jpg"
+                        }
+                    ],
+                    "equipment": [],
+                    "length": {
+                        "number": 1,
+                        "unit": "minutes"
+                    }
+                },
+                {
+                    "number": 3,
+                    "step": "Add the flour mixture and mix on low speed, just until incorporated.Gather the dough together with your hands and form it into a 9- to 10-inch log.Wrap the log in wax paper or foil. Fold or twist the ends of the paper without pinching or flattening the log",
+                    "ingredients": [
+                        {
+                            "id": 0,
+                            "name": "dough",
+                            "localizedName": "dough",
+                            "image": "pizza-dough"
+                        },
+                        {
+                            "id": 20081,
+                            "name": "all purpose flour",
+                            "localizedName": "all purpose flour",
+                            "image": "flour.png"
+                        },
+                        {
+                            "id": 10018364,
+                            "name": "wrap",
+                            "localizedName": "wrap",
+                            "image": "flour-tortilla.jpg"
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 404739,
+                            "name": "wax paper",
+                            "localizedName": "wax paper",
+                            "image": "wax-paper.jpg"
+                        },
+                        {
+                            "id": 404765,
+                            "name": "aluminum foil",
+                            "localizedName": "aluminum foil",
+                            "image": "aluminum-foil.png"
+                        }
+                    ]
+                },
+                {
+                    "number": 4,
+                    "step": "Refrigerate for at least 45 minutes, or until needed.Preheat the oven to 350F. Position racks in the upper and lower thirds of the oven.Use a sharp knife to cut the dough log into slices a scant 1/4\" thick.",
+                    "ingredients": [
+                        {
+                            "id": 0,
+                            "name": "dough",
+                            "localizedName": "dough",
+                            "image": "pizza-dough"
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 404745,
+                            "name": "knife",
+                            "localizedName": "knife",
+                            "image": "chefs-knife.jpg"
+                        },
+                        {
+                            "id": 404784,
+                            "name": "oven",
+                            "localizedName": "oven",
+                            "image": "oven.jpg",
+                            "temperature": {
+                                "number": 350,
+                                "unit": "Fahrenheit"
+                            }
+                        }
+                    ],
+                    "length": {
+                        "number": 45,
+                        "unit": "minutes"
+                    }
+                },
+                {
+                    "number": 5,
+                    "step": "Place 1 inch apart on cookie sheets and bake for 12 - 14 minutes, or until the cookies puff and crackle on top, then begin to settle down slightly.Rotate baking sheets from top to bottom and front to back about halfway through the baking time to ensure even baking.Slide the parchment or foil onto cooling racks and cool the cookies completely before storing or stacking.",
+                    "ingredients": [
+                        {
+                            "id": 10118192,
+                            "name": "cookies",
+                            "localizedName": "cookies",
+                            "image": "shortbread-cookies.jpg"
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 404727,
+                            "name": "baking sheet",
+                            "localizedName": "baking sheet",
+                            "image": "baking-sheet.jpg"
+                        },
+                        {
+                            "id": 404784,
+                            "name": "oven",
+                            "localizedName": "oven",
+                            "image": "oven.jpg"
+                        },
+                        {
+                            "id": 404765,
+                            "name": "aluminum foil",
+                            "localizedName": "aluminum foil",
+                            "image": "aluminum-foil.png"
+                        }
+                    ],
+                    "length": {
+                        "number": 14,
+                        "unit": "minutes"
+                    }
+                }
+            ]
+        }
+    ],
+    "originalId": null,
+    "spoonacularSourceUrl": "https://spoonacular.com/chocolate-wafers-639234"
+}

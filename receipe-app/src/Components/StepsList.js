@@ -6,7 +6,7 @@ function StepsList({steps}) {
 //console.log(props.Steps[1].step)
 
    return (
-        <div className="Steps-List">
+        <div id='steps-list'>
             <ul>
             {steps && steps.map((eachItem => (
                     <Step step={eachItem}/>

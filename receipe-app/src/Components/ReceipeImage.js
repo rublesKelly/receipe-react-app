@@ -4,7 +4,7 @@ import '../App.css'
 function ReceipeImage (props) {
    
     return (
-        <div className="reciepe-image">
+        <div id='receipe-image'>
             <img src = {props.src} />
         </div>
     )
