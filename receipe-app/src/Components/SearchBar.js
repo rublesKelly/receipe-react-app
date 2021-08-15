@@ -1,5 +1,6 @@
 import {React, useState} from 'react'
 import { api } from "../axios";
+import '../Styles/SearchBar.css'
 import SearchResults from './SearchResults';
 
 function SearchBar(props) {
@@ -13,10 +14,10 @@ function SearchBar(props) {
     const onSubmitHandler = (e) => {
         e.preventDefault()
         //Async all ways returns a promise so the  the .then is neccessary
-        const res = api.getReceipebyQuery(searchTerm)
+        api.getReceipebyQuery(searchTerm)
             .then((res) => setResults(res.results))
-        setShowResults(true)
-        console.log(results);
+            setShowResults(true)
+            console.log(results);
     }
 
     return (
@@ -32,10 +33,10 @@ function SearchBar(props) {
                 <input type="submit" />  
                 <input type="button" onClick={results => setShowResults(!showResults)}/>  
            </form> 
-           {results.length > 0 && showResults ? 
+           {results.length > 0 && showResults &&
            <SearchResults   results={results}
                             onAddReceipeClicked={props.onAddReceipeClicked}
-           />: <div>No results yet</div> } 
+           />} 
         </div>
     )
 }

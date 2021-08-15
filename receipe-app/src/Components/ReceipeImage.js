@@ -5,7 +5,7 @@ function ReceipeImage (props) {
    
     return (
         <div id='receipe-image'>
-            <img src = {props.src} />
+            <img src = {props.src} alt=''/>
         </div>
     )
 }

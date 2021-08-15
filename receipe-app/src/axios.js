@@ -9,8 +9,8 @@ const SEARCH_RECEIPE_URL = `${API_URL}/complexSearch?apiKey=${API_KEY}`
 const RANDOM_RECEIPE_URL = `${API_URL}/random?apiKey=${API_KEY}`
 // const GET_RECEIPE_INFO   = `${API_URL}/information?apiKey=${API_KEY}`
 
-const REQUEST_URL = `${API_URL}/authentication/token/new?apiKey=${API_KEY}`
-const LOGIN_URL = `${API_URL}/authentication/token/validate_with_login?apiKey=${API_KEY}`
+// const REQUEST_URL = `${API_URL}/authentication/token/new?apiKey=${API_KEY}`
+// const LOGIN_URL = `${API_URL}/authentication/token/validate_with_login?apiKey=${API_KEY}`
 
 const api ={
     //Get random receipe

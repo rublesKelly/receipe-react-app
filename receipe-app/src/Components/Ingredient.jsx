@@ -3,7 +3,7 @@ import React from 'react'
 function Ingredient({ingredient}) {
     return (
         <div>
-            <li>{ingredient.name}</li>
+            <li>{ingredient.name} {ingredient.amount} {ingredient.unit}</li>
         </div>
     )
 }

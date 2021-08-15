@@ -8,9 +8,9 @@ function StepsList({steps}) {
    return (
         <div id='steps-list'>
             <ul>
-            {steps && steps.map((eachItem => (
+            {steps && steps.map((eachItem) => (
                     <Step step={eachItem}/>
-                )))}                
+                ))}                
             </ul>            
         </div>
     )

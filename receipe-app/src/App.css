@@ -21,45 +21,17 @@ img{
   
 }
 #discover-section{
+  margin: 0 auto;
   background-color: rgb(119, 98, 119);
+  max-width: 98vw;
 }
 .quick-links-grid{
-  margin: .6rem;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
 
-.randomButton {
-  margin: 6rem;
-  padding: 1rem;
-  
-}
-
-.receipe-card{
-  margin: 1rem auto;
-  display: grid;
-  grid-template-rows: 1;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "first second second";
- grid-gap: .5rem;                      
- place-items: top left;
- text-align: left;
- margin-bottom: 1rem;
- background-color: #fff;
- height: 11vh;
- width: 30vw; 
-}
-
-#receipe-card-image{
-  grid-area: first;
-  height: inherit;
-  min-width: 100%;
-}
-#receipe-card-long-text-info{
-  grid-area: second;
-  font-size: x-small;
-}
 #nav-bar-links > a{
   margin: 2rem;
   border: #5d5d5d;
@@ -118,11 +90,6 @@ h4{
 
 h6{
   margin: 0rem;
-}
-
-#search-bar{
-  margin: auto;
-  width: auto;
 }
 
 

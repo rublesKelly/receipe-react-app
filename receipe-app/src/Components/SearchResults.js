@@ -1,4 +1,5 @@
 import React from 'react'
+import '../Styles/SearchResults.css'
 import ReceipeCard from "./ReceipeCard";
 
 function SearchResults(props) {

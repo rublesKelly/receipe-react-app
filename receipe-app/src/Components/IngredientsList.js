@@ -4,7 +4,7 @@ import Ingredient from './Ingredient'
 
 function IngredientsList({ingredients}) {
     
-    console.log(ingredients)
+    // console.log(ingredients)
 
     return (
         <div>
