@@ -1,0 +1,693 @@
+{
+    "vegetarian": false,
+    "vegan": false,
+    "glutenFree": true,
+    "dairyFree": false,
+    "veryHealthy": false,
+    "cheap": false,
+    "veryPopular": false,
+    "sustainable": false,
+    "weightWatcherSmartPoints": 8,
+    "gaps": "no",
+    "lowFodmap": false,
+    "aggregateLikes": 1,
+    "spoonacularScore": 29,
+    "healthScore": 4,
+    "creditsText": "Foodista.com – The Cooking Encyclopedia Everyone Can Edit",
+    "license": "CC BY 3.0",
+    "sourceName": "Foodista",
+    "pricePerServing": 92.86,
+    "extendedIngredients": [
+        {
+            "id": 10023572,
+            "aisle": "Meat",
+            "image": "fresh-ground-beef.jpg",
+            "consistency": "solid",
+            "name": "ground beef",
+            "nameClean": "ground chuck",
+            "original": "1 1/2 lb ground beef",
+            "originalString": "1 1/2 lb ground beef",
+            "originalName": "ground beef",
+            "amount": 1.5,
+            "unit": "lb",
+            "meta": [],
+            "metaInformation": [],
+            "measures": {
+                "us": {
+                    "amount": 1.5,
+                    "unitShort": "lb",
+                    "unitLong": "pounds"
+                },
+                "metric": {
+                    "amount": 680.389,
+                    "unitShort": "g",
+                    "unitLong": "grams"
+                }
+            }
+        },
+        {
+            "id": 7036,
+            "aisle": "Meat",
+            "image": "raw-pork-sausage.png",
+            "consistency": "solid",
+            "name": "italian sausage",
+            "nameClean": "italian sausage",
+            "original": "1 lb hot Italian sausage",
+            "originalString": "1 lb hot Italian sausage",
+            "originalName": "hot Italian sausage",
+            "amount": 1,
+            "unit": "lb",
+            "meta": [
+                "italian",
+                "hot"
+            ],
+            "metaInformation": [
+                "italian",
+                "hot"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 1,
+                    "unitShort": "lb",
+                    "unitLong": "pound"
+                },
+                "metric": {
+                    "amount": 453.592,
+                    "unitShort": "g",
+                    "unitLong": "grams"
+                }
+            }
+        },
+        {
+            "id": 1022027,
+            "aisle": "Spices and Seasonings",
+            "image": "dried-herbs.png",
+            "consistency": "solid",
+            "name": "italian seasoning",
+            "nameClean": "italian seasoning",
+            "original": "1 tsp dried Italian seasoning",
+            "originalString": "1 tsp dried Italian seasoning",
+            "originalName": "dried Italian seasoning",
+            "amount": 1,
+            "unit": "tsp",
+            "meta": [
+                "dried",
+                "italian"
+            ],
+            "metaInformation": [
+                "dried",
+                "italian"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 1,
+                    "unitShort": "tsp",
+                    "unitLong": "teaspoon"
+                },
+                "metric": {
+                    "amount": 1,
+                    "unitShort": "tsp",
+                    "unitLong": "teaspoon"
+                }
+            }
+        },
+        {
+            "id": 11282,
+            "aisle": "Produce",
+            "image": "brown-onion.png",
+            "consistency": "solid",
+            "name": "onion",
+            "nameClean": "onion",
+            "original": "1 onion finely chopped",
+            "originalString": "1 onion finely chopped",
+            "originalName": "onion finely chopped",
+            "amount": 1,
+            "unit": "",
+            "meta": [
+                "finely chopped"
+            ],
+            "metaInformation": [
+                "finely chopped"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 1,
+                    "unitShort": "",
+                    "unitLong": ""
+                },
+                "metric": {
+                    "amount": 1,
+                    "unitShort": "",
+                    "unitLong": ""
+                }
+            }
+        },
+        {
+            "id": 10211821,
+            "aisle": "Produce",
+            "image": "yellow-bell-pepper.jpg",
+            "consistency": "solid",
+            "name": "bell pepper",
+            "nameClean": "bell pepper",
+            "original": "1 bell pepper finely chopped",
+            "originalString": "1 bell pepper finely chopped",
+            "originalName": "bell pepper finely chopped",
+            "amount": 1,
+            "unit": "",
+            "meta": [
+                "finely chopped"
+            ],
+            "metaInformation": [
+                "finely chopped"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 1,
+                    "unitShort": "",
+                    "unitLong": ""
+                },
+                "metric": {
+                    "amount": 1,
+                    "unitShort": "",
+                    "unitLong": ""
+                }
+            }
+        },
+        {
+            "id": 11215,
+            "aisle": "Produce",
+            "image": "garlic.png",
+            "consistency": "solid",
+            "name": "garlic",
+            "nameClean": "garlic",
+            "original": "3 cloves minced garlic",
+            "originalString": "3 cloves minced garlic",
+            "originalName": "minced garlic",
+            "amount": 3,
+            "unit": "cloves",
+            "meta": [
+                "minced"
+            ],
+            "metaInformation": [
+                "minced"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 3,
+                    "unitShort": "cloves",
+                    "unitLong": "cloves"
+                },
+                "metric": {
+                    "amount": 3,
+                    "unitShort": "cloves",
+                    "unitLong": "cloves"
+                }
+            }
+        },
+        {
+            "id": 1026,
+            "aisle": "Cheese",
+            "image": "mozzarella.png",
+            "consistency": "solid",
+            "name": "mozzarella cheese",
+            "nameClean": "mozzarella",
+            "original": "8 oz fresh Mozzarella cheese sliced 1/4 inch thick",
+            "originalString": "8 oz fresh Mozzarella cheese sliced 1/4 inch thick",
+            "originalName": "fresh Mozzarella cheese sliced 1/4 inch thick",
+            "amount": 8,
+            "unit": "oz",
+            "meta": [
+                "fresh",
+                "sliced"
+            ],
+            "metaInformation": [
+                "fresh",
+                "sliced"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 8,
+                    "unitShort": "oz",
+                    "unitLong": "ounces"
+                },
+                "metric": {
+                    "amount": 226.796,
+                    "unitShort": "g",
+                    "unitLong": "grams"
+                }
+            }
+        },
+        {
+            "id": 10211529,
+            "aisle": "Produce",
+            "image": "roma-tomatoes.png",
+            "consistency": "solid",
+            "name": "roma tomatoes",
+            "nameClean": "italian tomato",
+            "original": "4 large Roma tomatoes sliced in 1/4 in thick slices",
+            "originalString": "4 large Roma tomatoes sliced in 1/4 in thick slices",
+            "originalName": "Roma tomatoes sliced in 1/4 in thick slices",
+            "amount": 4,
+            "unit": "large",
+            "meta": [
+                "thick",
+                "sliced in 1/4 in  slices"
+            ],
+            "metaInformation": [
+                "thick",
+                "sliced in 1/4 in  slices"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 4,
+                    "unitShort": "large",
+                    "unitLong": "larges"
+                },
+                "metric": {
+                    "amount": 4,
+                    "unitShort": "large",
+                    "unitLong": "larges"
+                }
+            }
+        },
+        {
+            "id": 2044,
+            "aisle": "Produce",
+            "image": "fresh-basil.jpg",
+            "consistency": "solid",
+            "name": "basil leaves",
+            "nameClean": "fresh basil",
+            "original": "36 large fresh basil leaves stems removed",
+            "originalString": "36 large fresh basil leaves stems removed",
+            "originalName": "fresh basil leaves stems removed",
+            "amount": 36,
+            "unit": "large",
+            "meta": [
+                "fresh"
+            ],
+            "metaInformation": [
+                "fresh"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 36,
+                    "unitShort": "large",
+                    "unitLong": "larges"
+                },
+                "metric": {
+                    "amount": 36,
+                    "unitShort": "large",
+                    "unitLong": "larges"
+                }
+            }
+        },
+        {
+            "id": 10211821,
+            "aisle": "Produce",
+            "image": "yellow-bell-pepper.jpg",
+            "consistency": "solid",
+            "name": "bell pepper",
+            "nameClean": "bell pepper",
+            "original": "freshly ground black pepper",
+            "originalString": "freshly ground black pepper",
+            "originalName": "freshly ground black pepper",
+            "amount": 1,
+            "unit": "serving",
+            "meta": [
+                "black",
+                "freshly ground"
+            ],
+            "metaInformation": [
+                "black",
+                "freshly ground"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 1,
+                    "unitShort": "serving",
+                    "unitLong": "serving"
+                },
+                "metric": {
+                    "amount": 1,
+                    "unitShort": "serving",
+                    "unitLong": "serving"
+                }
+            }
+        },
+        {
+            "id": 1034053,
+            "aisle": "Oil, Vinegar, Salad Dressing",
+            "image": "olive-oil.jpg",
+            "consistency": "liquid",
+            "name": "extra virgin olive oil",
+            "nameClean": "extra virgin olive oil",
+            "original": "3 Tbs extra virgin olive oil",
+            "originalString": "3 Tbs extra virgin olive oil",
+            "originalName": "extra virgin olive oil",
+            "amount": 3,
+            "unit": "Tbs",
+            "meta": [],
+            "metaInformation": [],
+            "measures": {
+                "us": {
+                    "amount": 3,
+                    "unitShort": "Tbs",
+                    "unitLong": "Tbs"
+                },
+                "metric": {
+                    "amount": 3,
+                    "unitShort": "Tbs",
+                    "unitLong": "Tbs"
+                }
+            }
+        },
+        {
+            "id": 2069,
+            "aisle": "Oil, Vinegar, Salad Dressing",
+            "image": "balsamic-vinegar.jpg",
+            "consistency": "liquid",
+            "name": "balsamic vinegar",
+            "nameClean": "balsamic vinegar",
+            "original": "3 Tbs balsamic vinegar",
+            "originalString": "3 Tbs balsamic vinegar",
+            "originalName": "balsamic vinegar",
+            "amount": 3,
+            "unit": "Tbs",
+            "meta": [],
+            "metaInformation": [],
+            "measures": {
+                "us": {
+                    "amount": 3,
+                    "unitShort": "Tbs",
+                    "unitLong": "Tbs"
+                },
+                "metric": {
+                    "amount": 3,
+                    "unitShort": "Tbs",
+                    "unitLong": "Tbs"
+                }
+            }
+        }
+    ],
+    "id": 648084,
+    "title": "Italian Caprese Sliders",
+    "readyInMinutes": 45,
+    "servings": 18,
+    "sourceUrl": "https://www.foodista.com/recipe/HLNWJPX5/italian-caprese-sliders",
+    "image": "https://spoonacular.com/recipeImages/648084-556x370.jpg",
+    "imageType": "jpg",
+    "summary": "Forget going out to eat or ordering takeout every time you crave Mediterranean food. Try making Italian Caprese Sliders at home. This recipe serves 18. One serving contains <b>253 calories</b>, <b>13g of protein</b>, and <b>21g of fat</b>. For <b>93 cents per serving</b>, this recipe <b>covers 9%</b> of your daily requirements of vitamins and minerals. Not a lot of people really liked this hor d'oeuvre. From preparation to the plate, this recipe takes around <b>around 45 minutes</b>. This recipe from Foodista requires bell pepper, mozzarella cheese 1, extra virgin olive oil, and roma tomatoes. It is a good option if you're following a <b>gluten free and primal</b> diet. 1 person found this recipe to be scrumptious and satisfying. With a spoonacular <b>score of 26%</b>, this dish is rather bad. Similar recipes are <a href=\"https://spoonacular.com/recipes/caprese-sliders-534567\">Caprese Sliders</a>, <a href=\"https://spoonacular.com/recipes/caprese-meatball-sliders-850583\">Caprese Meatball Sliders</a>, and <a href=\"https://spoonacular.com/recipes/filet-mignon-caprese-sliders-603103\">Filet Mignon Caprese Sliders</a>.",
+    "cuisines": [
+        "Mediterranean",
+        "Italian",
+        "European"
+    ],
+    "dishTypes": [
+        "fingerfood",
+        "antipasti",
+        "starter",
+        "snack",
+        "appetizer",
+        "antipasto",
+        "hor d'oeuvre"
+    ],
+    "diets": [
+        "gluten free",
+        "primal"
+    ],
+    "occasions": [],
+    "winePairing": {
+        "pairedWines": [
+            "sparkling rose",
+            "sparkling wine"
+        ],
+        "pairingText": "Sparkling rosé and Sparkling Wine are great choices for Slider. If you're serving a selection of appetizers, you can't go wrong with these. Both are very food friendly and complement a variety of flavors. One wine you could try is Santa Margherita Sparkling rosé ( half-bottle). It has 4.3 out of 5 stars and a bottle costs about 20 dollars.",
+        "productMatches": [
+            {
+                "id": 477502,
+                "title": "Santa Margherita Sparkling Rose ( half-bottle)",
+                "description": "Elegant perfumes of strawberries and citrus lead to an attractive palate with mixed berry fruits that linger on the finish. This wine is wonderful on its own, and pairs well with savory appetizers, complex  seafood dishes and anything spicy. The elegant mousse will refresh your palate for the next bite and contrasting the bubbles with something soft or creamy can elevate  your next meal. Open a bottle along with goat cheese souffle, scallops with roasted garlic and pesto, or a slow-cooked spicy red chicken curry. It also brings a delightful sparkle to a festive brunch or your favorite rich dessert.  Blend: 55% Chardonnay, 40% Glera and 5% Malbec ",
+                "price": "$19.99",
+                "imageUrl": "https://spoonacular.com/productImages/477502-312x231.jpg",
+                "averageRating": 0.86,
+                "ratingCount": 5,
+                "score": 0.7975,
+                "link": "https://click.linksynergy.com/deeplink?id=*QCiIS6t4gA&mid=2025&murl=https%3A%2F%2Fwww.wine.com%2Fproduct%2Fsanta-margherita-sparkling-rose-375ml-half-bottle%2F528620"
+            }
+        ]
+    },
+    "instructions": "Gently but thoroughly mix together the ground beef and ground Italian sausage (removing from the casings if any), along with the Italian spices, chopped onion, chopped Bell pepper and 2 cloves of minced garlic.\nPress the mixture into a jelly roll pan using a rolling pin to make a flat even layer.  Cut the meat into 2 squares.\nGrill 2-3 minutes on each side or until cooked through to a temperature of at least 160.\nIf not fresh from the oven, wrap the rolls in foil and warm on the top rack of the grill while the burgers are cooking on their second side.\nWhen the burgers are done, place a slice of mozzarella on each burger and tent with foil while preparing the buns.\nWhisk together olive oil, balsamic and remaining 1 clove minced garlic\nPlace the burger with cheese on the bottom of the bun, add a slice of tomato and two good-sized basil leaves and drizzle each burger with 1/2 teaspoon of the balsamic/olive oil dressing.",
+    "analyzedInstructions": [
+        {
+            "name": "",
+            "steps": [
+                {
+                    "number": 1,
+                    "step": "Gently but thoroughly mix together the ground beef and ground Italian sausage (removing from the casings if any), along with the Italian spices, chopped onion, chopped Bell pepper and 2 cloves of minced garlic.",
+                    "ingredients": [
+                        {
+                            "id": 7036,
+                            "name": "italian sausage",
+                            "localizedName": "italian sausage",
+                            "image": "raw-pork-sausage.png"
+                        },
+                        {
+                            "id": 0,
+                            "name": "minced garlic",
+                            "localizedName": "minced garlic",
+                            "image": "garlic.png"
+                        },
+                        {
+                            "id": 10211821,
+                            "name": "bell pepper",
+                            "localizedName": "bell pepper",
+                            "image": "bell-pepper-orange.png"
+                        },
+                        {
+                            "id": 10023572,
+                            "name": "ground beef",
+                            "localizedName": "ground beef",
+                            "image": "fresh-ground-beef.jpg"
+                        },
+                        {
+                            "id": 1002011,
+                            "name": "clove",
+                            "localizedName": "clove",
+                            "image": "cloves.jpg"
+                        },
+                        {
+                            "id": 2035,
+                            "name": "spices",
+                            "localizedName": "spices",
+                            "image": "spices.png"
+                        },
+                        {
+                            "id": 11282,
+                            "name": "onion",
+                            "localizedName": "onion",
+                            "image": "brown-onion.png"
+                        }
+                    ],
+                    "equipment": []
+                },
+                {
+                    "number": 2,
+                    "step": "Press the mixture into a jelly roll pan using a rolling pin to make a flat even layer.",
+                    "ingredients": [
+                        {
+                            "id": 19297,
+                            "name": "jelly",
+                            "localizedName": "jelly",
+                            "image": "grape-jelly.jpg"
+                        },
+                        {
+                            "id": 0,
+                            "name": "roll",
+                            "localizedName": "roll",
+                            "image": "dinner-yeast-rolls.jpg"
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 404746,
+                            "name": "rolling pin",
+                            "localizedName": "rolling pin",
+                            "image": "rolling-pin.jpg"
+                        },
+                        {
+                            "id": 404645,
+                            "name": "frying pan",
+                            "localizedName": "frying pan",
+                            "image": "pan.png"
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "step": "Cut the meat into 2 squares.",
+                    "ingredients": [
+                        {
+                            "id": 1065062,
+                            "name": "meat",
+                            "localizedName": "meat",
+                            "image": "whole-chicken.jpg"
+                        }
+                    ],
+                    "equipment": []
+                },
+                {
+                    "number": 4,
+                    "step": "Grill 2-3 minutes on each side or until cooked through to a temperature of at least 16",
+                    "ingredients": [],
+                    "equipment": [
+                        {
+                            "id": 404706,
+                            "name": "grill",
+                            "localizedName": "grill",
+                            "image": "grill.jpg"
+                        }
+                    ],
+                    "length": {
+                        "number": 3,
+                        "unit": "minutes"
+                    }
+                },
+                {
+                    "number": 5,
+                    "step": "If not fresh from the oven, wrap the rolls in foil and warm on the top rack of the grill while the burgers are cooking on their second side.",
+                    "ingredients": [
+                        {
+                            "id": 0,
+                            "name": "roll",
+                            "localizedName": "roll",
+                            "image": "dinner-yeast-rolls.jpg"
+                        },
+                        {
+                            "id": 10018364,
+                            "name": "wrap",
+                            "localizedName": "wrap",
+                            "image": "flour-tortilla.jpg"
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 404706,
+                            "name": "grill",
+                            "localizedName": "grill",
+                            "image": "grill.jpg"
+                        },
+                        {
+                            "id": 404765,
+                            "name": "aluminum foil",
+                            "localizedName": "aluminum foil",
+                            "image": "aluminum-foil.png"
+                        },
+                        {
+                            "id": 404784,
+                            "name": "oven",
+                            "localizedName": "oven",
+                            "image": "oven.jpg"
+                        }
+                    ]
+                },
+                {
+                    "number": 6,
+                    "step": "When the burgers are done, place a slice of mozzarella on each burger and tent with foil while preparing the buns.",
+                    "ingredients": [
+                        {
+                            "id": 1026,
+                            "name": "mozzarella",
+                            "localizedName": "mozzarella",
+                            "image": "mozzarella.png"
+                        },
+                        {
+                            "id": 0,
+                            "name": "roll",
+                            "localizedName": "roll",
+                            "image": "dinner-yeast-rolls.jpg"
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 404765,
+                            "name": "aluminum foil",
+                            "localizedName": "aluminum foil",
+                            "image": "aluminum-foil.png"
+                        }
+                    ]
+                },
+                {
+                    "number": 7,
+                    "step": "Whisk together olive oil, balsamic and remaining 1 clove minced garlic",
+                    "ingredients": [
+                        {
+                            "id": 0,
+                            "name": "minced garlic",
+                            "localizedName": "minced garlic",
+                            "image": "garlic.png"
+                        },
+                        {
+                            "id": 4053,
+                            "name": "olive oil",
+                            "localizedName": "olive oil",
+                            "image": "olive-oil.jpg"
+                        },
+                        {
+                            "id": 1002011,
+                            "name": "clove",
+                            "localizedName": "clove",
+                            "image": "cloves.jpg"
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 404661,
+                            "name": "whisk",
+                            "localizedName": "whisk",
+                            "image": "whisk.png"
+                        }
+                    ]
+                },
+                {
+                    "number": 8,
+                    "step": "Place the burger with cheese on the bottom of the bun, add a slice of tomato and two good-sized basil leaves and drizzle each burger with 1/2 teaspoon of the balsamic/olive oil dressing.",
+                    "ingredients": [
+                        {
+                            "id": 2044,
+                            "name": "fresh basil",
+                            "localizedName": "fresh basil",
+                            "image": "fresh-basil.jpg"
+                        },
+                        {
+                            "id": 4053,
+                            "name": "olive oil",
+                            "localizedName": "olive oil",
+                            "image": "olive-oil.jpg"
+                        },
+                        {
+                            "id": 1041009,
+                            "name": "cheese",
+                            "localizedName": "cheese",
+                            "image": "cheddar-cheese.png"
+                        },
+                        {
+                            "id": 11529,
+                            "name": "tomato",
+                            "localizedName": "tomato",
+                            "image": "tomato.png"
+                        },
+                        {
+                            "id": 0,
+                            "name": "roll",
+                            "localizedName": "roll",
+                            "image": "dinner-yeast-rolls.jpg"
+                        }
+                    ],
+                    "equipment": []
+                }
+            ]
+        }
+    ],
+    "originalId": null,
+    "spoonacularSourceUrl": "https://spoonacular.com/italian-caprese-sliders-648084"
+}

@@ -1,5 +1,9 @@
 #search-results{
-    background-color: mediumpurple;
-    position: fixed;
+    background-color: rgb(165, 161, 123);
+    margin: auto;
+    max-width: 50vw;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
     z-index: +1;
 }

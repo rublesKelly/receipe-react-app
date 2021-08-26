@@ -1,11 +1,11 @@
 import React from 'react';
 import '../App.css'
 
-function ReceipeImage (props) {
+function ReceipeImage ({image}) {
    
     return (
         <div id='receipe-image'>
-            <img src = {props.src} alt=''/>
+            <img src = {image} alt=''/>
         </div>
     )
 }

@@ -1,0 +1,453 @@
+{
+    "vegetarian": false,
+    "vegan": false,
+    "glutenFree": true,
+    "dairyFree": false,
+    "veryHealthy": false,
+    "cheap": false,
+    "veryPopular": false,
+    "sustainable": false,
+    "weightWatcherSmartPoints": 18,
+    "gaps": "no",
+    "lowFodmap": false,
+    "aggregateLikes": 5,
+    "spoonacularScore": 64,
+    "healthScore": 18,
+    "creditsText": "coffeebean",
+    "license": "spoonacular's terms",
+    "sourceName": "spoonacular",
+    "pricePerServing": 238.84,
+    "extendedIngredients": [
+        {
+            "id": 1123,
+            "aisle": "Milk, Eggs, Other Dairy",
+            "image": "egg.png",
+            "consistency": "solid",
+            "name": "eggs",
+            "nameClean": "egg",
+            "original": "8 eggs",
+            "originalString": "8 eggs",
+            "originalName": "eggs",
+            "amount": 8,
+            "unit": "",
+            "meta": [],
+            "metaInformation": [],
+            "measures": {
+                "us": {
+                    "amount": 8,
+                    "unitShort": "",
+                    "unitLong": ""
+                },
+                "metric": {
+                    "amount": 8,
+                    "unitShort": "",
+                    "unitLong": ""
+                }
+            }
+        },
+        {
+            "id": 2044,
+            "aisle": "Produce",
+            "image": "fresh-basil.jpg",
+            "consistency": "solid",
+            "name": "fresh basil",
+            "nameClean": "fresh basil",
+            "original": "fresh basil",
+            "originalString": "fresh basil",
+            "originalName": "fresh basil",
+            "amount": 2,
+            "unit": "servings",
+            "meta": [
+                "fresh"
+            ],
+            "metaInformation": [
+                "fresh"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 2,
+                    "unitShort": "servings",
+                    "unitLong": "servings"
+                },
+                "metric": {
+                    "amount": 2,
+                    "unitShort": "servings",
+                    "unitLong": "servings"
+                }
+            }
+        },
+        {
+            "id": 1077,
+            "aisle": "Milk, Eggs, Other Dairy",
+            "image": "milk.png",
+            "consistency": "liquid",
+            "name": "milk",
+            "nameClean": "milk",
+            "original": "1/2 cup milk",
+            "originalString": "1/2 cup milk",
+            "originalName": "milk",
+            "amount": 0.5,
+            "unit": "cup",
+            "meta": [],
+            "metaInformation": [],
+            "measures": {
+                "us": {
+                    "amount": 0.5,
+                    "unitShort": "cups",
+                    "unitLong": "cups"
+                },
+                "metric": {
+                    "amount": 118.294,
+                    "unitShort": "ml",
+                    "unitLong": "milliliters"
+                }
+            }
+        },
+        {
+            "id": 1033,
+            "aisle": "Cheese",
+            "image": "parmesan.jpg",
+            "consistency": "solid",
+            "name": "parmesan cheese",
+            "nameClean": "parmesan",
+            "original": "freshly grated Parmesan cheese",
+            "originalString": "freshly grated Parmesan cheese",
+            "originalName": "freshly grated Parmesan cheese",
+            "amount": 2,
+            "unit": "servings",
+            "meta": [
+                "freshly grated"
+            ],
+            "metaInformation": [
+                "freshly grated"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 2,
+                    "unitShort": "servings",
+                    "unitLong": "servings"
+                },
+                "metric": {
+                    "amount": 2,
+                    "unitShort": "servings",
+                    "unitLong": "servings"
+                }
+            }
+        },
+        {
+            "id": 7057,
+            "aisle": "Meat",
+            "image": "pepperoni.png",
+            "consistency": "solid",
+            "name": "pepperoni",
+            "nameClean": "pepperoni",
+            "original": "pepperoni",
+            "originalString": "pepperoni",
+            "originalName": "pepperoni",
+            "amount": 2,
+            "unit": "servings",
+            "meta": [],
+            "metaInformation": [],
+            "measures": {
+                "us": {
+                    "amount": 2,
+                    "unitShort": "servings",
+                    "unitLong": "servings"
+                },
+                "metric": {
+                    "amount": 2,
+                    "unitShort": "servings",
+                    "unitLong": "servings"
+                }
+            }
+        },
+        {
+            "id": 1001026,
+            "aisle": "Cheese",
+            "image": "shredded-cheese-white.jpg",
+            "consistency": "solid",
+            "name": "shredded mozzarella cheese",
+            "nameClean": "shredded mozzarella",
+            "original": "1/4 cup shredded mozzarella cheese",
+            "originalString": "1/4 cup shredded mozzarella cheese",
+            "originalName": "shredded mozzarella cheese",
+            "amount": 0.25,
+            "unit": "cup",
+            "meta": [
+                "shredded"
+            ],
+            "metaInformation": [
+                "shredded"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 0.25,
+                    "unitShort": "cups",
+                    "unitLong": "cups"
+                },
+                "metric": {
+                    "amount": 59.147,
+                    "unitShort": "ml",
+                    "unitLong": "milliliters"
+                }
+            }
+        }
+    ],
+    "id": 622598,
+    "title": "Pittata - Pizza Frittata",
+    "author": "coffeebean",
+    "readyInMinutes": 30,
+    "servings": 2,
+    "sourceUrl": "https://spoonacular.com/-1418233867224",
+    "image": "https://spoonacular.com/recipeImages/622598-556x370.jpg",
+    "imageType": "jpg",
+    "summary": "The recipe Pittata - Pizza Frittatan is ready <b>in roughly 30 minutes</b> and is definitely a great <b>gluten free and primal</b> option for lovers of Mediterranean food. This recipe makes 2 servings with <b>587 calories</b>, <b>44g of protein</b>, and <b>42g of fat</b> each. For <b>$2.39 per serving</b>, this recipe <b>covers 29%</b> of your daily requirements of vitamins and minerals. A mixture of parmesan cheese, mozzarella cheese, milk, and a handful of other ingredients are all it takes to make this recipe so delicious. To use up the eggs you could follow this main course with the <a href=\"https://spoonacular.com/recipes/rose-levy-beranbaums-chocolate-tomato-cake-with-mystery-ganache-27408\">Rose Levy Beranbaum's Chocolate Tomato Cake with Mystery Ganache</a> as a dessert. Try <a href=\"https://spoonacular.com/recipes/pizza-frittata-500787\">Pizza Frittata</a>, <a href=\"https://spoonacular.com/recipes/pizza-frittata-159328\">Pizza Frittata</a>, and <a href=\"https://spoonacular.com/recipes/pizza-frittata-123747\">Pizza Frittata</a> for similar recipes.",
+    "cuisines": [
+        "Mediterranean",
+        "Italian",
+        "European"
+    ],
+    "dishTypes": [
+        "lunch",
+        "main course",
+        "main dish",
+        "dinner"
+    ],
+    "diets": [
+        "gluten free",
+        "primal"
+    ],
+    "occasions": [],
+    "winePairing": {},
+    "instructions": "<p>1. Pre-heat oven to ~450°F (230°C), top heat only.</p><p>2. On the stove, heat cooking fat in a large oven-safe skillet over medium heat.</p><p>3. Beat the eggs with the milk (again milk is optional), salt, pepper, and any herbs or spices desired.</p><p>4. Add any desired add-ins (other than cheese) to the skillet. For the pittata, we didn't use anything, but this is when you would add your cooked vegetables or raw vegetables that don't require much cooking (e.g. bell pepper). Pour in the egg mixture and tilt the skillet to ensure it evenly surrounds any add-ins. Now distribute the shredded cheese and pepperoni slices (if using).</p><p>5. Allow the eggs to cook on the stove until the edges of the eggs are set. The center will still be a bit jiggly. Now is a good time to top with Parmesan cheese (be generous!)</p><p>6. Transfer the pan to the hot oven and bake until the eggs are puffed and browned with a firm center. Remove from oven and let cool for a couple minutes before cutting into wedges.</p>",
+    "analyzedInstructions": [
+        {
+            "name": "",
+            "steps": [
+                {
+                    "number": 1,
+                    "step": "Pre-heat oven to ~450°F (230°C), top heat only.",
+                    "ingredients": [],
+                    "equipment": [
+                        {
+                            "id": 404784,
+                            "name": "oven",
+                            "localizedName": "oven",
+                            "image": "oven.jpg",
+                            "temperature": {
+                                "number": 450,
+                                "unit": "Fahrenheit"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "step": "On the stove, heat cooking fat in a large oven-safe skillet over medium heat.",
+                    "ingredients": [
+                        {
+                            "id": 0,
+                            "name": "cooking fat",
+                            "localizedName": "cooking fat",
+                            "image": ""
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 404645,
+                            "name": "frying pan",
+                            "localizedName": "frying pan",
+                            "image": "pan.png"
+                        },
+                        {
+                            "id": 404794,
+                            "name": "stove",
+                            "localizedName": "stove",
+                            "image": "oven.jpg"
+                        },
+                        {
+                            "id": 404784,
+                            "name": "oven",
+                            "localizedName": "oven",
+                            "image": "oven.jpg"
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "step": "Beat the eggs with the milk (again milk is optional), salt, pepper, and any herbs or spices desired.",
+                    "ingredients": [
+                        {
+                            "id": 1002030,
+                            "name": "pepper",
+                            "localizedName": "pepper",
+                            "image": "pepper.jpg"
+                        },
+                        {
+                            "id": 2035,
+                            "name": "spices",
+                            "localizedName": "spices",
+                            "image": "spices.png"
+                        },
+                        {
+                            "id": 1002044,
+                            "name": "herbs",
+                            "localizedName": "herbs",
+                            "image": "mixed-fresh-herbs.jpg"
+                        },
+                        {
+                            "id": 1123,
+                            "name": "egg",
+                            "localizedName": "egg",
+                            "image": "egg.png"
+                        },
+                        {
+                            "id": 1077,
+                            "name": "milk",
+                            "localizedName": "milk",
+                            "image": "milk.png"
+                        },
+                        {
+                            "id": 2047,
+                            "name": "salt",
+                            "localizedName": "salt",
+                            "image": "salt.jpg"
+                        }
+                    ],
+                    "equipment": []
+                },
+                {
+                    "number": 4,
+                    "step": "Add any desired add-ins (other than cheese) to the skillet. For the pittata, we didn't use anything, but this is when you would add your cooked vegetables or raw vegetables that don't require much cooking (e.g. bell pepper).",
+                    "ingredients": [
+                        {
+                            "id": 10211821,
+                            "name": "bell pepper",
+                            "localizedName": "bell pepper",
+                            "image": "bell-pepper-orange.png"
+                        },
+                        {
+                            "id": 11583,
+                            "name": "vegetable",
+                            "localizedName": "vegetable",
+                            "image": "mixed-vegetables.png"
+                        },
+                        {
+                            "id": 1041009,
+                            "name": "cheese",
+                            "localizedName": "cheese",
+                            "image": "cheddar-cheese.png"
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 404645,
+                            "name": "frying pan",
+                            "localizedName": "frying pan",
+                            "image": "pan.png"
+                        }
+                    ]
+                },
+                {
+                    "number": 5,
+                    "step": "Pour in the egg mixture and tilt the skillet to ensure it evenly surrounds any add-ins. Now distribute the shredded cheese and pepperoni slices (if using).",
+                    "ingredients": [
+                        {
+                            "id": 1007057,
+                            "name": "pepperoni slices",
+                            "localizedName": "pepperoni slices",
+                            "image": "pepperoni.png"
+                        },
+                        {
+                            "id": 1011026,
+                            "name": "shredded cheese",
+                            "localizedName": "shredded cheese",
+                            "image": "cheddar-cheese.png"
+                        },
+                        {
+                            "id": 1123,
+                            "name": "egg",
+                            "localizedName": "egg",
+                            "image": "egg.png"
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 404645,
+                            "name": "frying pan",
+                            "localizedName": "frying pan",
+                            "image": "pan.png"
+                        }
+                    ]
+                },
+                {
+                    "number": 6,
+                    "step": "Allow the eggs to cook on the stove until the edges of the eggs are set. The center will still be a bit jiggly. Now is a good time to top with Parmesan cheese (be generous!)",
+                    "ingredients": [
+                        {
+                            "id": 1033,
+                            "name": "parmesan",
+                            "localizedName": "parmesan",
+                            "image": "parmesan.jpg"
+                        },
+                        {
+                            "id": 1123,
+                            "name": "egg",
+                            "localizedName": "egg",
+                            "image": "egg.png"
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 404794,
+                            "name": "stove",
+                            "localizedName": "stove",
+                            "image": "oven.jpg"
+                        }
+                    ]
+                },
+                {
+                    "number": 7,
+                    "step": "Transfer the pan to the hot oven and bake until the eggs are puffed and browned with a firm center.",
+                    "ingredients": [
+                        {
+                            "id": 1123,
+                            "name": "egg",
+                            "localizedName": "egg",
+                            "image": "egg.png"
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 404784,
+                            "name": "oven",
+                            "localizedName": "oven",
+                            "image": "oven.jpg"
+                        },
+                        {
+                            "id": 404645,
+                            "name": "frying pan",
+                            "localizedName": "frying pan",
+                            "image": "pan.png"
+                        }
+                    ]
+                },
+                {
+                    "number": 8,
+                    "step": "Remove from oven and let cool for a couple minutes before cutting into wedges.",
+                    "ingredients": [],
+                    "equipment": [
+                        {
+                            "id": 404784,
+                            "name": "oven",
+                            "localizedName": "oven",
+                            "image": "oven.jpg"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "originalId": null,
+    "spoonacularSourceUrl": "https://spoonacular.com/pittata-pizza-frittata-622598"
+}

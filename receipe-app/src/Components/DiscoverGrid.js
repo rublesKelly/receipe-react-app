@@ -4,7 +4,7 @@ import ReceipeThumbnail from "./ReceipeThumbnail";
 import '../App.css'
 import egg from '../Assets/egg-fried-rice.jpg'
 
-function DiscoverGrid({recomendations}) {
+function DiscoverGrid() {
     const [helperarray, setHelperarray] = useState([1,2,3,4,5,5])
     const [discoverTitle1, setDiscoverTitle1] = useState('French Cusine')
     const [helperArray, setHelperArray] = useState([1,2,3,4])

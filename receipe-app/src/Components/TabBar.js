@@ -3,16 +3,17 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import ReceipeGrid from './ReceipeGrid';
 import '../tabs.css'
 
-//Delcaring State
-// const [receiepTitle, setreceiepTitle] = useStatle(initialState)
 
-function TabBar({receipes}) {
+function TabBar({receipes},{onRemoveReceiepeClicked}) {
     return (
         <div className='tab-bar'>
             <Tabs>
                 <TabList>
                 {receipes.map(receipe => 
-                   <Tab>{receipe.title}</Tab>
+                   <Tab>
+                       {receipe.title}
+                        <button onClick={()=> onRemoveReceiepeClicked(receipe.id)} >X</button>
+                   </Tab>
                 )}
                 </TabList>
                 {receipes.map(receipe => 

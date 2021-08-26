@@ -9,7 +9,7 @@ function ReceipeGrid({receipe}) {
     return (
         <div id='receipe-grid'>
             <ReceipeHeader receiepeTitle = {receipe.title} />
-            <ReceipeImage   />
+            <ReceipeImage   image = {receipe.image}/>
             <IngredientList ingredients = {receipe.ingredients} />
             <StepsList      steps = {receipe.steps} />
         </div>
