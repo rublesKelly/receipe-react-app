@@ -30,9 +30,9 @@ function App() {
     const onAddReceipeClicked = (id) => {
       api.getReceipebyID(id)
           .then(res => {
-            console.log(res)
             const updateReceipes = [...receipes,
-              {title: res.title,
+              {key: res.id,
+               title: res.title,
                image: res.image,
                ingredients: res.extendedIngredients,
                steps: res.analyzedInstructions[0].steps
@@ -43,10 +43,12 @@ function App() {
     }
 
     const onRemoveReceiepeClicked = (id) => {
+      console.log(id)
       const updateReceiepes = receipes.filter(
-        receipe =>  receipe.id != id
+        receipe =>  receipe.key !== id
       )
-      // setReceipes([])
+      console.log(updateReceiepes)
+      setReceipes(updateReceiepes)
     }
 
   return (  
@@ -56,7 +58,7 @@ function App() {
       <SearchBar onAddReceipeClicked={onAddReceipeClicked}/>{/* controllers for rending the searchresults */}
       <Announcement/> {/* Conditionally rendered */}
       <DiscoverGrid />  
-      <TabBar receipes={receipes} onRemoveReceiepeClicked={onRemoveReceiepeClicked}/>
+      <TabBar frampton={'fd'}joint={123} receipes={receipes} onRemoveReceiepeClicked={onRemoveReceiepeClicked}/>
     </div>
   );
 }

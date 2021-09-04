@@ -15,20 +15,20 @@ const RANDOM_RECEIPE_URL = `${API_URL}/random?apiKey=${API_KEY}`
 const api ={
     //Get random receipe
     getRandomReceipe: async() => {
-        await axios.get(RANDOM_RECEIPE_URL)
+        const response = await axios.get(RANDOM_RECEIPE_URL)
         .then((res) => {
-            console.log(res.data);
+            return res.data
         })
         .catch((err) => {
             console.log(err);
         })
+        return response
     },
 
     //Get reciepes by query seach
     getReceipebyQuery: async(searchTerm) => {
         const response = await axios.get(`${SEARCH_RECEIPE_URL}&query=${searchTerm}`)
         .then((res) => {
-            // console.log(res.data);
             return res.data
         })
         .catch((err) => {
@@ -42,13 +42,12 @@ const api ={
     getReceipebyID: async(id) => {
         const response = await axios.get(`${API_URL}/${id}/information?apiKey=${API_KEY}`)
         .then((res) => {
-            // console.log(res);
             return res.data
         })
         .catch((err) => {
             console.log(err);
         })
-        console.log(response);
+        // console.log(response);
         return response
     },
 
@@ -56,13 +55,12 @@ const api ={
     getReceipebyCusine: async(cuisine) => {
         const response = await axios.get(`${SEARCH_RECEIPE_URL}&cuisine=${cuisine}`)
         .then((res) => {
-            console.log(res);
             return res.data
         })
         .catch((err) => {
             console.log(err);
         })
-        console.log(response);
+        // console.log(response);
         return response
     },
 }

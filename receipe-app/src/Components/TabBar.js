@@ -4,7 +4,7 @@ import ReceipeGrid from './ReceipeGrid';
 import '../tabs.css'
 
 
-function TabBar({receipes},{onRemoveReceiepeClicked}) {
+function TabBar({receipes, onRemoveReceiepeClicked, joint}) {
     return (
         <div className='tab-bar'>
             <Tabs>
@@ -12,7 +12,7 @@ function TabBar({receipes},{onRemoveReceiepeClicked}) {
                 {receipes.map(receipe => 
                    <Tab>
                        {receipe.title}
-                        <button onClick={()=> onRemoveReceiepeClicked(receipe.id)} >X</button>
+                        <button onClick={()=> onRemoveReceiepeClicked(receipe.key)} >X</button>
                    </Tab>
                 )}
                 </TabList>
