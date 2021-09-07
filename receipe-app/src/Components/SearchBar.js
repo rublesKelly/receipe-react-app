@@ -17,7 +17,7 @@ function SearchBar(props) {
         api.getReceipebyQuery(searchTerm)
             .then((res) => setResults(res.results))
             setShowResults(true)
-            console.log(results);
+            // console.log(results);
     }
 
     return (

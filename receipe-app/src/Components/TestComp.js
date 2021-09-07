@@ -1,8 +1,11 @@
 import React, {useState} from 'react'
 import {api} from '../axios';
+import { useAppContext } from '../AppContext';
 
-function TestComp() {
+function TestComp({setAnnoucement}) {
 
+    const {showTabBar, setShowTabBar} = useAppContext();
+    
     //Declaring variables 
     const [id, setId] = useState('')
 
@@ -26,6 +29,9 @@ function TestComp() {
                 />
                 <input type="submit"/>
             </form>
+            <button onClick={() => setShowTabBar(state => !state)}>Context</button>
+            <button onClick={()=>setAnnoucement({show: true})}>showAnnoucment</button>
+            <button onClick={()=>setAnnoucement({show: false})}>hideAnnoucment</button>
         </div>
     )
 }

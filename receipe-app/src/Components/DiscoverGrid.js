@@ -1,26 +1,22 @@
 import React, {useState} from 'react'
-import ReceipeCard from "./ReceipeCard";
+import ReceipeCollectionCard from './ReceipeCollectionCard';
 import ReceipeThumbnail from "./ReceipeThumbnail";
 import '../App.css'
-import egg from '../Assets/egg-fried-rice.jpg'
 
-function DiscoverGrid() {
-    const [helperarray, setHelperarray] = useState([1,2,3,4,5,5])
+function DiscoverGrid({userData}) {
+
     const [discoverTitle1, setDiscoverTitle1] = useState('French Cusine')
     const [helperArray, setHelperArray] = useState([1,2,3,4])
+
     return (
         <div id="discover-section">
             <h1  id="discover-greeting">Good Afternoon</h1>
             <div className="quick-links-grid">
-                {helperarray.map((eachItem) =>
-                    (<ReceipeCard
-                        id={eachItem.id} 
-                        title={'Recomended reciepes ;)'}
-                        image={egg}
-                        description={'shortdescription'}
-                        // prepTime={eachItem.readyInMinutes}
-                        // vegan={eachItem.vegan}
-
+                {userData.map((eachItem) =>
+                    (<ReceipeCollectionCard
+                        title={eachItem.title}
+                        image={eachItem.image}
+                        
                     />)
             )}
             </div>

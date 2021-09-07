@@ -1,15 +1,26 @@
-import React from 'react'
+import React, {useState} from 'react'
+import "../Styles/ReceipeCollectionCard.css";
+import ReceipeCollection from './ReceipeCollection';
 
-function ReceipeCollectionCard() {
+function ReceipeCollectionCard(props) {
+    
+    const [showCollection, setShowCollection] = useState(false)
+    
+
     return (
-        <div>
-            <div id="collection-image">
-                <img src={} alt="" id='collection-image'/>
+    <div>
+        <a id="collection-card-link" onClick={()=> setShowCollection(true)}>
+            <div id='receipe-collection-card'>
+                <div id="collection-image">
+                    <img src={props.image} alt="" id='collection-image'/>
+                </div>
+                <div id="collection-card-title">
+                    <h4 id="collection-card-title">{props.title}</h4>
+                </div>
             </div>
-            <div>
-                <h4 id="collection-card-title"></h4>
-            </div>
-        </div>
+        </a>
+        {showCollection && <ReceipeCollection/>}
+    </div>
     )
 }
 
