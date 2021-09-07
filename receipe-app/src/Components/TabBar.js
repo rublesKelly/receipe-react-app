@@ -4,9 +4,13 @@ import ReceipeGrid from './ReceipeGrid';
 import '../tabs.css'
 
 
+<<<<<<< HEAD
 
 function TabBar({receipes,onRemoveReceiepeClicked}) {
 
+=======
+function TabBar({receipes, onRemoveReceiepeClicked, joint}) {
+>>>>>>> d81c0b0e76ec7d6b8a7c53660dcd1aee85f2e4ea
     return (
         <div className='tab-bar'>
             <Tabs>
@@ -14,7 +18,10 @@ function TabBar({receipes,onRemoveReceiepeClicked}) {
                 {receipes.map(receipe => 
                    <Tab onRemoveReceiepeClicked={onRemoveReceiepeClicked}>
                        {receipe.title}
+<<<<<<< HEAD
                        {console.log(receipe.key)}
+=======
+>>>>>>> d81c0b0e76ec7d6b8a7c53660dcd1aee85f2e4ea
                         <button onClick={()=> onRemoveReceiepeClicked(receipe.key)} >X</button>
                    </Tab>
                 )}

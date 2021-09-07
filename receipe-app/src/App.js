@@ -45,9 +45,14 @@ function App() {
       if(receipes.includes(id)){console.log('success?')}
       api.getReceipebyID(id)
           .then(res => {
+<<<<<<< HEAD
             // console.log(res)
             const updateReceipes = [...receipes,
               {key:   res.id,
+=======
+            const updateReceipes = [...receipes,
+              {key: res.id,
+>>>>>>> d81c0b0e76ec7d6b8a7c53660dcd1aee85f2e4ea
                title: res.title,
                image: res.image,
                ingredients: res.extendedIngredients,
@@ -61,7 +66,11 @@ function App() {
     const onRemoveReceiepeClicked = (id) => {
       console.log(id)
       const updateReceiepes = receipes.filter(
+<<<<<<< HEAD
           receipe =>  receipe.key !== id
+=======
+        receipe =>  receipe.key !== id
+>>>>>>> d81c0b0e76ec7d6b8a7c53660dcd1aee85f2e4ea
       )
       console.log(updateReceiepes)
       setReceipes(updateReceiepes)
@@ -70,11 +79,19 @@ function App() {
   return (  
     <div className='app'>
       <button id="test-bar" onClick={()=>setShowTestComp(state=>!state)}/>
+<<<<<<< HEAD
       {showTestComp && <TestComp setAnnoucement={setAnnoucement}/>}
       <SearchBar onAddReceipeClicked={onAddReceipeClicked}/> 
       {Annoucement.show && <Announcement/>}
       <DiscoverGrid userData={userData} />
       <TabBar receipes={receipes} onRemoveReceiepeClicked={onRemoveReceiepeClicked}/>
+=======
+      {showTestComp && <TestComp/>}
+      <SearchBar onAddReceipeClicked={onAddReceipeClicked}/>{/* controllers for rending the searchresults */}
+      <Announcement/> {/* Conditionally rendered */}
+      <DiscoverGrid />  
+      <TabBar frampton={'fd'}joint={123} receipes={receipes} onRemoveReceiepeClicked={onRemoveReceiepeClicked}/>
+>>>>>>> d81c0b0e76ec7d6b8a7c53660dcd1aee85f2e4ea
     </div>
   );
 }
