@@ -1,6 +1,6 @@
 //Imports
 import './App.css'
-import React, {createContext, useState} from 'react' 
+import React, {useState, useEffect} from 'react' 
 // import {BrowserRouter, Router, Switch, Route } from "react-router-dom";
 import {api} from './axios';
 import egg from './Assets/egg-fried-rice.jpg'
@@ -20,10 +20,11 @@ require('dotenv').config({  path:'../.env'})
 
 function App() {    
 
+  //Adding context
   const {showTabBar, setShowTabBar} = useAppContext();
-  console.log(showTabBar)
+  // console.log(showTabBar)
 
-  //Declaring state to add tab
+  //Declaring state
   const [receipes, setReceipes] = useState([])
   const [Annoucement, setAnnoucement] = useState({show: true,
                                                   title: '',
@@ -33,26 +34,36 @@ function App() {
   const [userData, setUserData] = useState([{ id: 123,
                                               title:'Liked Receipes',
                                               image:egg},
-                                              { id: 124,
-                                                title:'Dinner Ideas',
-                                                image:egg},{ id: 125,
-                                                  title:'Daily Mix',
-                                                  image:egg}])                                             
+                                            { id: 124,
+                                              title:'Dinner Ideas',
+                                              image:egg},{ id: 125,
+                                              title:'Daily Mix',
+                                              image:egg}])
+
+  //Get random receipe and assign it to state on start                                            
+  useEffect(() => {
+    api.getRandomReceipe().then(res => {
+      const updateReceipes = [...receipes,
+        {key: res.recipes[0].id,
+          title: res.recipes[0].title,
+          image: res.recipes[0].image,
+          ingredients: res.recipes[0].extendedIngredients,
+          steps: res.recipes[0].analyzedInstructions[0].steps
+        }]
+      // console.log(updateReceipes)
+      setReceipes(updateReceipes)
+      })
+    },[])                                                                                        
 
   //Tab bar handler
     //Add receipe to tab passed to receipe card and thumbnail
     const onAddReceipeClicked = (id) => {
-      if(receipes.includes(id)){console.log('success?')}
+      if(receipes.includes(id)){console.log('success?')}//this line doesnt do anything at the momnent
       api.getReceipebyID(id)
           .then(res => {
-<<<<<<< HEAD
-            // console.log(res)
-            const updateReceipes = [...receipes,
-              {key:   res.id,
-=======
+            console.log();
             const updateReceipes = [...receipes,
               {key: res.id,
->>>>>>> d81c0b0e76ec7d6b8a7c53660dcd1aee85f2e4ea
                title: res.title,
                image: res.image,
                ingredients: res.extendedIngredients,
@@ -66,11 +77,7 @@ function App() {
     const onRemoveReceiepeClicked = (id) => {
       console.log(id)
       const updateReceiepes = receipes.filter(
-<<<<<<< HEAD
-          receipe =>  receipe.key !== id
-=======
         receipe =>  receipe.key !== id
->>>>>>> d81c0b0e76ec7d6b8a7c53660dcd1aee85f2e4ea
       )
       console.log(updateReceiepes)
       setReceipes(updateReceiepes)
@@ -79,19 +86,11 @@ function App() {
   return (  
     <div className='app'>
       <button id="test-bar" onClick={()=>setShowTestComp(state=>!state)}/>
-<<<<<<< HEAD
       {showTestComp && <TestComp setAnnoucement={setAnnoucement}/>}
-      <SearchBar onAddReceipeClicked={onAddReceipeClicked}/> 
-      {Annoucement.show && <Announcement/>}
-      <DiscoverGrid userData={userData} />
-      <TabBar receipes={receipes} onRemoveReceiepeClicked={onRemoveReceiepeClicked}/>
-=======
-      {showTestComp && <TestComp/>}
       <SearchBar onAddReceipeClicked={onAddReceipeClicked}/>{/* controllers for rending the searchresults */}
-      <Announcement/> {/* Conditionally rendered */}
-      <DiscoverGrid />  
-      <TabBar frampton={'fd'}joint={123} receipes={receipes} onRemoveReceiepeClicked={onRemoveReceiepeClicked}/>
->>>>>>> d81c0b0e76ec7d6b8a7c53660dcd1aee85f2e4ea
+      {Annoucement.show && <Announcement/>}
+      <DiscoverGrid userData={userData}/>  
+      <TabBar receipes={receipes} onRemoveReceiepeClicked={onRemoveReceiepeClicked}/>
     </div>
   );
 }

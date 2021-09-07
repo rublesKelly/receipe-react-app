@@ -17,19 +17,11 @@ const api ={
     getRandomReceipe: async() => {
         const response = await axios.get(RANDOM_RECEIPE_URL)
         .then((res) => {
-<<<<<<< HEAD
-            // console.log(res.data);
-=======
->>>>>>> d81c0b0e76ec7d6b8a7c53660dcd1aee85f2e4ea
             return res.data
         })
         .catch((err) => {
             console.log(err);
         })
-<<<<<<< HEAD
-        // console.log(response);
-=======
->>>>>>> d81c0b0e76ec7d6b8a7c53660dcd1aee85f2e4ea
         return response
     },
 
@@ -63,10 +55,6 @@ const api ={
     getReceipebyCusine: async(cuisine) => {
         const response = await axios.get(`${SEARCH_RECEIPE_URL}&cuisine=${cuisine}`)
         .then((res) => {
-<<<<<<< HEAD
-            // console.log(res);
-=======
->>>>>>> d81c0b0e76ec7d6b8a7c53660dcd1aee85f2e4ea
             return res.data
         })
         .catch((err) => {

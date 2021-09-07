@@ -9,7 +9,7 @@ function ReceipeCollectionCard(props) {
 
     return (
     <div>
-        <a id="collection-card-link" onClick={()=> setShowCollection(true)}>
+        <a id="collection-card-link" onClick={()=> setShowCollection(state => !state)}>
             <div id='receipe-collection-card'>
                 <div id="collection-image">
                     <img src={props.image} alt="" id='collection-image'/>
