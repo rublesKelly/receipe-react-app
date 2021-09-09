@@ -47,7 +47,7 @@ const api ={
         .catch((err) => {
             console.log(err);
         })
-        // console.log(response);
+        console.log(response);
         return response
     },
 

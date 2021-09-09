@@ -9,6 +9,7 @@
 }
 
 .react-tabs__tab {
+  background-color: #999;
   display: inline-block;
   border: 1px solid transparent;
   border-bottom: none;
@@ -39,7 +40,7 @@
 
 .react-tabs__tab:focus:after {
   content: "";
-position: absolute;
+  position: absolute;
   height: 5px;
   left: -4px;
   right: -4px;
@@ -60,4 +61,14 @@ position: absolute;
   position: absolute;
   top: 10px;
   left: 3%;
+}
+
+#remove-tab-btn{
+  border-radius: 15%;
+  background-color: transparent;
+  border: none;
+}
+
+#remove-tab-btn:hover{
+  background-color: #fff;
 }

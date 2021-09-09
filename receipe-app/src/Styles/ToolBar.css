@@ -1,0 +1,24 @@
+#tool-bar{
+    width: 100vw;
+    height: 40px;
+    background-color: #111;
+    position:absolute; left:0px; bottom:0px; z-index:999;
+    grid: display;
+    grid-template-rows: 1;
+}
+
+#side-bar-btn{
+    border-right: solid #eee;
+    background-color: cornsilk;
+    height: 38px;
+    width: 4vw;
+}
+
+#side-bar-btn-active{
+    position: relative;
+    left: calc(20vw - 4vw);
+    border-right: solid #eee;
+    background-color: cornsilk;
+    height: 38px;
+    width: 4vw;
+}

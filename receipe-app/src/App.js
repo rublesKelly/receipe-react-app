@@ -4,16 +4,20 @@ import React, {useState, useEffect} from 'react'
 // import {BrowserRouter, Router, Switch, Route } from "react-router-dom";
 import {api} from './axios';
 import egg from './Assets/egg-fried-rice.jpg'
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { useAppContext } from './AppContext';
+import { AiTwotoneHome, AiOutlineSearch } from "react-icons/ai";
+import { IoIosCloseCircle } from "react-icons/io";
 
 //Importing react components
 // import SearchPage from './Pages/SearchPage'
 import SearchBar from "./Components/SearchBar";
-import Announcement from "./Components/Annoucement";
 import TabBar from "./Components/TabBar.js";
 import DiscoverGrid from './Components/DiscoverGrid.js';
 import SideBar from "./Components/SideBar";
 import TestComp from './Components/TestComp.js'
+import ReceipeGrid from './Components/ReceipeGrid.js'
+import ToolBar from "./Components/ToolBar.js";
 
 require('dotenv').config({  path:'../.env'})
 // console.log(process.env);
@@ -27,13 +31,17 @@ function App() {
 
   //Declaring state
   const [receipes, setReceipes] = useState([])
-  const [Annoucement, setAnnoucement] = useState({show: true,
+  const [announcement, setAnnouncement] = useState({show: true,
     title: '',
     msg: '',
-    image: ''})
-    const [showTestComp, setShowTestComp] = useState(false)
-    const [showSideBar, setShowSideBar] = useState(false)
-    const [tabClassName, setTabClassName] = useState('tab-bar-inactive')
+    image: ''
+                                                    })
+  const [showTestComp, setShowTestComp] = useState(false)
+  const [showToolBar, setShowToolBar] = useState(true)
+  const [showSideBar, setShowSideBar] = useState(false)
+  const [tabClassName, setTabClassName] = useState('tab-bar-inactive')
+  const [tabIndex, setTabIndex] = useState(0)
+  const [showTabPanel, setShowTabPanel] = useState(false)
   const [userData, setUserData] = useState([{ id: 123,
                                               title:'Liked Receipes',
                                               image:egg},
@@ -41,7 +49,8 @@ function App() {
                                               title:'Dinner Ideas',
                                               image:egg},{ id: 125,
                                               title:'Daily Mix',
-                                              image:egg}])
+                                              image:egg
+                                            }])
 
   //Get random receipe and assign it to state on start                                            
   useEffect(() => {
@@ -70,7 +79,13 @@ function App() {
                title: res.title,
                image: res.image,
                ingredients: res.extendedIngredients,
-               steps: res.analyzedInstructions[0].steps
+               steps: res.analyzedInstructions[0].steps,
+               vegan: res.vegan,
+               vegetarian: res.vegetarian,
+               glutenFree: res.glutenFree,
+               dairyFree: res.dairyFree,
+               readyInMinuites: res.readyInMinuites,
+               servings: res.servings
               }]
             setReceipes(updateReceipes)
             })
@@ -86,20 +101,43 @@ function App() {
       setReceipes(updateReceiepes)
     }
 
+    const tabClickedHandler = () => {
+      setShowTabPanel(true)
+      setTabClassName('tab-bar-active')
+    }
+
   return (  
     <div className='app'>
       <button id="test-bar" onClick={()=>setShowTestComp(state=>!state)}/>
-      {showTestComp && <TestComp setAnnoucement={setAnnoucement} setShowSideBar={setShowSideBar}setTabClassName={setTabClassName}/>}
-      <SearchBar onAddReceipeClicked={onAddReceipeClicked}/>{/* controllers for rending the searchresults */}
-      {Annoucement.show && <Announcement/>}
-      <DiscoverGrid userData={userData}/>
+      {showTestComp && <TestComp setAnnouncement={setAnnouncement} setShowSideBar={setShowSideBar}setTabClassName={setTabClassName}setShowToolBar={setShowToolBar}/>}
+      <Tabs selectedIndex={tabIndex} onSelect={index=>setTabIndex(index)}>
+        <TabList>
+        <Tab><AiTwotoneHome/></Tab>
+        <Tab><AiOutlineSearch/></Tab> 
+        {receipes.map(receipe => 
+                   <Tab  onClick={()=>tabClickedHandler()}>
+                        {receipe.title}
+                        <button id='remove-tab-btn' onClick={()=> onRemoveReceiepeClicked(receipe.key)} ><IoIosCloseCircle/></button>
+                   </Tab>
+        )}
+        </TabList>
+        <TabPanel>
+          <DiscoverGrid 
+                userData={userData} announcement={announcement}
+                onAddReceipeClicked={onAddReceipeClicked}      
+          />
+        </TabPanel>
+        <TabPanel>
+          <SearchBar onAddReceipeClicked={onAddReceipeClicked}/>{/* controllers for rending the searchresults */}
+        </TabPanel>
+        {showTabPanel && receipes.map(receipe => 
+                    <TabPanel>
+                        <ReceipeGrid receipe = {receipe}/>
+                    </TabPanel>
+        )}
+      </Tabs>
       {showSideBar && <SideBar/>}
-      <TabBar 
-        receipes={receipes} 
-        onRemoveReceiepeClicked={onRemoveReceiepeClicked}
-        tabClassName={tabClassName}
-        setTabClassName={setTabClassName}
-      />
+      {showToolBar && <ToolBar setShowSideBar={setShowSideBar} showSideBar={showSideBar}/>}
     </div>
   );
 }

@@ -8,7 +8,7 @@ function SearchBar(props) {
     //Setting state for controlled form component 
     const [searchTerm, setSearchTerm] = useState('')
     const [results, setResults] = useState([])
-    const [showResults, setShowResults] = useState(false)
+    const [showResults, setShowResults] = useState(true)
 
     //On Submit Handler calls the fetch request with the search term
     const onSubmitHandler = (e) => {
