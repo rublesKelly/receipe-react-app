@@ -24,13 +24,14 @@ function SearchBar(props) {
            <form id='search-form'onSubmit={onSubmitHandler}>
                <label htmlFor="search-bar"></label>
                 <input 
+                    id='search-input'
                     type="text" 
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)} //onChangeHandler
                     
                  />
                 <input type="submit" />  
-                <input type="button" onClick={results => setShowResults(!showResults)}/>  
+                {/* <input type="button" onClick={results => setShowResults(!showResults)}/>   */}
            </form> 
            {results.length > 0 && showResults &&
            <SearchResults   results={results}

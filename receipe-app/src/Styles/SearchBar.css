@@ -1,7 +1,13 @@
+#search-bar{
+    background-color: #fff;
+    border-radius: 1px;
+}
+
 #search-form{
-    margin: auto;
-    position: relative;
-    top: 5px;
-    left: 35%;
-    /* transform: translate(-50%, 0); */
+    height: 2.5vh;
+    margin-left: 1vw;
+}
+
+#search-input{
+    height: auto;
 }

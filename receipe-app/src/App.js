@@ -12,6 +12,7 @@ import SearchBar from "./Components/SearchBar";
 import Announcement from "./Components/Annoucement";
 import TabBar from "./Components/TabBar.js";
 import DiscoverGrid from './Components/DiscoverGrid.js';
+import SideBar from "./Components/SideBar";
 import TestComp from './Components/TestComp.js'
 
 require('dotenv').config({  path:'../.env'})
@@ -27,10 +28,12 @@ function App() {
   //Declaring state
   const [receipes, setReceipes] = useState([])
   const [Annoucement, setAnnoucement] = useState({show: true,
-                                                  title: '',
-                                                  msg: '',
-                                                  image: ''})
-  const [showTestComp, setShowTestComp] = useState(false)
+    title: '',
+    msg: '',
+    image: ''})
+    const [showTestComp, setShowTestComp] = useState(false)
+    const [showSideBar, setShowSideBar] = useState(false)
+    const [tabClassName, setTabClassName] = useState('tab-bar-inactive')
   const [userData, setUserData] = useState([{ id: 123,
                                               title:'Liked Receipes',
                                               image:egg},
@@ -86,11 +89,17 @@ function App() {
   return (  
     <div className='app'>
       <button id="test-bar" onClick={()=>setShowTestComp(state=>!state)}/>
-      {showTestComp && <TestComp setAnnoucement={setAnnoucement}/>}
+      {showTestComp && <TestComp setAnnoucement={setAnnoucement} setShowSideBar={setShowSideBar}setTabClassName={setTabClassName}/>}
       <SearchBar onAddReceipeClicked={onAddReceipeClicked}/>{/* controllers for rending the searchresults */}
       {Annoucement.show && <Announcement/>}
-      <DiscoverGrid userData={userData}/>  
-      <TabBar receipes={receipes} onRemoveReceiepeClicked={onRemoveReceiepeClicked}/>
+      <DiscoverGrid userData={userData}/>
+      {showSideBar && <SideBar/>}
+      <TabBar 
+        receipes={receipes} 
+        onRemoveReceiepeClicked={onRemoveReceiepeClicked}
+        tabClassName={tabClassName}
+        setTabClassName={setTabClassName}
+      />
     </div>
   );
 }

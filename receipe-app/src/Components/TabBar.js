@@ -1,21 +1,28 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import ReceipeGrid from './ReceipeGrid';
 import '../tabs.css'
 
-function TabBar({receipes, onRemoveReceiepeClicked, joint}) {
+function TabBar({receipes, onRemoveReceiepeClicked, tabClassName, setTabClassName}) {
     
     //Declare state
     const [tabIndex, setTabIndex] = useState(0)
     const [showTabPanel, setShowTabPanel] = useState(false)
     
+  
+    //Functions
+    const tabClickedHandler = () => {
+        setShowTabPanel(true)
+        setTabClassName('tab-bar-active')
+    }
+
     return (
-        <div className='tab-bar'>
+        <div className={tabClassName}>
             <Tabs selectedIndex={tabIndex} onSelect={index=>setTabIndex(index)}>
                 <TabList>
                 {receipes.map(receipe => 
-                   <Tab onRemoveReceiepeClicked={onRemoveReceiepeClicked} onClick={()=>setShowTabPanel(true)}>
-                       {receipe.title}
+                   <Tab  onClick={()=>tabClickedHandler()}>
+                        {receipe.title}
                         <button onClick={()=> onRemoveReceiepeClicked(receipe.key)} >X</button>
                    </Tab>
                 )}

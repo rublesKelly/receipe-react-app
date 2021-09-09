@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
 import {api} from '../axios';
 import { useAppContext } from '../AppContext';
+import "../Styles/TestComp.css";
 
-function TestComp({setAnnoucement}) {
+function TestComp({setAnnoucement, setShowSideBar,setTabClassName}) {
 
     const {showTabBar, setShowTabBar} = useAppContext();
     
@@ -17,8 +18,8 @@ function TestComp({setAnnoucement}) {
     }
 
     return (
-        <div>
-            <button onClick={()=>api.getReceipebyCusine('Italian')}>Add receiep</button>
+        <div id='test-comp'>
+            {/* <button onClick={()=>api.getReceipebyCusine('Italian')}>Add receieps</button> */}
             <form onSubmit={onSubmitHandler} id="test-form">
                 <label>Search by ID</label>
                 <input 
@@ -29,9 +30,11 @@ function TestComp({setAnnoucement}) {
                 />
                 <input type="submit"/>
             </form>
-            <button onClick={() => setShowTabBar(state => !state)}>Context</button>
+            <button onClick={() =>setShowTabBar(state => !state)}>Context toggle showTabBar</button>
             <button onClick={()=>setAnnoucement({show: true})}>showAnnoucment</button>
             <button onClick={()=>setAnnoucement({show: false})}>hideAnnoucment</button>
+            <button id="side-bar-btn" onClick={()=>setShowSideBar(state => !state)}>Show Sidebar</button>
+            <button id="toggle-tab-bar"onClick={()=>setTabClassName(state => !state)}>toggle tabbar className</button>
         </div>
     )
 }
