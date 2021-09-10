@@ -51,7 +51,7 @@ const api ={
         return response
     },
 
-    //Get reciepes by query seach
+    //Get reciepes by cusine
     getReceipebyCusine: async(cuisine) => {
         const response = await axios.get(`${SEARCH_RECEIPE_URL}&cuisine=${cuisine}`)
         .then((res) => {
@@ -63,6 +63,19 @@ const api ={
         // console.log(response);
         return response
     },
+
+    //Get multi reciepes by id
+    getReceipebyCusine: async(ids) => {
+        const response = await axios.get(`${API_URL}/informationBulk?ids=${ids}&apiKey=${API_KEY}`)
+        .then((res) => {
+            return res.data
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+        // console.log(response);
+        return response
+    }
 }
     
     export {

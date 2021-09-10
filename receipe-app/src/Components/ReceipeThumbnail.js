@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
-import "../Styles/Thumbnail.css";
+import egg from '../Assets/egg-fried-rice.jpg'
+
 function ReceipeThumbnail({id, title, image, onAddReceipeClicked}) {
 
     //Declare state
@@ -14,11 +15,11 @@ function ReceipeThumbnail({id, title, image, onAddReceipeClicked}) {
                 <h6 id="thumb-title">
                     {title}
                 </h6>
-            <div id="expanded-thumbnail">
+            {false && <div id="expanded-thumbnail">
                 <ul>
                     
                 </ul>
-            </div>
+            </div>}
             </div>
         </div>
     )
