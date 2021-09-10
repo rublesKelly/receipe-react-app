@@ -1,6 +1,7 @@
 #receipe-grid{
     min-height: 1000px;
-    background-color: #fff;
+    background-color: rgb(34, 66, 85);
+    color: #eee;
     display: grid;
     margin: 0 auto;
     grid-gap: 10px;

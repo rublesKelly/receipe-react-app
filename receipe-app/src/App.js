@@ -42,6 +42,7 @@ function App() {
   const [tabClassName, setTabClassName] = useState('tab-bar-inactive')
   const [tabIndex, setTabIndex] = useState(0)
   const [showTabPanel, setShowTabPanel] = useState(false)
+  const [showSearchBar, setShowSearchBar] = useState(false)
   const [userData, setUserData] = useState([{ id: 123,
                                               title:'Liked Receipes',
                                               image:egg},
@@ -113,7 +114,11 @@ function App() {
       <Tabs selectedIndex={tabIndex} onSelect={index=>setTabIndex(index)}>
         <TabList>
         <Tab><AiTwotoneHome/></Tab>
-        <Tab><AiOutlineSearch/></Tab> 
+        <Tab>
+          {showSearchBar ? <SearchBar 
+                                      onAddReceipeClicked={onAddReceipeClicked}
+                            /> : <AiOutlineSearch/> }
+          </Tab> 
         {receipes.map(receipe => 
                    <Tab  onClick={()=>tabClickedHandler()}>
                         {receipe.title}
@@ -128,7 +133,7 @@ function App() {
           />
         </TabPanel>
         <TabPanel>
-          <SearchBar onAddReceipeClicked={onAddReceipeClicked}/>{/* controllers for rending the searchresults */}
+          <div id='search-page'></div>
         </TabPanel>
         {showTabPanel && receipes.map(receipe => 
                     <TabPanel>

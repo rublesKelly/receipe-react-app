@@ -1,15 +1,15 @@
 #search-bar{
-    min-height: 900px;
-    background-color: lightblue;
+    display: inline;
     border-radius: 1px;
 }
 
 #search-form{
-    min-height: 2.5vh;
     margin-left: 1vw;
-
+    display: inline;
 }
 
 #search-input{
-    height: auto;
+    display: inline;
+    border: none;
+    background-color: transparent;
 }

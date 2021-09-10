@@ -1,8 +1,16 @@
 #discover-section{
     margin: 0 auto;
-    background-color: rgb(119, 98, 119);
+    /* background-color: rgb(119, 98, 119); */
     max-width: 98vw;
   }
+
+  
+.quick-links-grid{
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
 
   #discover-section1{
     margin: 0 auto;
@@ -15,3 +23,4 @@
     background-color: #fff;
     opacity: 72%;
   }
+

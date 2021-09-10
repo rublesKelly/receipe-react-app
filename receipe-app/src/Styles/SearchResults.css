@@ -1,9 +1,14 @@
 #search-results{
-    background-color: rgb(165, 161, 123);
+    background-color: rgb(46, 45, 42);
     margin: auto;
     max-width: 50vw;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: +1;
+}
+
+#search-result{
+    color: #333;
+    min-height: 700px;
 }

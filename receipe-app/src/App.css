@@ -1,16 +1,8 @@
 body{
   justify-items: center;
-  background:#3d8591;
+  background: rgb(42,49,50);
+  background: linear-gradient(325deg, rgba(42,49,50,1) 0%, rgba(29,39,60,1) 18%, rgba(76,82,83,1) 100%);  /* background:#3d8591; */
   height: 100vh;
-}
-
-.App {
-  justify-items: center;
-  text-align: center;
-  font-family: 'Courier New', Courier, monospace;
-  color: #5d5d5d;
-  background:#3d8591
-  
 }
 
 img{
@@ -21,40 +13,6 @@ img{
   background-size: cover;  
 }
 
-
-.quick-links-grid{
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-}
-
-#nav-bar-links > a{
-  margin: 2rem;
-  border: #5d5d5d;
-  background-color: #fff;
-}
-
-/*For prototyping comment out for beautiful loook
-
-.reciepe-grid{
-  background-color: aqua;
-  
-}
-
-.Ingredients-List{
-  background-color: brown;
-}
-
-.Steps-List{
-  background-color: bisque;
-}
-
-.reciepeHeader{
-  background-color: #d7f;
-}
-
-*/
 h4{
   font-size: 1.8vh;
 }
@@ -63,11 +21,22 @@ h6{
   margin: 0rem;
 }
 
-
 #test-bar{
   background-color: lightsalmon;
   height: 30px;
   position: absolute;
   left: 95vw;
   z-index: +10;
+}
+
+/* Control second search tab animation roll out roll in */
+#react-tabs-2.react-tabs__tab--selected{
+  width: 30vw;
+  max-height: 18px;
+}
+#react-tabs-2.react-tabs__tab{
+  width: auto;
+}
+#search-page{
+  min-height: 900px;
 }

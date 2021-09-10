@@ -13,13 +13,13 @@ function DiscoverGrid({userData, announcement, onAddReceipeClicked}) {
     const [helperArray, setHelperArray] = useState([1,2,3,4])
 
     //UseEffect to get Frecnh cusine on discover sectoin
-    useEffect(() => {
-        api.getReceipebyCusine('french')
-            .then(res=>setDiscoverData(res.results))
-        return () => {
-            console.log('clenaip');
-        }
-    }, [])
+    // useEffect(() => {
+    //     api.getReceipebyCusine('french')
+    //         .then(res=>setDiscoverData(res.results))
+    //     return () => {
+    //         console.log('clenaip');
+    //     }
+    // }, [])
 
     return (
         <div id="discover-section">
