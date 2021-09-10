@@ -3,6 +3,7 @@ import ReceipeCollectionCard from './ReceipeCollectionCard';
 import ReceipeThumbnail from "./ReceipeThumbnail";
 import '../App.css'
 import {api} from '../axios';
+import '../Styles/HomeSection.css'
 import Announcement from './Annoucement';
 
 function DiscoverGrid({userData, announcement, onAddReceipeClicked}) {

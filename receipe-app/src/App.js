@@ -70,7 +70,7 @@ function App() {
   //Tab bar handler
     //Add receipe to tab passed to receipe card and thumbnail
     const onAddReceipeClicked = (id) => {
-      if(receipes.includes(id)){console.log('success?')}//this line doesnt do anything at the momnent
+      if(id in receipes){console.log('success?')}//this line doesnt do anything at the momnent
       api.getReceipebyID(id)
           .then(res => {
             console.log();

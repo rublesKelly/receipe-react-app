@@ -1,0 +1,12 @@
+#thumbnail{
+    max-width: 10rem;
+  }
+  
+  #thumb-image{
+    height: inherit;
+  }
+  
+  #thumb-tab{
+    background-color: #fff;
+    height: inherit;
+  }

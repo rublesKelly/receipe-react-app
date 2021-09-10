@@ -21,16 +21,12 @@ img{
   background-size: cover;  
 }
 
-#discover-section{
-  margin: 0 auto;
-  background-color: rgb(119, 98, 119);
-  max-width: 98vw;
-}
+
 .quick-links-grid{
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
 }
 
 #nav-bar-links > a{
@@ -61,32 +57,6 @@ img{
 */
 h4{
   font-size: 1.8vh;
-}
-
-
-.announcement-container{
-  background-color: #fff;
-  opacity: 72%;
-}
-
-#discover-section1{
-  display: grid;
-  margin: auto;
-  justify-items: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
-
-#thumbnail{
-  max-width: 11rem;
-}
-
-#thumb-image{
-  height: inherit;
-}
-
-#thumb-tab{
-  background-color: #fff;
-  height: inherit;
 }
 
 h6{

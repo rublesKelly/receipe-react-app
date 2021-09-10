@@ -1,0 +1,17 @@
+#discover-section{
+    margin: 0 auto;
+    background-color: rgb(119, 98, 119);
+    max-width: 98vw;
+  }
+
+  #discover-section1{
+    margin: 0 auto;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(5,1fr)
+  }
+
+  .announcement-container{
+    background-color: #fff;
+    opacity: 72%;
+  }

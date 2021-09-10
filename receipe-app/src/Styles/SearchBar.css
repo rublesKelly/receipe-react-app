@@ -1,11 +1,13 @@
 #search-bar{
-    background-color: #fff;
+    min-height: 900px;
+    background-color: lightblue;
     border-radius: 1px;
 }
 
 #search-form{
-    height: 2.5vh;
+    min-height: 2.5vh;
     margin-left: 1vw;
+
 }
 
 #search-input{
