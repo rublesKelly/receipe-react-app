@@ -1,5 +1,6 @@
 //Imports
 import './App.css'
+import './tabs.css'
 import React, {useState, useEffect} from 'react' 
 // import {BrowserRouter, Router, Switch, Route } from "react-router-dom";
 import {api} from './axios';
@@ -10,9 +11,8 @@ import { AiTwotoneHome, AiOutlineSearch } from "react-icons/ai";
 import { IoIosCloseCircle } from "react-icons/io";
 
 //Importing react components
-// import SearchPage from './Pages/SearchPage'
+import SearchResults from './Components/SearchResults'
 import SearchBar from "./Components/SearchBar";
-import TabBar from "./Components/TabBar.js";
 import DiscoverGrid from './Components/DiscoverGrid.js';
 import SideBar from "./Components/SideBar";
 import TestComp from './Components/TestComp.js'
@@ -30,19 +30,21 @@ function App() {
   // console.log(showTabBar)
 
   //Declaring state
+  const [showTestComp, setShowTestComp] = useState(false)
   const [receipes, setReceipes] = useState([])
+  const [results, setResults] = useState([])
   const [announcement, setAnnouncement] = useState({show: true,
     title: '',
     msg: '',
     image: ''
-                                                    })
-  const [showTestComp, setShowTestComp] = useState(false)
+  })
+  const [showResults, setShowResults] = useState(true)
   const [showToolBar, setShowToolBar] = useState(true)
   const [showSideBar, setShowSideBar] = useState(false)
   const [tabClassName, setTabClassName] = useState('tab-bar-inactive')
   const [tabIndex, setTabIndex] = useState(0)
   const [showTabPanel, setShowTabPanel] = useState(false)
-  const [showSearchBar, setShowSearchBar] = useState(false)
+  const [showSearchBar, setShowSearchBar] = useState(true)
   const [userData, setUserData] = useState([{ id: 123,
                                               title:'Liked Receipes',
                                               image:egg},
@@ -111,20 +113,22 @@ function App() {
     <div className='app'>
       <button id="test-bar" onClick={()=>setShowTestComp(state=>!state)}/>
       {showTestComp && <TestComp setAnnouncement={setAnnouncement} setShowSideBar={setShowSideBar}setTabClassName={setTabClassName}setShowToolBar={setShowToolBar}/>}
+      {showSideBar && <SideBar/>}
       <Tabs selectedIndex={tabIndex} onSelect={index=>setTabIndex(index)}>
         <TabList>
-        <Tab><AiTwotoneHome/></Tab>
-        <Tab>
-          {showSearchBar ? <SearchBar 
-                                      onAddReceipeClicked={onAddReceipeClicked}
-                            /> : <AiOutlineSearch/> }
-          </Tab> 
-        {receipes.map(receipe => 
-                   <Tab  onClick={()=>tabClickedHandler()}>
-                        {receipe.title}
-                        <button id='remove-tab-btn' onClick={()=> onRemoveReceiepeClicked(receipe.key)} ><IoIosCloseCircle/></button>
-                   </Tab>
-        )}
+          <Tab><AiTwotoneHome/></Tab>
+          <Tab>
+            {tabIndex === 1 ? <SearchBar 
+                                setResults={setResults}
+                                setShowResults={setShowResults}
+                            /> :<AiOutlineSearch/> }
+            </Tab> 
+          {receipes.map(receipe => 
+                    <Tab  onClick={()=>tabClickedHandler()}>
+                          {receipe.title}
+                          <button id='remove-tab-btn' onClick={()=> onRemoveReceiepeClicked(receipe.key)} ><IoIosCloseCircle/></button>
+                    </Tab>
+          )}
         </TabList>
         <TabPanel>
           <DiscoverGrid 
@@ -133,7 +137,12 @@ function App() {
           />
         </TabPanel>
         <TabPanel>
-          <div id='search-page'></div>
+          <div id="search-panel">
+            {results.length > 0 && showResults &&
+              <SearchResults  results={results}
+                              onAddReceipeClicked={onAddReceipeClicked}
+              />}
+          </div>
         </TabPanel>
         {showTabPanel && receipes.map(receipe => 
                     <TabPanel>
@@ -141,7 +150,6 @@ function App() {
                     </TabPanel>
         )}
       </Tabs>
-      {showSideBar && <SideBar/>}
       {showToolBar && <ToolBar setShowSideBar={setShowSideBar} showSideBar={showSideBar}/>}
     </div>
   );

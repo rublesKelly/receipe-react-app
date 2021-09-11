@@ -1,16 +1,13 @@
 import {React, useState} from 'react'
 import { api } from "../axios";
 import '../Styles/SearchBar.css'
-import SearchResults from './SearchResults';
 import {AiOutlineSearch } from "react-icons/ai";
 
 
-function SearchBar(props) {
+function SearchBar({setResults, setShowResults}) {
 
     //Setting state for controlled form component 
     const [searchTerm, setSearchTerm] = useState('')
-    const [results, setResults] = useState([])
-    const [showResults, setShowResults] = useState(true)
 
     //On Submit Handler calls the fetch request with the search term
     const onSubmitHandler = (e) => {
@@ -29,16 +26,11 @@ function SearchBar(props) {
                     type="text" 
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)} //onChangeHandler
-                    
                  />
                  <AiOutlineSearch/>
                 {/* <input type="submit" />   */}
                 {/* <input type="button" onClick={results => setShowResults(!showResults)}/>   */}
-           </form> 
-           {results.length > 0 && showResults &&
-           <SearchResults   results={results}
-                            onAddReceipeClicked={props.onAddReceipeClicked}
-           />} 
+           </form>     
         </div>
     )
 }

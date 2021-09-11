@@ -8,19 +8,23 @@
     place-items: top left;
     text-align: left;
     margin-bottom: 1rem;
-    background-color: #fff;
+    background-color: #333;
+    border-radius: 8%;
+    color: whitesmoke;
     height: 11vh;
+    background: rgba( 56, 56, 56, .3);
     width: 30vw; 
     max-width: 420px;
   }
 
   #receipe-collection-card:hover{
-    background-color: #eee;
+    background-color: #777;
     cursor: pointer;
   }
   
   #collection-card-title{
       grid-area: second;
+      opacity: 100%;
       margin: auto;
       margin-left: 0;
       font-size: 1.5vw;

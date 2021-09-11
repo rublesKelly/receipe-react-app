@@ -2,15 +2,15 @@ import React from 'react'
 import ReceipeCard from './ReceipeCard'
 import ReceipeCollectionCard from './ReceipeCollectionCard'
 
-const array = [1,2,3,4,5,6]
-
-
-function ReceipeCollection() {
+function ReceipeCollection({receipes}) {
     return (
         <div id='receipe-collection'>
             <div id='receipe-collection-item'>
-                {array.map(eachCard => 
-                    <ReceipeCard/>
+                {receipes.map(receipe => 
+                    <ReceipeCard
+                        title={receipe.title}
+                        image={receipe.image}
+                    />
                 )}
             </div>
         </div>

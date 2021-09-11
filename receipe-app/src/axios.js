@@ -65,7 +65,7 @@ const api ={
     },
 
     //Get multi reciepes by id
-    getReceipebyCusine: async(ids) => {
+    getReceipebyBulk: async(ids) => {
         const response = await axios.get(`${API_URL}/informationBulk?ids=${ids}&apiKey=${API_KEY}`)
         .then((res) => {
             return res.data
@@ -73,7 +73,7 @@ const api ={
         .catch((err) => {
             console.log(err);
         })
-        // console.log(response);
+        console.log(response);
         return response
     }
 }

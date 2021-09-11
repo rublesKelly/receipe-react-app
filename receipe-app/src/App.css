@@ -29,14 +29,6 @@ h6{
   z-index: +10;
 }
 
-/* Control second search tab animation roll out roll in */
-#react-tabs-2.react-tabs__tab--selected{
-  width: 30vw;
-  max-height: 18px;
-}
-#react-tabs-2.react-tabs__tab{
-  width: auto;
-}
-#search-page{
+#search-panel{
   min-height: 900px;
 }

@@ -1,12 +1,12 @@
 #receipe-grid{
     min-height: 1000px;
-    background-color: rgb(34, 66, 85);
-    color: #eee;
+    background: rgba( 56, 56, 56, .3);
+    color: fff;
     display: grid;
     margin: 0 auto;
     grid-gap: 10px;
     place-items: top center;
-    max-width: 80vw;
+    max-width: 90vw;
     grid-template-columns: repeat(3, 1fr) ;
     grid-template-rows: auto 1fr;
     grid-template-areas: "Header Header Image"

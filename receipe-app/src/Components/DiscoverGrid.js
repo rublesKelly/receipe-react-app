@@ -10,16 +10,18 @@ function DiscoverGrid({userData, announcement, onAddReceipeClicked}) {
 
     const [discoverTitles, setDiscoverTitles] = useState(['French Cusine'])
     const [discoverData, setDiscoverData] = useState([])
-    const [helperArray, setHelperArray] = useState([1,2,3,4])
+    const [likedReceipes, setLikedReceipes] = useState([])
 
     //UseEffect to get Frecnh cusine on discover sectoin
-    // useEffect(() => {
-    //     api.getReceipebyCusine('french')
-    //         .then(res=>setDiscoverData(res.results))
-    //     return () => {
-    //         console.log('clenaip');
-    //     }
-    // }, [])
+    useEffect(() => {
+        api.getReceipebyCusine('french')
+            .then(res=>setDiscoverData(res.results))
+        api.getReceipebyBulk([660404,639580])
+            .then(res=>setLikedReceipes(res))
+        return () => {
+            console.log('clenaip');
+        }
+    }, [])
 
     return (
         <div id="discover-section">
@@ -30,9 +32,9 @@ function DiscoverGrid({userData, announcement, onAddReceipeClicked}) {
                     (<ReceipeCollectionCard
                         title={eachItem.title}
                         image={eachItem.image}
-                        
+                        receipes={likedReceipes}
                     />)
-            )}
+                 )}
             </div>
             <h1  id="discover-title">{discoverTitles[0]}</h1>
             <div id="discover-section1">
@@ -43,8 +45,7 @@ function DiscoverGrid({userData, announcement, onAddReceipeClicked}) {
                         title={receipe.title}
                         image={receipe.image}
                         onAddReceipeClicked={onAddReceipeClicked}
-                    />)}
-
+                />)}
             </div>
         </div>        
     )

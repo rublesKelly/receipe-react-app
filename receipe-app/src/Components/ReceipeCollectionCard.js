@@ -19,7 +19,7 @@ function ReceipeCollectionCard(props) {
                 </div>
             </div>
         </a>
-        {showCollection && <ReceipeCollection/>}
+        {showCollection && <ReceipeCollection receipes={props.receipes}/>}
     </div>
     )
 }
