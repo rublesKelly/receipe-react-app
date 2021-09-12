@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import '../Styles/Thumbnail.css'
 import egg from '../Assets/egg-fried-rice.jpg'
 
 function ReceipeThumbnail({id, title, image, onAddReceipeClicked}) {

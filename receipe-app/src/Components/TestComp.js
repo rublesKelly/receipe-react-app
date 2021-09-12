@@ -52,6 +52,7 @@ function TestComp({setAnnouncement, setShowSideBar,setTabClassName}) {
             <button id="side-bar-btn" onClick={()=>setShowSideBar(state => !state)}>Show Sidebar</button>
             <button id="toggle-tool-bar"onClick={()=>setShowTabBar(state => !state)}>toggle setShowToolbBar</button>
             <button id="toggle-tab-bar"onClick={()=>setTabClassName(state => !state)}>toggle tabbar className</button>
+            <button id='log-detailed-receipe' onClick={()=>api.getDetailedReceipebyQuery('garlic')}>Get detailed receipe</button>
         </div>
     )
 }

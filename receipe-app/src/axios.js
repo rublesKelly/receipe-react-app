@@ -38,6 +38,19 @@ const api ={
         return response
     },
 
+    //Get reciepes by query seach
+    getDetailedReceipebyQuery: async(searchTerm) => {
+        const response = await axios.get(`${SEARCH_RECEIPE_URL}&query=${searchTerm}&addRecipeNutrition=true&addRecipeInformation=true`)
+        .then((res) => {
+            return res.data
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+        console.log(response);
+        return response
+    },
+
     //Get reciepes by id
     getReceipebyID: async(id) => {
         const response = await axios.get(`${API_URL}/${id}/information?apiKey=${API_KEY}`)

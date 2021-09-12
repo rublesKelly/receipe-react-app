@@ -1,10 +1,10 @@
 import React from 'react'
+import banner from '../Assets/wide-open-ocean-art-by-linda-woods-linda-woods.jpg';
 
 function announcement() {
     return (
         <div className='announcement-container'>
-            <h1>This is the announcement section</h1>
-            <h4>This will render sometimes when the websites needs to speak to the user or wants to feature a reciepe</h4>
+            <img src={banner} alt="" />
         </div>
     )
 }

@@ -1,11 +1,10 @@
 #discover-section{
     margin: 0 auto;
     /* background-color: rgb(119, 98, 119); */
-    max-width: 98vw;
+    max-width: 60vw;
     height: 900px;
   }
 
-  
 .quick-links-grid{
   margin: 0 auto;
   display: grid;
@@ -14,14 +13,16 @@
 }
 
   #discover-section1{
+    grid-template-columns: repeat(5,1fr);
     margin: 0 auto;
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(5,1fr)
   }
 
-  .announcement-container{
-    background-color: #fff;
+  announcement-container{
+    max-height: 1vh;
+    display: inline;
+    background-color: grey;
     opacity: 72%;
   }
 

@@ -1,12 +1,17 @@
-import React from 'react'
-import {  } from "../Styles/SideBar.css";
+import React, {useState} from 'react'
+import "../Styles/SideBar.css";
+import Menu from './Menu';
+
 
 function SideBar() {
+    
+//Declare state
+const [changeMenu, setChangeMenu] = useState('primary')
+    
     return (
         <div id='side-bar'>
-            <h4>Home</h4>
-            <h4>Liked Reciepes</h4>
-            <h4>Settings</h4>
+           {changeMenu === 'primary' &&  <Menu id='primary-menu' setChangeMenu={setChangeMenu}/>}
+           {changeMenu === 'settings' && <Menu id='settings-menu'/>}
         </div>
     )
 }

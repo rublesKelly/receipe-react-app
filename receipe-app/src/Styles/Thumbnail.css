@@ -1,12 +1,14 @@
 #thumbnail{
-    max-width: 10rem;
+    max-width: 10vw;
+    background-color: #333;
+    margin: 1vw;
   }
   
   #thumb-image{
-    height: inherit;
+    max-height: 80vh;
+    overflow: hidden;
   }
   
   #thumb-tab{
-    background-color: #fff;
-    height: inherit;
+     height: inherit;
   }
