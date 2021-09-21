@@ -1,17 +1,18 @@
 
 #tool-bar{
-    width: 98vw;
-    height: 40px;
+    width: 100%;
+    height: min(35px, 4vh);
     background-color: #111;
     position: sticky; left:0px; bottom:0px; z-index:999;
-    grid: display;
+    display: grid;
     grid-template-rows: 1;
+    grid-template-columns: 8vw 1fr 22vw;
 }
 
-#side-bar-btn{
-    border-right: solid #eee;
-    background-color: cornsilk;
-    height: 38px;
+#tool-bar > button {
+    /* border-right: solid #eee; */
+    background-color: #5d5d5d;
+    height: auto;
     width: 4vw;
 }
 
@@ -24,3 +25,17 @@
     width: 4vw;
 }
 
+#timer{
+    display: inline;
+    background-color: black;
+    text-align: 'center'
+}
+
+#timer-display{
+    
+}
+
+#timer-container{
+    display: grid;
+    place-items: end end;
+}

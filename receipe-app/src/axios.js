@@ -25,6 +25,28 @@ const api ={
         return response
     },
 
+    //Complex search the args might need to be an object 
+    getComplexbyQuery: async(
+            searchTerm, 
+            cusine, 
+            diet, 
+            intolerances, 
+            maxReadyTime, 
+            sort, 
+            sortDirection) => {
+                const response = await axios.get(`${SEARCH_RECEIPE_URL}&query=${searchTerm}`,{
+                    params:{
+                        cusine: cusine,
+                        diet: diet,
+                        intolerances: intolerances, 
+                        maxReadyTime: maxReadyTime, 
+                        sort: sort, 
+                        sortDirection: sortDirection
+                    }
+                })
+        
+    },
+
     //Get reciepes by query seach
     getReceipebyQuery: async(searchTerm) => {
         const response = await axios.get(`${SEARCH_RECEIPE_URL}&query=${searchTerm}`)

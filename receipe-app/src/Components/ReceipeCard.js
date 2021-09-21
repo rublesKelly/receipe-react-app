@@ -12,12 +12,12 @@ function ReceipeCard(props) {
                     <img src={props.image} alt="receipe-not-found" id="receipe-card-image" />
                 </div>
                 <div id='receipe-card-long-text-info'>
-                    <h4 id="receipe-card-title">{props.title}</h4>
+                    <h3 id="receipe-card-title">{props.title}</h3>
                     <p>{props.description}</p>
                     {/* <button onClick={()=>props.onAddReceipeClicked(props.id)}>GoTo</button> */}
                 </div>
                 <div id="receiep-card-short-text-info">
-                    <h4 id="reciepe-card-preptime">{props.prepTime}</h4>
+                    <h3 id="reciepe-card-preptime">{props.prepTime}</h3>
                     <i id='vegan-friendly-icon'>{props.vegan}</i>
                     <i id='vegatarian-friendly-icon'></i>
                     <i id='dairy-free-icon'></i>

@@ -6,12 +6,12 @@ import Menu from './Menu';
 function SideBar() {
     
 //Declare state
-const [changeMenu, setChangeMenu] = useState('primary')
-    
+const [menu, setMenu] = useState(1)
+// console.log(setMenu instanceof Function)    
     return (
         <div id='side-bar'>
-           {changeMenu === 'primary' &&  <Menu id='primary-menu' setChangeMenu={setChangeMenu}/>}
-           {changeMenu === 'settings' && <Menu id='settings-menu'/>}
+           {menu === 1 &&  <Menu id='primary-menu' setMenu={setMenu}/>}
+           {menu === 2 && <Menu id='settings-menu'/>}
         </div>
     )
 }

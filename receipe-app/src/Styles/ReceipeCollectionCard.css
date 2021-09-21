@@ -1,19 +1,19 @@
+#receipe-collection{
+  margin-left: 10px;
+}
 #receipe-collection-card{
-    margin: 1rem auto;
-    display: grid;
-    grid-template-rows: 1;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "first second second";
-    grid-gap: .5rem;                      
-    place-items: top left;
-    text-align: left;
-    margin-bottom: 1rem;
-    background-color: #333;
-    border-radius: 8%;
-    max-height: 6vh;
-    background: rgba( 56, 56, 56, .3);
-    width: 16vw; 
-    max-width: 320px;
+  
+  display: grid;
+  grid-template-rows: 1;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "first second second";
+  grid-gap: .5rem;                      
+  place-items: top left;
+  text-align: left;
+  border-radius: 8%;
+  height: clamp(1vh, 250px + 5vh, 12vh);
+  width: clamp(250px, 250px + 5vw, 70vw);
+  background: rgba( 56, 56, 56, .3);    
   }
 
   #receipe-collection-card:hover{
@@ -26,11 +26,7 @@
       opacity: 100%;
       margin: auto;
       margin-left: 0;
-      font-size: 1vw;
-  }
-
-  h4#collection-card-title{
-    font-size: 1vw;
+      font-size: var(--fs-x-medium);
   }
   
   #collection-image{

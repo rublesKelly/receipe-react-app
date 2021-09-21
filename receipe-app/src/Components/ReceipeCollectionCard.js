@@ -8,14 +8,14 @@ function ReceipeCollectionCard(props) {
     
 
     return (
-    <div>
+    <div id='receipe-collection'>
         <a id="collection-card-link" onClick={()=> setShowCollection(state => !state)}>
             <div id='receipe-collection-card'>
                 <div id="collection-image">
                     <img src={props.image} alt="" id='collection-image'/>
                 </div>
                 <div id="collection-card-title">
-                    <h4 id="collection-card-title">{props.title}</h4>
+                    <h3 id="collection-card-title">{props.title}</h3>
                 </div>
             </div>
         </a>

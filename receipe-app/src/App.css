@@ -1,11 +1,16 @@
+:root{
+  --fs-x-large: clamp(2.5rem, 4px + 2vw, 12rem);
+  --fs-large: clamp(1.5rem, 4px + 2vw, 4rem);
+  --fs-medium: clamp(.5rem, 4px + 1.5vw, 2rem);
+  --fs-small: clamp(.2.5rem, 4px + 2vw, 1rem);
+}
+
 body{
   justify-items: center;
   background: rgb(42,49,50);
   background: linear-gradient(325deg, rgba(42,49,50,1) 0%, rgba(29,39,60,1) 18%, rgba(76,82,83,1) 100%);  /* background:#3d8591; */
   color: #d5d5d5;
   height: 100vh;
-  /* font grows 1px for every 100px of viewport width */
-  font-size: calc(4px + 1vw);
 }
 
 img{
@@ -14,14 +19,6 @@ img{
   max-width: 100%;
   height: auto;
   background-size: cover;  
-}
-
-h4{
-  font-size: 1.8vh;
-}
-
-h6{
-  margin: 0rem;
 }
 
 #test-bar{

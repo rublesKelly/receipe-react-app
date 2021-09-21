@@ -13,9 +13,9 @@ function ReceipeThumbnail({id, title, image, onAddReceipeClicked}) {
                 <img src={image} alt="image not found" id="thumb-image" />
             </div>
             <div id="thumb-tab">
-                <h6 id="thumb-title">
+                <h3 id="thumb-title">
                     {title}
-                </h6>
+                </h3>
             {false && <div id="expanded-thumbnail">
                 <ul>
                     

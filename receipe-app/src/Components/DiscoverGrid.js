@@ -26,7 +26,7 @@ function DiscoverGrid({userData, announcement, onAddReceipeClicked}) {
     return (
         <div id="discover-section">
             {announcement.show && <Announcement/>}
-            <h1  id="discover-greeting">Good Afternoon</h1>
+            <h3  id="discover-greeting">Good Afternoon</h3>
             <div className="quick-links-grid">
                 {userData.map((eachItem) =>
                     (<ReceipeCollectionCard
@@ -36,7 +36,7 @@ function DiscoverGrid({userData, announcement, onAddReceipeClicked}) {
                     />)
                  )}
             </div>
-            <h1  id="discover-title">{discoverTitles[0]}</h1>
+            <h3  id="discover-title">{discoverTitles[0]}</h3>
             <div id="discover-section1">
                 {discoverData.map((receipe)=>
                     <ReceipeThumbnail

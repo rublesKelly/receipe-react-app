@@ -25,9 +25,9 @@ require('dotenv').config({  path:'../.env'})
 
 function App() {    
 
-  //Adding context
-  const {showTabBar, setShowTabBar} = useAppContext();
-  // console.log(showTabBar)
+  //Importing context
+  // const {showTabBar, setShowTabBar} = useAppContext(); console.log(showTabBar)
+  
 
   //Declaring state
   const [showTestComp, setShowTestComp] = useState(false)

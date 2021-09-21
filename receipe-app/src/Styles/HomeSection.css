@@ -1,9 +1,13 @@
 #discover-section{
     margin: 0 auto;
     /* background-color: rgb(119, 98, 119); */
-    max-width: 60vw;
+    max-width: 80vw;
     height: 900px;
   }
+
+#discover-greeting, #discover-title{
+  font-size: var(--fs-large);
+}
 
 .quick-links-grid{
   margin: 0 auto;
