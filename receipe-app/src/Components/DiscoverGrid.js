@@ -1,23 +1,23 @@
 import React, {useState, useEffect} from 'react'
-import ReceipeCollectionCard from './ReceipeCollectionCard';
-import ReceipeThumbnail from "./ReceipeThumbnail";
+import RecipeCollectionCard from './RecipeCollectionCard';
+import RecipeThumbnail from "./RecipeThumbnail";
 import '../App.css'
 import {api} from '../axios';
 import '../Styles/HomeSection.css'
 import Announcement from './Annoucement';
 
-function DiscoverGrid({userData, announcement, onAddReceipeClicked}) {
+function DiscoverGrid({userData, announcement, onAddRecipeClicked}) {
 
     const [discoverTitles, setDiscoverTitles] = useState(['French Cusine'])
     const [discoverData, setDiscoverData] = useState([])
-    const [likedReceipes, setLikedReceipes] = useState([])
+    const [likedRecipes, setLikedRecipes] = useState([])
 
     //UseEffect to get Frecnh cusine on discover sectoin
     useEffect(() => {
-        api.getReceipebyCusine('french')
+        api.getRecipebyCusine('french')
             .then(res=>setDiscoverData(res.results))
-        api.getReceipebyBulk([660404,639580])
-            .then(res=>setLikedReceipes(res))
+        api.getRecipebyBulk([660404,639580])
+            .then(res=>setLikedRecipes(res))
         return () => {
             console.log('clenaip');
         }
@@ -29,22 +29,22 @@ function DiscoverGrid({userData, announcement, onAddReceipeClicked}) {
             <h3  id="discover-greeting">Good Afternoon</h3>
             <div className="quick-links-grid">
                 {userData.map((eachItem) =>
-                    (<ReceipeCollectionCard
+                    (<RecipeCollectionCard
                         title={eachItem.title}
                         image={eachItem.image}
-                        receipes={likedReceipes}
+                        recipes={likedRecipes}
                     />)
                  )}
             </div>
             <h3  id="discover-title">{discoverTitles[0]}</h3>
             <div id="discover-section1">
-                {discoverData.map((receipe)=>
-                    <ReceipeThumbnail
-                        key={receipe.id}
-                        id={receipe.id}
-                        title={receipe.title}
-                        image={receipe.image}
-                        onAddReceipeClicked={onAddReceipeClicked}
+                {discoverData.map((recipe)=>
+                    <RecipeThumbnail
+                        key={recipe.id}
+                        id={recipe.id}
+                        title={recipe.title}
+                        image={recipe.image}
+                        onAddRecipeClicked={onAddRecipeClicked}
                 />)}
             </div>
         </div>        

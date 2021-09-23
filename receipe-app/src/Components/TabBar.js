@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import ReceipeGrid from './ReceipeGrid';
+import RecipeGrid from './RecipeGrid';
 import '../tabs.css'
 
-function TabBar({receipes, onRemoveReceiepeClicked, tabClassName, setTabClassName}) {
+function TabBar({recipes, onRemoveReceiepeClicked, tabClassName, setTabClassName}) {
     
     //Declare state
     const [tabIndex, setTabIndex] = useState(0)
@@ -20,16 +20,16 @@ function TabBar({receipes, onRemoveReceiepeClicked, tabClassName, setTabClassNam
         <div className={tabClassName}>
             <Tabs selectedIndex={tabIndex} onSelect={index=>setTabIndex(index)}>
                 <TabList>
-                {receipes.map(receipe => 
+                {recipes.map(recipe => 
                    <Tab  onClick={()=>tabClickedHandler()}>
-                        {receipe.title}
-                        <button onClick={()=> onRemoveReceiepeClicked(receipe.key)} >X</button>
+                        {recipe.title}
+                        <button onClick={()=> onRemoveReceiepeClicked(recipe.key)} >X</button>
                    </Tab>
                 )}
                 </TabList>
-                {showTabPanel && receipes.map(receipe => 
+                {showTabPanel && recipes.map(recipe => 
                     <TabPanel>
-                        <ReceipeGrid receipe = {receipe}/>
+                        <RecipeGrid recipe = {recipe}/>
                     </TabPanel>
                 )}              
             </Tabs>

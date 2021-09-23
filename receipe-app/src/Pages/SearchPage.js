@@ -25,11 +25,11 @@ const onSubmitHandler = (e) => {
     e.preventDefault(); 
     setSearchQuery(e.target.value); 
     console.log(searchQuery);
-    getReciepesbySearchQuery(searchQuery);
+    getRecipesbySearchQuery(searchQuery);
 }
 
-//getReciepesbySearchQuery function here 
-const getReciepesbySearchQuery = async (searchQuery) => {
+//getRecipesbySearchQuery function here 
+const getRecipesbySearchQuery = async (searchQuery) => {
     await axios(`/complexSearch?query=${searchQuery}&addRecipeInformation=true&apiKey=${process.env.react_app_api_key}`)
         .then(res => {
             console.log(res);
@@ -40,8 +40,8 @@ const getReciepesbySearchQuery = async (searchQuery) => {
         })
 };
 
-//Search reciepes by ID
-const getReciepesbyID = async (id) => {
+//Search recipes by ID
+const getRecipesbyID = async (id) => {
     axios.get(`/${id}/information?apiKey=${process.env.react_app_api_key}`)
         .then(res => {
             // console.log(res.data);
@@ -54,7 +54,7 @@ const getReciepesbyID = async (id) => {
     return (
         <div>
             <form action="/" method='get/post_here' onSubmit={onSubmitHandler} >
-                <label htmlFor="search-bar">Search for Receipes</label>
+                <label htmlFor="search-bar">Search for Recipes</label>
                 <input 
                     type="input"
                     id='search-bar'
@@ -63,7 +63,7 @@ const getReciepesbyID = async (id) => {
                 />
                 <label >Search by ID </label>
                 <input type="text"onChange={(e) => setId(e.target.value)}/>
-                <input type="submit" onSubmit={getReciepesbyID(id)} />
+                <input type="submit" onSubmit={getRecipesbyID(id)} />
             </form>
                 <SearchResults searchResults={searchResults}/>
 

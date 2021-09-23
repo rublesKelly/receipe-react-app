@@ -2,13 +2,13 @@ import React, {useState} from 'react'
 import '../Styles/Thumbnail.css'
 import egg from '../Assets/egg-fried-rice.jpg'
 
-function RecipeThumbnail({id, title, image, onAddRecipeClicked}) {
+function RecipeThumbnail({id, title, image, onAddrecipeClicked}) {
 
     //Declare state
-    const [, setThumnailClass] = useState('initialState')
+    const [thumnailClass, setThumnailClass] = useState('initialState')
 
     return (
-        <div id='thumbnail' onClick={()=>onAddRecipeClicked(id)}>
+        <div id='thumbnail' onClick={()=>onAddrecipeClicked(id)}>
             <div id="thumb-image">
                 <img src={image} alt="image not found" id="thumb-image" />
             </div>

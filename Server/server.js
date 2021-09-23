@@ -6,9 +6,9 @@ const {graphqlHTTP} = require('express-graphql');
 const schema = require('./GraphQL/schema.js')
 
 //Data for testing 
-const receipe1 = require('../receipe-app/src/test-data.json');
-const receipe2 = require('../receipe-app/src/test-data2.json');
-const receipe3 = require('../receipe-app/src/test-data3.json');
+const recipe1 = require('../recipe-app/src/test-data.json');
+const recipe2 = require('../recipe-app/src/test-data2.json');
+const recipe3 = require('../recipe-app/src/test-data3.json');
 
 //Sever stuff (routing mostly)
 
@@ -37,22 +37,22 @@ app.get("/", (req, res) => {
     //res.json(data);
 });
 
-//Get method to send a sample receipe to rect app
-app.get("/receipe1", (req, res) => {
+//Get method to send a sample recipe to rect app
+app.get("/recipe1", (req, res) => {
     console.log('Im the first reciiepe');
-    res.json(receipe1);
+    res.json(recipe1);
 });
 
-        //Get method to send a second sample receipe to rect app
-        app.get("/receipe2", (req, res) => {
-            console.log('Looks like reciepe 2 was called ');
-            res.json(receipe2);
+        //Get method to send a second sample recipe to rect app
+        app.get("/recipe2", (req, res) => {
+            console.log('Looks like recipe 2 was called ');
+            res.json(recipe2);
         });
 
-        //Get method to send a third sample receipe to rect app
-        app.get("/receipe3", (req, res) => {
-            console.log('Receipe 3 reporting for duty ');
-            res.json(receipe3);
+        //Get method to send a third sample recipe to rect app
+        app.get("/recipe3", (req, res) => {
+            console.log('Recipe 3 reporting for duty ');
+            res.json(recipe3);
         });
 
 //POST request that justs sends the message and the request info back to client

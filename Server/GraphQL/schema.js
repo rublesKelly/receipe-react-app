@@ -2,8 +2,8 @@
 const   {GraphQLObjectType, GraphQLInt, 
         GraphQLString, GraphQLBoolean} = require('graphql');
 
-// //Create reciepe type
-// const receipeType = new GraphQLObjectType({
+// //Create recipe type
+// const recipeType = new GraphQLObjectType({
 //     name: 'uinset name here',
 //     description: 'stuff goes here bro',
 //     fields () => ({

@@ -10,7 +10,7 @@ function Menu({setMenu}) {
     return (
         <div>
             <h3>Home</h3>
-            <h3>Liked Reciepes</h3>
+            <h3>Liked Recipes</h3>
             <button 
                 id="settings-button" 
                 onClick={()=>onClickHandler()}

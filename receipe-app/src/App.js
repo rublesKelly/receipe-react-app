@@ -16,7 +16,7 @@ import SearchBar from "./Components/SearchBar";
 import DiscoverGrid from './Components/DiscoverGrid.js';
 import SideBar from "./Components/SideBar";
 import TestComp from './Components/TestComp.js'
-import ReceipeGrid from './Components/ReceipeGrid.js'
+import RecipeGrid from './Components/RecipeGrid.js'
 import ToolBar from "./Components/ToolBar.js";
 
 require('dotenv').config({  path:'../.env'})
@@ -31,7 +31,7 @@ function App() {
 
   //Declaring state
   const [showTestComp, setShowTestComp] = useState(false)
-  const [receipes, setReceipes] = useState([])
+  const [recipes, setRecipes] = useState([])
   const [results, setResults] = useState([])
   const [announcement, setAnnouncement] = useState({show: true,
     title: '',
@@ -46,7 +46,7 @@ function App() {
   const [showTabPanel, setShowTabPanel] = useState(false)
   const [showSearchBar, setShowSearchBar] = useState(true)
   const [userData, setUserData] = useState([{ id: 123,
-                                              title:'Liked Receipes',
+                                              title:'Liked Recipes',
                                               image:egg},
                                             { id: 124,
                                               title:'Dinner Ideas',
@@ -55,29 +55,29 @@ function App() {
                                               image:egg
                                             }])
 
-  //Get random receipe and assign it to state on start                                            
+  //Get random recipe and assign it to state on start                                            
   useEffect(() => {
-    api.getRandomReceipe().then(res => {
-      const updateReceipes = [...receipes,
+    api.getRandomRecipe().then(res => {
+      const updateRecipes = [...recipes,
         {key: res.recipes[0].id,
           title: res.recipes[0].title,
           image: res.recipes[0].image,
           ingredients: res.recipes[0].extendedIngredients,
           steps: res.recipes[0].analyzedInstructions[0].steps
         }]
-      // console.log(updateReceipes)
-      setReceipes(updateReceipes)
+      // console.log(updateRecipes)
+      setRecipes(updateRecipes)
       })
     },[])                                                                                        
 
   //Tab bar handler
-    //Add receipe to tab passed to receipe card and thumbnail
-    const onAddReceipeClicked = (id) => {
-      if(id in receipes){console.log('success?')}//this line doesnt do anything at the momnent
-      api.getReceipebyID(id)
+    //Add recipe to tab passed to recipe card and thumbnail
+    const onAddRecipeClicked = (id) => {
+      if(id in recipes){console.log('success?')}//this line doesnt do anything at the momnent
+      api.getRecipebyID(id)
           .then(res => {
             console.log();
-            const updateReceipes = [...receipes,
+            const updateRecipes = [...recipes,
               {key: res.id,
                title: res.title,
                image: res.image,
@@ -90,18 +90,18 @@ function App() {
                readyInMinuites: res.readyInMinuites,
                servings: res.servings
               }]
-            setReceipes(updateReceipes)
+            setRecipes(updateRecipes)
             })
     
     }
 
     const onRemoveReceiepeClicked = (id) => {
       console.log(id)
-      const updateReceiepes = receipes.filter(
-        receipe =>  receipe.key !== id
+      const updateReceiepes = recipes.filter(
+        recipe =>  recipe.key !== id
       )
       console.log(updateReceiepes)
-      setReceipes(updateReceiepes)
+      setRecipes(updateReceiepes)
     }
 
     const tabClickedHandler = () => {
@@ -123,30 +123,30 @@ function App() {
                                 setShowResults={setShowResults}
                             /> :<AiOutlineSearch/> }
             </Tab> 
-          {receipes.map(receipe => 
+          {recipes.map(recipe => 
                     <Tab  onClick={()=>tabClickedHandler()}>
-                          {receipe.title}
-                          <button id='remove-tab-btn' onClick={()=> onRemoveReceiepeClicked(receipe.key)} ><IoIosCloseCircle/></button>
+                          {recipe.title}
+                          <button id='remove-tab-btn' onClick={()=> onRemoveReceiepeClicked(recipe.key)} ><IoIosCloseCircle/></button>
                     </Tab>
           )}
         </TabList>
         <TabPanel>
           <DiscoverGrid 
                 userData={userData} announcement={announcement}
-                onAddReceipeClicked={onAddReceipeClicked}      
+                onAddRecipeClicked={onAddRecipeClicked}      
           />
         </TabPanel>
         <TabPanel>
           <div id="search-panel">
             {results.length > 0 && showResults &&
               <SearchResults  results={results}
-                              onAddReceipeClicked={onAddReceipeClicked}
+                              onAddRecipeClicked={onAddRecipeClicked}
               />}
           </div>
         </TabPanel>
-        {showTabPanel && receipes.map(receipe => 
+        {showTabPanel && recipes.map(recipe => 
                     <TabPanel>
-                        <ReceipeGrid receipe = {receipe}/>
+                        <RecipeGrid recipe = {recipe}/>
                     </TabPanel>
         )}
       </Tabs>

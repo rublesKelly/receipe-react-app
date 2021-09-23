@@ -5,17 +5,17 @@ import axios from 'axios'
 const API_KEY = process.env.react_app_api_key
 const API_URL = 'https://api.spoonacular.com/recipes' 
 
-const SEARCH_RECEIPE_URL = `${API_URL}/complexSearch?apiKey=${API_KEY}`
-const RANDOM_RECEIPE_URL = `${API_URL}/random?apiKey=${API_KEY}`
-//const GET_RECEIPE_INFO   = `${API_URL}/information?apiKey=${API_KEY}`
+const SEARCH_RECIPE_URL = `${API_URL}/complexSearch?apiKey=${API_KEY}`
+const RANDOM_RECIPE_URL = `${API_URL}/random?apiKey=${API_KEY}`
+//const GET_RECIPE_INFO   = `${API_URL}/information?apiKey=${API_KEY}`
 
 // const REQUEST_URL = `${API_URL}/authentication/token/new?apiKey=${API_KEY}`
 // const LOGIN_URL = `${API_URL}/authentication/token/validate_with_login?apiKey=${API_KEY}`
 
 const api ={
-    //Get random receipe
-    getRandomReceipe: async() => {
-        const response = await axios.get(RANDOM_RECEIPE_URL)
+    //Get random recipe
+    getRandomRecipe: async() => {
+        const response = await axios.get(RANDOM_RECIPE_URL)
         .then((res) => {
             return res.data
         })
@@ -34,7 +34,7 @@ const api ={
             maxReadyTime, 
             sort, 
             sortDirection) => {
-                const response = await axios.get(`${SEARCH_RECEIPE_URL}&query=${searchTerm}`,{
+                const response = await axios.get(`${SEARCH_RECIPE_URL}&query=${searchTerm}`,{
                     params:{
                         cusine: cusine,
                         diet: diet,
@@ -47,9 +47,9 @@ const api ={
         
     },
 
-    //Get reciepes by query seach
-    getReceipebyQuery: async(searchTerm) => {
-        const response = await axios.get(`${SEARCH_RECEIPE_URL}&query=${searchTerm}`)
+    //Get recipes by query seach
+    getRecipebyQuery: async(searchTerm) => {
+        const response = await axios.get(`${SEARCH_RECIPE_URL}&query=${searchTerm}`)
         .then((res) => {
             return res.data
         })
@@ -60,9 +60,9 @@ const api ={
         return response
     },
 
-    //Get reciepes by query seach
-    getDetailedReceipebyQuery: async(searchTerm) => {
-        const response = await axios.get(`${SEARCH_RECEIPE_URL}&query=${searchTerm}&addRecipeNutrition=true&addRecipeInformation=true`)
+    //Get recipes by query seach
+    getDetailedRecipebyQuery: async(searchTerm) => {
+        const response = await axios.get(`${SEARCH_RECIPE_URL}&query=${searchTerm}&addRecipeNutrition=true&addRecipeInformation=true`)
         .then((res) => {
             return res.data
         })
@@ -73,8 +73,8 @@ const api ={
         return response
     },
 
-    //Get reciepes by id
-    getReceipebyID: async(id) => {
+    //Get recipes by id
+    getRecipebyID: async(id) => {
         const response = await axios.get(`${API_URL}/${id}/information?apiKey=${API_KEY}`)
         .then((res) => {
             return res.data
@@ -86,9 +86,9 @@ const api ={
         return response
     },
 
-    //Get reciepes by cusine
-    getReceipebyCusine: async(cuisine) => {
-        const response = await axios.get(`${SEARCH_RECEIPE_URL}&cuisine=${cuisine}`)
+    //Get recipes by cusine
+    getRecipebyCusine: async(cuisine) => {
+        const response = await axios.get(`${SEARCH_RECIPE_URL}&cuisine=${cuisine}`)
         .then((res) => {
             return res.data
         })
@@ -99,8 +99,8 @@ const api ={
         return response
     },
 
-    //Get multi reciepes by id
-    getReceipebyBulk: async(ids) => {
+    //Get multi recipes by id
+    getRecipebyBulk: async(ids) => {
         const response = await axios.get(`${API_URL}/informationBulk?ids=${ids}&apiKey=${API_KEY}`)
         .then((res) => {
             return res.data
@@ -115,8 +115,8 @@ const api ={
     
     export {
     api,
-    SEARCH_RECEIPE_URL,
-    RANDOM_RECEIPE_URL
+    SEARCH_RECIPE_URL,
+    RANDOM_RECIPE_URL
 }
 
 

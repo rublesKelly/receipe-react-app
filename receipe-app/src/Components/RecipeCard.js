@@ -6,7 +6,7 @@ function RecipeCard(props) {
     
     return (
         // <Link to={`/${props.id}`}>
-        <a onClick={() => props.onAddRecipeClicked(props.id)}>
+        <a onClick={() => props.onAddrecipeClicked(props.id)}>
             <div className='recipe-card'>
                 <div id='recipe-card-image'>
                     <img src={props.image} alt="recipe-not-found" id="recipe-card-image" />
@@ -14,7 +14,7 @@ function RecipeCard(props) {
                 <div id='recipe-card-long-text-info'>
                     <h3 id="recipe-card-title">{props.title}</h3>
                     <p>{props.description}</p>
-                    {/* <button onClick={()=>props.onAddRecipeClicked(props.id)}>GoTo</button> */}
+                    {/* <button onClick={()=>props.onAddrecipeClicked(props.id)}>GoTo</button> */}
                 </div>
                 <div id="receiep-card-short-text-info">
                     <h3 id="recipe-card-preptime">{props.prepTime}</h3>

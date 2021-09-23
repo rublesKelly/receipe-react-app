@@ -8,7 +8,7 @@ import RecipeHeader from './RecipeHeader';
 function RecipeGrid({recipe}) {
     return (
         <div id='recipe-grid'>
-            <RecipeHeader  receiepeTitle = {recipe.title} 
+            <RecipeHeader  recipeTitle = {recipe.title} 
                             vegan = {recipe.vegan}
                             vegetarian = {recipe.vegetarian}
                             glutenFree = {recipe.glutenFree}

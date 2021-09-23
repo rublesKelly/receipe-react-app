@@ -13,13 +13,13 @@ function TestComp({setAnnouncement, setShowSideBar,setTabClassName}) {
     //Submit Handler
     const onSubmitHandler = (e) => {
         e.preventDefault()
-        api.getReceipebyID(id)
+        api.getRecipebyID(id)
             .then(res=>console.log(res))
     }
 
     const onSubmitHandler2 = (e) => {
         e.preventDefault()
-        api.getReceipebyCusine(cusine)
+        api.getRecipebyCusine(cusine)
             .then(res=>console.log(res))
     }
 
@@ -30,7 +30,7 @@ function TestComp({setAnnouncement, setShowSideBar,setTabClassName}) {
 
     return (
         <div id='test-comp'>
-            {/* <button onClick={()=>api.getReceipebyCusine('Italian')}>Add receieps</button> */}
+            {/* <button onClick={()=>api.getRecipebyCusine('Italian')}>Add receieps</button> */}
             <form onSubmit={onSubmitHandler} id="test-form-id">
                 <label>Search by ID</label>
                 <input 
@@ -57,7 +57,7 @@ function TestComp({setAnnouncement, setShowSideBar,setTabClassName}) {
             <button id="side-bar-btn" onClick={()=>setShowSideBar(state => !state)}>Show Sidebar</button>
             <button id="toggle-tool-bar"onClick={()=>setShowTabBar(state => !state)}>toggle setShowToolbBar</button>
             <button id="toggle-tab-bar"onClick={()=>setTabClassName(state => !state)}>toggle tabbar className</button>
-            <button id='log-detailed-receipe' onClick={()=>api.getDetailedReceipebyQuery('garlic')}>Get detailed receipe</button>
+            <button id='log-detailed-recipe' onClick={()=>api.getDetailedRecipebyQuery('garlic')}>Get detailed recipe</button>
             <form onSubmit={onSubmitHandler3} id="advanced-search">
                 <label htmlFor="cusine">Choose cusine</label>
                 <select name="cusine" id="cusine-selector">

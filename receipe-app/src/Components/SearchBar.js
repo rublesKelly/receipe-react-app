@@ -13,7 +13,7 @@ function SearchBar({setResults, setShowResults}) {
     const onSubmitHandler = (e) => {
         e.preventDefault()
         //Async all ways returns a promise so the  the .then is neccessary
-        api.getReceipebyQuery(searchTerm)
+        api.getRecipebyQuery(searchTerm)
             .then((res) => setResults(res.results))
             setShowResults(true)
     }

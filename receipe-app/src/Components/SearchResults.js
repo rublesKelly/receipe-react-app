@@ -1,6 +1,6 @@
 import React from 'react'
 import '../Styles/SearchResults.css'
-import ReceipeCard from "./ReceipeCard";
+import RecipeCard from "./RecipeCard";
 
 function SearchResults(props) {
 // console.log(props);
@@ -9,14 +9,14 @@ function SearchResults(props) {
         <div id="search-results">
             <div id="search-result">
                 {props.results.map((eachItem) =>
-                    (<ReceipeCard
+                    (<RecipeCard
                         id={eachItem.id} 
                         title={eachItem.title}
                         image={eachItem.image}
                         description={eachItem.summary}
                         prepTime={eachItem.readyInMinutes}
                         vegan={eachItem.vegan}
-                        onAddReceipeClicked={props.onAddReceipeClicked}
+                        onAddRecipeClicked={props.onAddRecipeClicked}
 
                     />)
                 )}
