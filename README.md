@@ -4,6 +4,12 @@ Spotify but for recipes
 
 So far a serverless API caller that is working off the spoonacular database
 
+### To run app locally 
+- clone repository 
+- run npm i 
+- run npm start
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
