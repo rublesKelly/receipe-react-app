@@ -2,7 +2,7 @@
 
 Spotify but for recipes 
 
-So far an serverless API caller that is working off the spoonacular database
+So far a serverless API caller that is working off the spoonacular database
 
 # Getting Started with Create React App
 
