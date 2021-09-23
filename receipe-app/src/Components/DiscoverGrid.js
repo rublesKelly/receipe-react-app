@@ -12,7 +12,7 @@ function DiscoverGrid({userData, announcement, onAddRecipeClicked}) {
     const [discoverData, setDiscoverData] = useState([])
     const [likedRecipes, setLikedRecipes] = useState([])
 
-    //UseEffect to get Frecnh cusine on discover sectoin
+    //UseEffect to get Frecnh cusine on discover section
     useEffect(() => {
         api.getRecipebyCusine('french')
             .then(res=>setDiscoverData(res.results))

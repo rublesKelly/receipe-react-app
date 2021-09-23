@@ -1,14 +1,28 @@
 #thumbnail{
-    max-width: 10vw;
     background-color: #333;
+    /* background-color: magenta; */
     margin: 1vw;
+    border-radius: 10%;
+    width: clamp(60px, 100px + 5vw, 26vw);
   }
   
   #thumb-image{
+    border-radius: 10%;
     max-height: 80vh;
     overflow: hidden;
   }
-  
+
   #thumb-tab{
-     height: inherit;
+    height: clamp(4vh, 5px + .5vh, 14vh);  }
+  
+  #thumb-tab:hover{
+    display: absolute;
+    z-index: 10;
+    background-color: #fff;
+    height: clamp(20vh, 250px + 5vh, 12vh);
+  }
+
+  #thumb-title{
+    padding-left: .6rem;
+    font-size: var(--fs-small);
   }

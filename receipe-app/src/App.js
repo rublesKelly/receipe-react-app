@@ -65,10 +65,10 @@ function App() {
           ingredients: res.recipes[0].extendedIngredients,
           steps: res.recipes[0].analyzedInstructions[0].steps
         }]
-      // console.log(updateRecipes)
+      // console.log(updateReceipes)
       setRecipes(updateRecipes)
       })
-    },[])                                                                                        
+    },[])                                                                              
 
   //Tab bar handler
     //Add recipe to tab passed to recipe card and thumbnail

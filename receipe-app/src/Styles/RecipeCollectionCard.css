@@ -26,7 +26,7 @@
       opacity: 100%;
       margin: auto;
       margin-left: 0;
-      font-size: var(--fs-x-medium);
+      font-size: var(--fs-medium);
   }
   
   #collection-image{

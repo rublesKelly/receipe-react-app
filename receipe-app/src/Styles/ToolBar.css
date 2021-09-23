@@ -1,18 +1,22 @@
-
 #tool-bar{
     width: 100%;
     height: min(35px, 4vh);
     background-color: #111;
-    position: sticky; left:0px; bottom:0px; z-index:999;
+    position: fixed; left:0px; bottom:20px; z-index:999;
     display: grid;
     grid-template-rows: 1;
-    grid-template-columns: 8vw 1fr 22vw;
+    grid-template-columns: 8vw 1fr 40vw;
 }
 
-#tool-bar > button {
-    /* border-right: solid #eee; */
-    background-color: #5d5d5d;
-    height: auto;
+#timer-button{
+    background-color: cornsilk;
+    height: 38px;
+    width: 4vw;
+}
+
+#side-bar-btn{
+    background-color: cornsilk;
+    height: 38px;
     width: 4vw;
 }
 
@@ -26,16 +30,17 @@
 }
 
 #timer{
-    display: inline;
+    display: inline-block;
     background-color: black;
-    text-align: 'center'
-}
-
-#timer-display{
-    
+    display: grid;
+    grid-template-rows: 1;
+    place-items: end end;
 }
 
 #timer-container{
-    display: grid;
-    place-items: end end;
+    
+}
+
+#temp-button{
+    display: inline;
 }

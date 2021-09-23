@@ -49,7 +49,7 @@ function Timer({expiryTimestamp}) {
                     
                 }
                 {/* <button onClick={resume}>Resume</button> */}
-                <button onClick={()=>updateTimer(time)}>Add 5 min</button>
+                <button id='temp-button'onClick={()=>updateTimer(time)}>Add 5 min</button>
         </div>
     )
 }
