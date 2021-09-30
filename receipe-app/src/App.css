@@ -1,9 +1,9 @@
 :root{
-  --fs-x-large: clamp(2.5rem, 4px + 2vw, 12rem);
-  --fs-large: clamp(1.5rem, 4px + 2vw, 4rem);
-  --fs-medium: clamp(.5rem, 4px + 1.5vw, 2rem);
-  --fs-small: clamp(.2rem, 2px + 1vw, 1rem);
-  --fs-text: clamp(.1rem, 4px + 1vw, 1.5rem)
+  --fs-x-large: clamp(2.5rem, calc(4px + 2vw), 12rem);
+  --fs-large: clamp(1.5rem, calc(4px + 2vw), 4rem);
+  --fs-medium: clamp(.5rem, calc(4px + 1.5vw), 2rem);
+  --fs-small: clamp(.2rem, calc(2px + 1vw), 1rem);
+  --fs-text: clamp(.1rem, calc(4px + 1vw), 1.5rem)
 }
 
 body{
