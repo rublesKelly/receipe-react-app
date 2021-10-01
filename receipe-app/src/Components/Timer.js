@@ -36,11 +36,11 @@ function Timer({expiryTimestamp}) {
     return (
         <div id='timer'>
                 {isRunning ? 
-                    <div>
+                    <div id='timer-input'>
                         <button onClick={pause}><GiPauseButton/></button>
                         <input type="datetime" name="timer-setter" id="timer-setter-input"/>             
                     </div> :
-                    <div>
+                    <div id='timer-display'>
                         <button onClick={start}><GiPlayButton/></button>
                         <div style={{fontSize: '20px', display: 'inline', margin: '2rem'}}>
                             <span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span>
@@ -49,7 +49,9 @@ function Timer({expiryTimestamp}) {
                     
                 }
                 {/* <button onClick={resume}>Resume</button> */}
-                <button id='temp-button'onClick={()=>updateTimer(time)}>Add 5 min</button>
+                <div id="timer-controls">
+                    <button id='temp-button'onClick={()=>updateTimer(time)}>Add 5 min</button>
+                </div>
         </div>
     )
 }

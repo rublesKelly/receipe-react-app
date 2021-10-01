@@ -2,10 +2,14 @@
     width: 100%;
     height: min(35px, 4vh);
     background-color: #111;
-    position: fixed; left:0px; bottom:20px; z-index:999;
+    position: fixed; left:0px; bottom:2px; z-index:999;
     display: grid;
     grid-template-rows: 1;
     grid-template-columns: 8vw 1fr 40vw;
+}
+
+#timer-container{
+    justify-self: end;
 }
 
 #timer-button{
@@ -30,14 +34,24 @@
 }
 
 #timer{
-    display: inline-block;
     background-color: black;
     display: grid;
-    grid-template-rows: 1;
-    place-items: end end;
+    place-items: center end;
 }
 
-
-#temp-button{
-    display: inline;
+#timer-input{
+    grid-row: 1;
 }
+
+#timer-display{
+    grid-row: 1;
+}
+
+#timer-setter-input{
+    background-color: #555;
+}
+
+#timer-controls{
+    grid-row: 1;
+}
+

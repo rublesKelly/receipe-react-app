@@ -11,11 +11,13 @@ function ToolBar({setShowSideBar, showSideBar}) {
 
     return (
         <div id='tool-bar'>
-            <button 
-                id={showSideBar ? 'side-bar-btn-active' : 'side-bar-btn'}
-                onClick={()=>setShowSideBar(state=>!state)}>
-                <FaChevronLeft/>
-            </button>
+            <div id="side-bar-section">
+                <button 
+                    id={showSideBar ? 'side-bar-btn-active' : 'side-bar-btn'}
+                    onClick={()=>setShowSideBar(state=>!state)}>
+                    <FaChevronLeft/>
+                </button>
+            </div>
             <div id='middle-section'></div>
             <div id='timer-container'>
                 {showTimer ? 

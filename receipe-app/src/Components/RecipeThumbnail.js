@@ -6,22 +6,26 @@ function RecipeThumbnail({id, title, image, onAddRecipeClicked}) {
 
     //Declare state
     const [thumnailClass, setThumnailClass] = useState('initialState')
+    const [isHover, setIsHover] = useState(null)
 
-    console.log(2)
     return (
-        <div id='thumbnail' onClick={()=>onAddRecipeClicked(id)}>
+        <div 
+         id='thumbnail' 
+         onClick={()=>onAddRecipeClicked(id)}
+         onMouseOver={()=>setIsHover(state=>!state)}
+         onMouseOut={()=>setIsHover(state=>!state)}
+        >
             <div id="thumb-image">
                 <img src={image} alt="image not found" id="thumb-image" />
             </div>
-            <div id="thumb-tab">
+            <div id={isHover ? 'thumb-tab-expanded' : "thumb-tab"}>
                 <h3 id="thumb-title">
                     {title}
                 </h3>
-            {false && <div id="expanded-thumbnail">
-                <ul>
+            {isHover && 
+                <div id="expanded-thumbnail">
                     
-                </ul>
-            </div>}
+                </div>}
             </div>
         </div>
     )

@@ -15,11 +15,9 @@
   #thumb-tab{
     height: clamp(4vh, 5px + .5vh, 14vh);  }
   
-  #thumb-tab:hover{
-    display: absolute;
-    z-index: 10;
-    background-color: #fff;
-    height: clamp(20vh, 250px + 5vh, 12vh);
+  #thumb-tab-expanded{
+    background-color: #555;
+    height: clamp(8vh, 50px + 5vh, 15vh);
   }
 
   #thumb-title{

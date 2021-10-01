@@ -2,7 +2,6 @@
   margin-left: 10px;
 }
 #recipe-collection-card{
-  
   display: grid;
   grid-template-rows: 1;
   grid-template-columns: repeat(3, 1fr);
@@ -12,7 +11,7 @@
   text-align: left;
   border-radius: 8%;
   height: clamp(1vh, 250px + 5vh, 12vh);
-  width: clamp(250px, 250px + 5vw, 70vw);
+  width: clamp(200px, 150px + 12vw, 70vw);
   background: rgba( 56, 56, 56, .3);    
   }
 
@@ -32,5 +31,6 @@
   #collection-image{
     grid-area: first;
     height: inherit;
+    border-radius: 10%;
     min-width: 100%;
   }
